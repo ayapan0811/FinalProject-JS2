@@ -1,6 +1,6 @@
 # FinalProject-JS2
 
-Members: Aya, John, Lucas
+Members: Aya, John, Katsushi
 
 Brainstorm link: https://www.canva.com/design/DAFgt2UNC90/u-TPNt0WO7TFW22pnbuoMQ/edit?utm_content=DAFgt2UNC90&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
