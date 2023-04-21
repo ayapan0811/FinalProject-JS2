@@ -2,7 +2,7 @@
 
 Members: Aya, John, Lucas
 
-Brainstorm link: https://lucid.app/lucidchart/5dbe0b94-988f-4948-9a01-43c8a30549c7/edit?beaconFlowId=3C92F69E79990B45&page=0_0&invitationId=inv_a6adf09d-1c27-4c20-af91-da903f20aea3#
+Brainstorm link: https://www.canva.com/design/DAFgt2UNC90/u-TPNt0WO7TFW22pnbuoMQ/edit?utm_content=DAFgt2UNC90&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Final document link: https://docs.google.com/document/d/1FNOnIXpqb_XpKr8QrBwdX_Q4M4nQGGmU/edit
 
