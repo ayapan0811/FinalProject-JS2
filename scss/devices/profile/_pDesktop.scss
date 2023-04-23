@@ -43,6 +43,7 @@
         > section {
             > article {
                 flex-direction: column;
+                row-gap: 2vh;
                 width: 80%;
             }
         }
@@ -72,6 +73,11 @@
             background-color: rgba(250, 179, 48, .8);
             padding: 5px;
             border-radius: 10px;
+        }
+    }
+    .proBottom {
+        > section > section {
+            flex-direction: row;
         }
     }
 }

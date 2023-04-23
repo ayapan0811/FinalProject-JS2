@@ -36,4 +36,22 @@
             width: 50%;
         }
     }
+    .proBottom {
+        > section {
+            flex-direction: row;
+            justify-content: space-around;
+            > section {
+                flex-direction: column;
+            }
+        }
+        article {
+            width: 60%;
+        }
+        a {
+            transition: .4s;
+        }
+        a:hover {
+            color: rgba(250, 179, 48, .8);
+        }
+    }
 }
