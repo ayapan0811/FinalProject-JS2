@@ -1,8 +1,110 @@
 @media(min-width:$mobileScreen){
-    h3{
-        color: red;
-    }
     .profile {
-        background-color: red;
+        @include columnRow(5vh);
+        align-items: center;
+        padding: 5vh 0;
+    }
+    .profile > section {
+        width: 90%;
+    }
+    .proTop {
+        width: 90%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        column-gap: 6vh;
+        img { //profile top page
+            width: 20vh;
+            height: 20vh;
+            border-radius: 50%;
+        }
+        h2 { //name
+            font-style: italic
+        }
+        figcaption { //name, review and email
+            @include columnRow(2vh);
+        }
+        section {
+            @include flex-column;
+        }
+        aside {
+            display: flex;
+            column-gap: 1vh;
+            padding-left: 8vh;
+        }
+        section > a{
+            padding-left: 8vh;
+        }
+    }
+    .proRight {
+        @include columnRow(3vh);
+        background-color: rgba(250, 179, 48, .8);
+        padding: 3% 0;
+        border-radius: 15px;
+        .sitterAvb { //available time
+            @include columnRow(1vh);
+            width: 100%;
+            align-items: center;
+            h3 {
+                width: 80%;
+            }
+        }
+        align-items: center;
+        > section {
+            @include columnRow(3vh);
+            align-items: center;
+            width: 100%;
+            > article { //city and experience
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                > aside {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 1vh;
+                }
+            }
+            > aside {
+                width: 80%;
+                @include columnRow(1vh);
+            }
+        }
+        li {
+            list-style-type: none;
+            display: flex;
+            column-gap: 1vh;
+            align-items: baseline;
+        }
+        ul { //services
+            @include columnRow(1vh);
+            span {
+                font-weight: 600;
+                font-size: x-large;
+            }
+        }
+        ol { //size
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1vh;
+        }
+    }
+    .proLeft {
+        @include columnRow(3vh);
+        > .sitterAvb { //available time
+            display: none;
+        }
+        > figure { // pictures
+            display: flex;
+            justify-content: space-around;
+            > img {
+                width: 40%;
+                border: 6px double black;
+                padding: 1%;
+            }
+        }
+        article {
+            @include columnRow(1vh);
+        }
+
     }
 }

@@ -1,0 +1,39 @@
+@media (min-width:$tabletScreen){
+    .proTop {
+        width: 80%;
+        justify-content: space-around;
+        column-gap: 0;
+        section {
+            row-gap: 2vh;
+        }
+        img { //picture
+            width: 25vh;
+            height: 25vh;
+        }
+        h2 { //name
+            font-size: 36px;
+        }
+        span { //rating
+            font-size: 20px;
+        }
+        h3 { //take a contact
+            font-size: 24px;
+        }
+        a { //email link
+            font-size: 18px;
+            transition: .4s;
+        }
+        a:hover {
+            color: orange;
+        }
+        section > a {
+            padding-left: 12vh;
+        }
+    }
+    .proRight {
+        flex-direction: row;
+        .sitterAvb {
+            width: 50%;
+        }
+    }
+}
