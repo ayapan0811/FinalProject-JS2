@@ -79,5 +79,14 @@
         > section > section {
             flex-direction: row;
         }
+        .shownSlide {
+            display: none;
+        }
+        .shown2Slides {
+            @include columnRow(1vh);
+            align-items: center;
+            justify-content: center;
+            height: 45vh;
+        }
     }
 }

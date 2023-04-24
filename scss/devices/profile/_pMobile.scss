@@ -123,27 +123,32 @@
             height: 4vh;
             border-radius: 100%;
         }
+        .slideShow {
+            display: flex;
+            column-gap: 5vh;
+        }
         blockquote {
-            @include columnRow(1vh);
-            align-items: center;
+            display: none;
             border: 1px solid black;
             background-color: whitesmoke;
             border-radius: 20px;
-            padding: 2%;
+            padding: 0 2vh;
             width: 30vh;
+            height: 30vh;
             i {
                 color: orange;
             }
         }
-        .review2,.review3,.review4 {
-            display: none;
+        .shownSlide {
+            @include columnRow(1vh);
+            align-items: center;
+            justify-content: center;
         }
         > section > section {
             display: flex;
             column-gap: 2vh;
             justify-content: center;
             align-items: center;
-        }
-        
+        }  
     }
 }
