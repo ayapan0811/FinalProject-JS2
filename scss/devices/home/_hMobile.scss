@@ -1,9 +1,5 @@
 @media (min-width: $mobileScreen){
 
-  img{
-    width: 100%;
-    height: 40vh;
-  }
   p{
     color: gray
   }
@@ -33,9 +29,11 @@
   header
   ======================*/
   .header-container{
+    height: 7vh;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding:2vh;
+    padding: 0 2vh;
     >section{
       display: flex;
       column-gap: 1vh;
@@ -60,7 +58,6 @@
   .search-sitter{
     img{
       height: 40vh;
-      opacity: 1;
     }
     p{
       color: white;
@@ -91,6 +88,7 @@
   ======================*/
   .about{
     padding-top: 10vh;
+    padding-bottom: 8vh;
     display: flex;
     align-items: center;
     >section{
@@ -319,8 +317,5 @@
     a{
       color: dimgrey;
     }
-
   }
-
-
 }
