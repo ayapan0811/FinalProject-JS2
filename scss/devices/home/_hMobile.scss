@@ -1,0 +1,326 @@
+@media (min-width: $mobileScreen){
+
+  img{
+    width: 100%;
+    height: 40vh;
+  }
+  p{
+    color: gray
+  }
+  body,
+  .home-main,
+  .search-sitter > figure,
+  .about > section,
+  .services,
+  .services > section,
+  .service,
+  .booking-flow,
+  .booking-flow > section,
+  .booking-flow > article,
+  .blog,
+  .contact,
+  .contact form,
+  .location,
+  .location article{
+    @include flex-column;
+  }
+  .home-main{
+    > section{
+      @include flex-column;
+    }
+  }
+  /*=====================
+  header
+  ======================*/
+  .header-container{
+    display: flex;
+    justify-content: space-between;
+    padding:2vh;
+    >section{
+      display: flex;
+      column-gap: 1vh;
+      i{
+        font-size: 25px;
+        color:$orangeColor;
+      }
+    }
+    .fa-bars{
+      font-size: 20px;
+    }
+    h1{
+      color: $orangeColor;
+    }
+  }
+  .overlay{
+    display: none;
+  }
+  /*=====================
+  search-sitter
+  ======================*/
+  .search-sitter{
+    img{
+      height: 40vh;
+      opacity: 1;
+    }
+    p{
+      color: white;
+    }
+    figure{
+      position: relative;
+    }
+    figcaption{
+      position: absolute;
+      width: 50%;
+      right: 1%;
+      top: 10%;
+      color: white;
+    }
+    form{
+      position: absolute;
+      bottom: -10%;
+      left: 4%;
+      width: 40vh;
+      padding: 3%;
+      background-color:$secondColor;
+      border-radius: 10px;
+      box-shadow: 3px 3px 4px gray;
+    }
+  }
+  /*=====================
+  about
+  ======================*/
+  .about{
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    >section{
+      width: 90%;
+      text-align: center;
+      row-gap: 3vh;
+    }
+  }
+  /*=====================
+  services
+  ======================*/
+  .services{
+    padding: 5vh 0;
+    background-color: $secondColor;
+    row-gap: 5vh;
+    align-items: center;
+    > section{
+      width: 90%;
+    }
+    h3{
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .service{
+    row-gap: 5vh;
+    aside{
+      display: flex;
+      column-gap: 2vh;
+      background-color: white;
+      padding: 3%;
+      border-radius: 10px;
+      box-shadow: 2px 2px 3px lightgray;
+    }
+    i{
+      font-size: 40px;
+      color: $orangeColor;
+    }
+  }
+  .trust-sitter{
+    margin-top: 5vh;
+    border: 1px solid lightgrey;
+    padding: 3vh 0;
+    aside{
+      display: flex;
+      @include flex-center;
+      column-gap: 1vh;
+      padding-bottom: 2vh;
+    }
+    ul{
+      list-style-type: none;
+      @include columnRow(3vh);
+      @include flex-center;
+    }
+    li{
+      display: flex;
+      width: 80%;
+      column-gap: 1vh;
+    }
+    i{
+      color: mediumseagreen;
+    }
+  }
+  /*=====================
+  booking-flow
+  ======================*/
+  .booking-flow{
+    padding: 8vh 0;
+    @include flex-center;
+    row-gap: 5vh;
+    > section,
+    > article{
+      width: 90%;
+      text-align: center;
+    }
+    > article{
+      row-gap: 5vh;
+    }
+    aside{
+      @include columnRow(2vh);
+    }
+    i{
+      font-size: 40px;
+    }
+  }
+  /*=====================
+  blog
+  ======================*/
+  .blog{
+    padding: 8vh 0;
+    background-color: $grayBack;
+    @include flex-center;
+    row-gap: 3vh;
+    > section{
+      width: 90%;
+      @include columnRow(5vh);
+    }
+    img{
+      height: 30vh;
+    }
+    figure{
+      @include columnRow(2vh);
+      background-color: white;
+      padding-bottom: 2vh;
+      box-shadow: 2px 2px 3px gray;
+    }
+    figcaption{
+      @include flex-column;
+      padding: 0 2vh;
+    }
+    a{
+      padding-left: 2vh;
+    }
+    aside{
+      display: flex;
+      align-items: center;
+      column-gap: 1vh;
+      justify-content: flex-end;
+      padding-right: 2vh;
+    }
+  }
+  /*=====================
+  contact
+  ======================*/
+  .contact{
+    padding: 5vh 0;
+    background-color: $secondColor;
+    align-items: center;
+    row-gap: 2vh;
+    form{
+      width: 90%;
+      padding: 3vh;
+      row-gap: 2vh;
+    }
+    input,
+    textarea{
+      border: none;
+      padding: 2vh;
+      border-radius: 5px;
+    }
+    [type="submit"]{
+      background-color: $orangeColor;
+      color: white;
+    }
+  }
+  /*=====================
+  location
+  ======================*/
+  .location{
+    padding: 8vh 0;
+    padding-left: 5%;
+    background-color: gray;
+    color: white;
+    row-gap: 2vh;
+    > article{
+      row-gap: 1vh;
+    }
+    ul{
+      padding-left: 4%;
+    }
+    h3{
+      border-bottom: 1px solid white;
+      width: 35%;
+    }
+    a{
+      color:white;
+      text-decoration: dashed;
+    }
+    i{
+      font-size: 40px;
+    }
+  }
+  /*=====================
+  footer
+  ======================*/
+  footer{
+    padding-top: 8vh;
+    background-color: $secondColor;
+    @include flex-column;
+    @include flex-center;
+    >section{
+      width: 90%;
+    }
+    >p{
+      width: 100%;
+      border-top: 1px solid dimgray;
+      padding: 2vh;
+      text-align: center;
+    }
+  }
+  .footer-aboutus{
+    padding-bottom: 3vh;
+    h4{
+      font-size: 18px;
+    }
+    p{
+      padding-bottom: 3vh;
+    }
+    ul{
+      display: flex;
+      width: 100%;
+    }
+    li{
+      display: flex;
+      width: 70%;
+    }
+    a{
+      display: flex;
+      @include flex-center;
+      width:5vh;
+      height: 5vh;
+      border: 2px solid $orangeColor;
+      border-radius: 50%;
+      background-color: $orangeColor;
+      color: white;
+    }
+  }
+  .link{
+    padding-bottom: 3vh;
+    ul{
+      list-style-type: none;
+    }
+    h3{
+      padding-bottom: 2vh;
+    }
+    a{
+      color: dimgrey;
+    }
+
+  }
+
+
+}
