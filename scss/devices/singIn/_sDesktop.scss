@@ -1,0 +1,17 @@
+@media(min-width:$desktopScreen){
+    .singUp{
+        background-color: whitesmoke;
+        form{
+            width: 50%;
+            aside{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            button{
+                padding: 2%;
+                width: 50%;
+            }
+        }
+    }
+}

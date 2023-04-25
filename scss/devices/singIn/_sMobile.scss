@@ -1,3 +1,42 @@
-main{
-    display: flex;
+@media(min-width:$mobileScreen) {
+    .singUp{
+        font-family: $fontFamily;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5vh;
+        h1{
+            font-size: 30px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            width: 80%;
+            row-gap: 3vh;
+            aside{
+                display: flex;
+                flex-direction: column;
+            }
+            input,select{
+                font-size: 22px;
+                border: 1px solid gray;
+                border-radius: 3px;
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+            }
+            button{
+                font-size: 16px;
+                padding: 3%;
+                border-radius: 50px;
+                border: 1px solid rgb(24, 125, 24);
+                background-color: rgb(24, 125, 24);
+                color: white;
+            }
+        }
+    }
 }
