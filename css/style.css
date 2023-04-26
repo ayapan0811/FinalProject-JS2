@@ -91,8 +91,8 @@ a {
   }
   .search-sitter form {
     position: absolute;
-    bottom: -10%;
-    left: 4%;
+    bottom: -50%;
+    left: 13%;
     width: 40vh;
     padding: 3%;
     background-color: #faf3eb;
@@ -360,6 +360,9 @@ a {
   /*=====================
   header
   ======================*/
+  .header-container > section {
+    align-items: center;
+  }
   .header-container > section i {
     font-size: 35px;
   }
@@ -369,24 +372,27 @@ a {
   .header-container .fa-bars {
     display: none;
   }
+  .header-container nav {
+    width: 50vh;
+    height: 100%;
+    display: flex;
+  }
   .header-container ul {
+    width: 100%;
     list-style-type: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    -moz-column-gap: 2vh;
-         column-gap: 2vh;
   }
   .header-container li {
-    display: flex;
-    align-self: center;
     width: 100%;
     height: 100%;
+    display: flex;
   }
-  .header-container nav {
-    width: 30vh;
+  .header-container li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .overlay {
     height: 100%;
@@ -398,6 +404,9 @@ a {
   /*=====================
   search-sitter
   ======================*/
+  .search-sitter img {
+    height: 60vh;
+  }
   .search-sitter figcaption {
     width: 40%;
     right: 4%;
@@ -407,7 +416,6 @@ a {
   }
   .search-sitter form {
     width: 30vh;
-    height: 10vh;
     bottom: 10%;
     left: 32vh;
   }
@@ -510,7 +518,6 @@ a {
   }
   .search-sitter form {
     width: 60vh;
-    height: 30vh;
     bottom: 10%;
     left: 70vh;
   }
