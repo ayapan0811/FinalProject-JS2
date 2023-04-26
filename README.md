@@ -6,7 +6,7 @@ Producion: Production branch
 
 Staging: Main branch
 
-Develop: home, John, Katsushi branches
+Develop: home, JoaoBento, Katsushi branches
 
 Brainstorm & Flowchart link: https://www.canva.com/design/DAFgt2UNC90/u-TPNt0WO7TFW22pnbuoMQ/edit?utm_content=DAFgt2UNC90&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
