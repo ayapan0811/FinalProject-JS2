@@ -1,0 +1,13 @@
+@media(min-width:$desktopScreen){
+    .shop{
+        .box{
+            width: 30%;
+        }
+        #box{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 3vh;
+        }
+    }
+}

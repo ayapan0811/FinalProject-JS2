@@ -1,4 +1,31 @@
 // @import 'home/hMobile';
 // @import 'profile/pMobile';
 @import 'singIn/sMobile';
-@import 'shop/shopMobile'
+@import 'shop/shopMobile';
+@media (min-width: $mobileScreen) {
+    .header-container{
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        padding: 0 2vh;
+        >section{
+          display: flex;
+          column-gap: 1vh;
+          i{
+            font-size: 25px;
+            color:$box2;
+          }
+        }
+        .fa-bars{
+          font-size: 20px;
+        }
+        h1{
+          color: $box2;
+        }
+      }
+      .overlay{
+        display: none;
+      }
+}

@@ -5,10 +5,20 @@
         row-gap: 7vh;
         h2{
             font-size: 20px;
+            transition: 0.4s;
+            padding: 2px;
+            &:hover{
+                background-color: $box2;
+
+            }
         }
         #menu{
             display: flex;
+            @include flex-center;
             column-gap: 5vh;
+            background-color: $box;
+            padding: 5%;
+            width: 100%
         }
         #box{
             @include flex-column;
@@ -16,9 +26,21 @@
             row-gap: 4vh;
             flex-wrap: wrap
         }
+        .box{
+            width: 80%;
+            border: 10px solid $box2;
+            background-color: $box2;
+            img{
+                width: 50%;
+            }
+        }
         figure,figcaption{
             @include flex-column;
             @include flex-center;
+            text-align: center;
+        }
+        figcaption :nth-child(1){
+            color: $title;
         }
         
     }

@@ -1,0 +1,13 @@
+@media(min-width:$tabletScreen){
+    .shop{
+        h2{
+            font-size: 30px;
+        }
+        #menu{
+            column-gap: 12vh;
+        }
+        h3{
+            font-size: 30px;
+        }
+    }
+}
