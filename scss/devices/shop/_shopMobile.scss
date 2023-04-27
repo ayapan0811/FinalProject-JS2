@@ -1,0 +1,25 @@
+@media(min-width:$mobileScreen){
+    .shop{
+        @include flex-column;
+        @include flex-center;
+        row-gap: 7vh;
+        h2{
+            font-size: 20px;
+        }
+        #menu{
+            display: flex;
+            column-gap: 5vh;
+        }
+        #box{
+            @include flex-column;
+            @include flex-center;
+            row-gap: 4vh;
+            flex-wrap: wrap
+        }
+        figure,figcaption{
+            @include flex-column;
+            @include flex-center;
+        }
+        
+    }
+}
