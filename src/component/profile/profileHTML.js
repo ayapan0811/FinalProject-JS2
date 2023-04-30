@@ -1,3 +1,28 @@
+//START: getting JSON file
+const sitterUrl = "http://127.0.0.1:5500/src/data/sitters.json";
+
+jQuery.extend({
+    getJsonData: function(url){
+        let result = null;
+        $.ajax({
+            docType: "json",
+            async: false,
+            type: "GET",
+            url: url,
+            success: function(data){
+                result = data;
+            },
+            error: function(xhr,status,error){
+                console.log(error);
+            }
+        })
+        return result;
+    }
+})
+
+let sittersData = $.getJsonData(sitterUrl);
+console.log(sittersData);
+//END: getting JSON file
 //START: Profile page top part
 function ProfileTop(){
     return(
@@ -39,7 +64,6 @@ const daysList = [
     {name: "Friday", dayClass: "friday"},
     {name: "Saturday", dayClass: "saturday"}
 ]
-
 
 function SitterAvailability(){
     return(
@@ -196,6 +220,10 @@ function ProfilePage(){
 function App(){
 
     $("#root").ready(function(){
+
+        //START: showing Json file data to profile page
+        
+        //END: showing Json file data to profile page
         
         //START: slideshow part
         let firstRev = $(".review1");
