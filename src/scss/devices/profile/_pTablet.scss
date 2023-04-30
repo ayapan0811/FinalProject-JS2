@@ -42,6 +42,7 @@
             justify-content: space-around;
             > section {
                 flex-direction: column;
+                row-gap: 5vh;
             }
         }
         article {

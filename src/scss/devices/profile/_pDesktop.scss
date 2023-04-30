@@ -73,11 +73,11 @@
             background-color: $box;
             padding: 5px;
             border-radius: 10px;
+            font-weight: 600;
         }
     }
     .proBottom {
         > section > section {
-            flex-direction: row;
             font-size: 24px;
         }
         .shownSlide {

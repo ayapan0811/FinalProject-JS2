@@ -55,6 +55,14 @@
             h3 {
                 width: 80%;
             }
+            li {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(252, 225, 119);
+                border-radius: 15px;
+                padding: 3%;
+                font-weight: 600;
+            }
         }
         align-items: center;
         > section {
@@ -82,7 +90,7 @@
             column-gap: 1vh;
             align-items: baseline;
         }
-        .size {
+        .size1,.size2,.size3,.size4 {
             background-color: rgb(252, 225, 119);
             border-radius: 15px;
             padding: 1%;
@@ -121,7 +129,7 @@
     .proBottom {
         @include columnRow(1vh);
         > section {
-            @include columnRow(1vh);
+            @include columnRow(5vh);
         }
         article {
             display: flex;

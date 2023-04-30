@@ -27,13 +27,13 @@ console.log(sittersData);
 function ProfileTop(){
     return(
         <figure className="proTop">
-            <img src="img/sitter1.jpg" alt="mainPic"/>
+            <img alt="mainPic"/>
             <figcaption>
                 <section>
                     <h2 className="sitterName">UserName</h2>
                     <aside>
-                        <span className="rating">5/5</span>
-                        <a className="reviewNum" href="#review">(10 reviews)</a>
+                        <span className="rating">num/5</span>
+                        <a className="reviewNum" href="#review">(num reviews)</a>
                     </aside>
                 </section>
                 <section>
@@ -49,9 +49,7 @@ function ProfileTop(){
 //START: Sitter Availability part
 function DaysList(props){
     return(
-        <li>
-            <h4 className={props.dayClass}>{props.dayName}</h4>
-        </li>
+        <li className={props.dayClass}>{props.dayName}</li>
     );
 }
 
@@ -92,9 +90,9 @@ function ProfileRight(){
             <section>
                 <article>
                     <aside>
-                        <h3 className="sitterPlace">
-                            <i className="fa-solid fa-location-arrow"></i> City,
-                        </h3>
+                        <i className="fa-solid fa-location-arrow"></i>
+                        <h3 className="sitterPlace">City</h3>
+                        <h3>,</h3>
                         <h3 className="sitterCity">City</h3>
                     </aside>
                     <aside>
@@ -112,10 +110,13 @@ function ProfileRight(){
                 <aside>
                     <h3>Accepted Size</h3>
                     <ol>
-                        <li className="size ten">~10kg</li>|
-                        <li className="size twenty">10kg~25kg</li>|
-                        <li className="size forty">25kg~45kg</li>|
-                        <li className="size overforty">45kg~</li>
+                        <li className="size1">~10kg</li>
+                        <span className="span1">|</span>
+                        <li className="size2">10kg~25kg</li>
+                        <span className="span2">|</span>
+                        <li className="size3">25kg~45kg</li>
+                        <span className="span3">|</span>
+                        <li className="size4">45kg~</li>
                     </ol>
                 </aside>
             </section>
@@ -222,8 +223,64 @@ function App(){
     $("#root").ready(function(){
 
         //START: showing Json file data to profile page
-        
+        let selectedSitterId = 17;
+        let selectedSitter = sittersData[selectedSitterId];
+
+        $('[alt="mainPic"]').attr("src",selectedSitter.picture);
+        $('[class="sitterName"]').text(`${selectedSitter.name}`);
+        $('[class="rating"]').text(`${selectedSitter.rating}/5`);
+        $('[class="sitterMail"]').text(`${selectedSitter.email}`);
+        $('[class="sitterPlace"]').text(`${selectedSitter.city1}`);
+        $('[class="sitterCity"]').text(`${selectedSitter.city2}`);
+        if(selectedSitter.sunday == false){
+            $('[class="sunday"]').css("display","none");
+        }
+        if(selectedSitter.monday == false){
+            $('[class="monday"]').css("display","none");
+        }
+        if(selectedSitter.tuesday == false){
+            $('[class="tuesday"]').css("display","none");
+        }
+        if(selectedSitter.wednesday == false){
+            $('[class="wednesday"]').css("display","none");
+        }
+        if(selectedSitter.thursday == false){
+            $('[class="thursday"]').css("display","none");
+        }
+        if(selectedSitter.friday == false){
+            $('[class="friday"]').css("display","none");
+        }
+        if(selectedSitter.saturday == false){
+            $('[class="saturday"]').css("display","none");
+        }
+        if(selectedSitter.service == "Walk"){
+            $('[class="liBoarding"]').css("display","none");
+        }else if(selectedSitter.service == "Board"){
+            $('[class="liWalking"]').css("display","none");
+        }
+        if(selectedSitter.size == "1"){
+            $('[class="span1"]').css("display","none");
+            $('[class="size2"]').css("display","none");
+            $('[class="span2"]').css("display","none");
+            $('[class="size3"]').css("display","none");
+            $('[class="span3"]').css("display","none");
+            $('[class="size4"]').css("display","none");
+        }else if(selectedSitter.size == "2"){
+            $('[class="span2"]').css("display","none");
+            $('[class="size3"]').css("display","none");
+            $('[class="span3"]').css("display","none");
+            $('[class="size4"]').css("display","none");
+        }else if(selectedSitter.size == "3"){
+            $('[class="span3"]').css("display","none");
+            $('[class="size4"]').css("display","none");
+        }
         //END: showing Json file data to profile page
+        //START: giving random numbers in profile page
+        $('[class="reviewNum"]').text(`(${Math.floor(Math.random()*20)+2} reviews)`);
+        $('[class="sitterYear"]').text(`${Math.floor(Math.random()*10)}`);
+        $('[class="walkPay"]').text(`${Math.floor(Math.random()*10)+15}`);
+        $('[class="boardPay"]').text(`${Math.floor(Math.random()*10)+15}`);
+        //END: giving random numbers in profile page
         
         //START: slideshow part
         let firstRev = $(".review1");
