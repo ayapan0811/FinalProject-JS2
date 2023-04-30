@@ -25,9 +25,10 @@
                 <i class="fa-solid fa-xmark" id="close"></i>
                 <nav>
                     <ul>
-                        <li><a href="#">Our Service</a></li>
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#services">Our Service</a></li>
+                        <li><a href="sitterlist.html">Sitter List</a></li>
+                        <li><a href="signUp.html">Sign Up</a></li>
+                        <li><a href="signIn.html">Sign In</a></li>
                     </ul>
                 </nav>
             </article>
@@ -36,89 +37,79 @@
     </header>
     <main class="home-main">
         <section class="search-sitter">
-            <figure>
-                <img src="/img/home-img/home-dog7.jpg" alt="dod7">
-                <figcaption>
+            <section class="ss-container">
+                <article>
                     <h2>Loving pet care in your neighborhood</h2>
                     <p> Book trusted sitters and dog walkers</p>
-                </figcaption>
+                    <a href="sitterlist.html">Search Sitter</a>
+                </article>
                 <form action="#">
-                    <article><!--select dog or cat-->
-                        <label for="dogcat">I'm looking for service for my:</label>
-                        <aside>
-                            <input type="checkbox" name="dog" id="dog">
-                            <small>Dog</small>
-                        </aside>
-                        <aside>
-                            <input type="checkbox" name="cat" id="cat">
-                            <small>Cat</small>
-                        </aside>
-                    </article>
-                    <article><!--select service-->
-                        <label for="select-service">Service:</label>
-                        <select name="select-service" id="select-service">
-                            <option value="none" disabled selected>Select Service</option>
-                            <option value="boarding">Boarding</option>
-                            <option value="dogwalking">Dog Walking</option>
-                        </select>
-                    </article>
-                    <article><!--select location-->
-                        <label for="select-location">Location:</label>
-                        <select name="location" id="location">
-                            <option value="none" disabled selected>Select your location</option>
-                            <optgroup label="Vancouver">
-                                <option value="Vancouver">Vancouver</option>
-                                <option value="Richmond">Richmond</option>
-                                <option value="Burnaby">Burnaby</option>
-                                <option value="NorthVancouver">North Vancouver</option>
-                                <option value="WestVancouver">West Vancouver</option>
-                            </optgroup>
-                            <optgroup label="Montreal">
-                                <option value="Downtown">Downtown</option>
-                                <option value="SouthWest">South West</option>
-                                <option value="Plateau">Plateau</option>
-                                <option value="Cote-des-Niege">Cote-des-Niege</option>
-                            </optgroup>
-                            <optgroup label="Toronto">
-                                <option value="CityOfToronto">City of Toronto</option>
-                                <option value="Halton">Halton</option>
-                                <option value="Peel">Peel</option>
-                                <option value="York">York</option>
-                                <option value="Durham">Durham</option>
-                            </optgroup>
-                        </select>
-                    </article>
-                    <article><!--select day time-->
-                        <aside>
-                            <label for="day">For these days</label>
-                            <section>
+                    <section>
+                        <article class="dogorcat"><!--select dog or cat-->
+                            <label for="dogcat">I'm looking for service for my:</label>
+                            <aside>
+                                <input type="checkbox" name="dog" id="dog">
+                                <small>Dog</small>
+                            </aside>
+                            <aside>
+                                <input type="checkbox" name="cat" id="cat">
+                                <small>Cat</small>
+                            </aside>
+                        </article>
+                        <article><!--select service-->
+                            <label for="select-service">Service:</label>
+                            <select name="select-service" id="select-service">
+                                <option value="none" disabled selected>Select Service</option>
+                                <option value="boarding">Boarding</option>
+                                <option value="dogwalking">Dog Walking</option>
+                            </select>
+                        </article>
+                        <article><!--select location-->
+                            <label for="select-location">Location:</label>
+                            <select name="location" id="location">
+                                <option value="none" disabled selected>Select your location</option>
+                                <optgroup label="Vancouver">
+                                    <option value="Vancouver">Vancouver</option>
+                                    <option value="Richmond">Richmond</option>
+                                    <option value="Burnaby">Burnaby</option>
+                                    <option value="NorthVancouver">North Vancouver</option>
+                                    <option value="WestVancouver">West Vancouver</option>
+                                </optgroup>
+                                <optgroup label="Montreal">
+                                    <option value="Downtown">Downtown</option>
+                                    <option value="SouthWest">South West</option>
+                                    <option value="Plateau">Plateau</option>
+                                    <option value="Cote-des-Niege">Cote-des-Niege</option>
+                                </optgroup>
+                                <optgroup label="Toronto">
+                                    <option value="CityOfToronto">City of Toronto</option>
+                                    <option value="Halton">Halton</option>
+                                    <option value="Peel">Peel</option>
+                                    <option value="York">York</option>
+                                    <option value="Durham">Durham</option>
+                                </optgroup>
+                            </select>
+                        </article>
+                        <article><!--select day time-->
+                            <aside>
+                                <label for="day">For these days</label>
                                 <input type="date">
-                                <label for="#">→</label>
-                                <input type="data">
-                            </section>
-                        </aside>
-                        <aside>
-                            <label for="time">Time</label>
-                        </aside>
-                    </article>
-                    <article><!--select size-->
-                        <label for="select-size">My Dog Size</label>
-                        <select name="select-size" id="select-size">
-                            <option value="none" disabled selected>Select your dog size</option>
-                            <option value="-10">-10</option>
-                            <option value="11-25">11-25</option>
-                            <option value="25-45">25-45</option>
-                            <option value="46-">46-</option>
-                        </select>
-
-                    </article>
-
+                            </aside>
+                        </article>
+                        <article><!--select size-->
+                            <label for="select-size">My Dog Size</label>
+                            <select name="select-size" id="select-size">
+                                <option value="none" disabled selected>Select your dog size</option>
+                                <option value="-10">-10</option>
+                                <option value="11-25">11-25</option>
+                                <option value="25-45">25-45</option>
+                                <option value="46-">46-</option>
+                            </select>
+                        </article>
+                    </section>
                 </form>
-            </figure>
+            </section>
         </section><!--search-sitter-->
-        <section class="reviews">
-            <h3>Pet Sitter Reviews</h3>
-        </section>
 
         <section class="about">
             <section>
@@ -129,7 +120,7 @@
             </section>
         </section><!--about-->
 
-        <section class="services">
+        <section class="services" id="services">
             <h3>Services for every dog and cat</h3>
             <section>
                 <article class="service">
@@ -259,8 +250,8 @@
             </section>
         </section><!--blog-->
 
-        <section class="contact">
-            <h3>Contact</h3>
+        <section class="contact" id="qa">
+            <h3>Q & A</h3>
             <form action="#">
                 <input type="text" name="name" id="name" placeholder="Your Name">
                 <input type="mail" name="mail" id="mail" placeholder="Your Email">
@@ -337,7 +328,7 @@
                 </ul>
             </section><!--footer about us-->
             <section class="link">
-                <h3>Quick Links</h3>
+                <h4>Quick Links</h4>
                 <ul>
                     <li>
                         <i class="fa-solid fa-angle-right"></i>
@@ -345,19 +336,23 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-angle-right"></i>
-                        <a href="">About us</a>
+                        <a href="#services">Our Services</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-angle-right"></i>
-                        <a href="">Our Services</a>
+                        <a href="#qa">Q & A</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-angle-right"></i>
-                        <a href="#">Blog</a>
+                        <a href="sitterlist.html">Search Sitter</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-angle-right"></i>
-                        <a href="#">Contact Us</a>
+                        <a href="#">Sign Up</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-angle-right"></i>
+                        <a href="#">Sign In</a>
                     </li>
                 </ul>
             </section><!--link-->
@@ -365,6 +360,6 @@
 
         <p>Copyright &copy; Bawwow sitter service </p>
     </footer>
-    <script src="js/script.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
 </body>
 </html>

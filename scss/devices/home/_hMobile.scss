@@ -1,11 +1,10 @@
 @media (min-width: $mobileScreen){
 
   p{
-    color: gray
+    color:dimgray;
   }
   body,
   .home-main,
-  .search-sitter > figure,
   .about > section,
   .services,
   .services > section,
@@ -29,7 +28,7 @@
   header
   ======================*/
   .header-container{
-    height: 7vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,14 +38,14 @@
       column-gap: 1vh;
       i{
         font-size: 25px;
-        color:$orangeColor;
+        color:$title
       }
     }
     .fa-bars{
       font-size: 20px;
     }
     h1{
-      color: $orangeColor;
+      color: $title;
     }
   }
   .overlay{
@@ -56,33 +55,41 @@
   search-sitter
   ======================*/
   .search-sitter{
-    img{
-      height: 40vh;
+    height: 50vh;
+    background-image: url(/img/home-img/home-dog7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h2,p{
+      width: 45%;
+      color: white;
     }
     p{
-      color: white;
+      padding-bottom: 3vh
     }
-    figure{
-      position: relative;
-    }
-    figcaption{
-      position: absolute;
-      width: 50%;
-      right: 1%;
-      top: 10%;
+    a{
+      background-color:sandybrown;
+      padding: 2vh;
       color: white;
+      border: 1px solid sandybrown;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-right: 4vh
+    }
+    .ss-container{
+      >article{
+        @include columnRow(2vh);
+        padding-top: 7vh;
+        padding-right: 2vh;
+        align-items: flex-end;
+      }
     }
     form{
-      position: absolute;
-      bottom: -50%;
-      left: 13%;
-      width: 40vh;
-      padding: 3%;
-      background-color:$secondColor;
-      border-radius: 10px;
-      box-shadow: 3px 3px 4px gray;
+      display: none;
     }
+
   }
+
   /*=====================
   about
   ======================*/
@@ -102,7 +109,7 @@
   ======================*/
   .services{
     padding: 5vh 0;
-    background-color: $secondColor;
+    background-color: $background;
     row-gap: 5vh;
     align-items: center;
     > section{
@@ -125,12 +132,12 @@
     }
     i{
       font-size: 40px;
-      color: $orangeColor;
+      color: $title
     }
   }
   .trust-sitter{
     margin-top: 5vh;
-    border: 1px solid lightgrey;
+    border: 1px solid dimgray;
     padding: 3vh 0;
     aside{
       display: flex;
@@ -179,7 +186,7 @@
   ======================*/
   .blog{
     padding: 8vh 0;
-    background-color: $grayBack;
+    background-color: $box;
     @include flex-center;
     row-gap: 3vh;
     > section{
@@ -215,7 +222,7 @@
   ======================*/
   .contact{
     padding: 5vh 0;
-    background-color: $secondColor;
+    background-color: $box2;
     align-items: center;
     row-gap: 2vh;
     form{
@@ -230,7 +237,7 @@
       border-radius: 5px;
     }
     [type="submit"]{
-      background-color: $orangeColor;
+      background-color:$title;
       color: white;
     }
   }
@@ -242,16 +249,19 @@
     padding-left: 5%;
     background-color: gray;
     color: white;
-    row-gap: 2vh;
+    row-gap: 4vh;
     > article{
-      row-gap: 1vh;
+      row-gap: 3vh;
     }
     ul{
       padding-left: 4%;
     }
+    h2{
+      width: 70%;
+    }
     h3{
       border-bottom: 1px solid white;
-      width: 35%;
+      width: 25%;
     }
     a{
       color:white;
@@ -266,7 +276,7 @@
   ======================*/
   footer{
     padding-top: 8vh;
-    background-color: $secondColor;
+    background-color: $box2;
     @include flex-column;
     @include flex-center;
     >section{
@@ -289,20 +299,20 @@
     }
     ul{
       display: flex;
-      width: 100%;
+      width: 70%;
     }
     li{
       display: flex;
-      width: 70%;
+      width: 100%;
     }
     a{
       display: flex;
       @include flex-center;
       width:5vh;
       height: 5vh;
-      border: 2px solid $orangeColor;
+      border: 2px solid $title;
       border-radius: 50%;
-      background-color: $orangeColor;
+      background-color: $title;
       color: white;
     }
   }
@@ -310,8 +320,10 @@
     padding-bottom: 3vh;
     ul{
       list-style-type: none;
+      @include flex-column;
+      row-gap: 1vh;
     }
-    h3{
+    h4{
       padding-bottom: 2vh;
     }
     a{

@@ -18,11 +18,10 @@ a {
 
 @media (min-width: 300px) {
   p {
-    color: gray;
+    color: dimgray;
   }
   body,
   .home-main,
-  .search-sitter > figure,
   .about > section,
   .services,
   .services > section,
@@ -46,7 +45,7 @@ a {
   header
   ======================*/
   .header-container {
-    height: 7vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,13 +58,13 @@ a {
   }
   .header-container > section i {
     font-size: 25px;
-    color: #ef8b59;
+    color: #9E6F21;
   }
   .header-container .fa-bars {
     font-size: 20px;
   }
   .header-container h1 {
-    color: #ef8b59;
+    color: #9E6F21;
   }
   .overlay {
     display: none;
@@ -73,31 +72,39 @@ a {
   /*=====================
   search-sitter
   ======================*/
-  .search-sitter img {
-    height: 40vh;
+  .search-sitter {
+    height: 50vh;
+    background-image: url(/img/home-img/home-dog7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .search-sitter h2, .search-sitter p {
+    width: 45%;
+    color: white;
   }
   .search-sitter p {
-    color: white;
+    padding-bottom: 3vh;
   }
-  .search-sitter figure {
-    position: relative;
-  }
-  .search-sitter figcaption {
-    position: absolute;
-    width: 50%;
-    right: 1%;
-    top: 10%;
+  .search-sitter a {
+    background-color: sandybrown;
+    padding: 2vh;
     color: white;
+    border: 1px solid sandybrown;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-right: 4vh;
+  }
+  .search-sitter .ss-container > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    padding-top: 7vh;
+    padding-right: 2vh;
+    align-items: flex-end;
   }
   .search-sitter form {
-    position: absolute;
-    bottom: -50%;
-    left: 13%;
-    width: 40vh;
-    padding: 3%;
-    background-color: #faf3eb;
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px gray;
+    display: none;
   }
   /*=====================
   about
@@ -118,7 +125,7 @@ a {
   ======================*/
   .services {
     padding: 5vh 0;
-    background-color: #faf3eb;
+    background-color: #D4F4FC;
     row-gap: 5vh;
     align-items: center;
   }
@@ -143,11 +150,11 @@ a {
   }
   .service i {
     font-size: 40px;
-    color: #ef8b59;
+    color: #9E6F21;
   }
   .trust-sitter {
     margin-top: 5vh;
-    border: 1px solid lightgrey;
+    border: 1px solid dimgray;
     padding: 3vh 0;
   }
   .trust-sitter aside {
@@ -205,7 +212,7 @@ a {
   ======================*/
   .blog {
     padding: 8vh 0;
-    background-color: #fafafa;
+    background-color: #B8E7E1;
     align-items: center;
     justify-content: center;
     row-gap: 3vh;
@@ -248,7 +255,7 @@ a {
   ======================*/
   .contact {
     padding: 5vh 0;
-    background-color: #faf3eb;
+    background-color: #FFEEB3;
     align-items: center;
     row-gap: 2vh;
   }
@@ -264,7 +271,7 @@ a {
     border-radius: 5px;
   }
   .contact [type=submit] {
-    background-color: #ef8b59;
+    background-color: #9E6F21;
     color: white;
   }
   /*=====================
@@ -275,17 +282,20 @@ a {
     padding-left: 5%;
     background-color: gray;
     color: white;
-    row-gap: 2vh;
+    row-gap: 4vh;
   }
   .location > article {
-    row-gap: 1vh;
+    row-gap: 3vh;
   }
   .location ul {
     padding-left: 4%;
   }
+  .location h2 {
+    width: 70%;
+  }
   .location h3 {
     border-bottom: 1px solid white;
-    width: 35%;
+    width: 25%;
   }
   .location a {
     color: white;
@@ -300,7 +310,7 @@ a {
   ======================*/
   footer {
     padding-top: 8vh;
-    background-color: #faf3eb;
+    background-color: #FFEEB3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -326,11 +336,11 @@ a {
   }
   .footer-aboutus ul {
     display: flex;
-    width: 100%;
+    width: 70%;
   }
   .footer-aboutus li {
     display: flex;
-    width: 70%;
+    width: 100%;
   }
   .footer-aboutus a {
     display: flex;
@@ -338,9 +348,9 @@ a {
     justify-content: center;
     width: 5vh;
     height: 5vh;
-    border: 2px solid #ef8b59;
+    border: 2px solid #9E6F21;
     border-radius: 50%;
-    background-color: #ef8b59;
+    background-color: #9E6F21;
     color: white;
   }
   .link {
@@ -348,8 +358,11 @@ a {
   }
   .link ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
   }
-  .link h3 {
+  .link h4 {
     padding-bottom: 2vh;
   }
   .link a {
@@ -360,20 +373,29 @@ a {
   /*=====================
   header
   ======================*/
+  .header-container {
+    height: 8vh;
+    padding: 0 5vh;
+  }
   .header-container > section {
+    width: 50vh;
     align-items: center;
   }
   .header-container > section i {
     font-size: 35px;
   }
   .header-container h1 {
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .header-container article {
+    width: 50vh;
   }
   .header-container .fa-bars {
     display: none;
   }
   .header-container nav {
-    width: 50vh;
+    width: 100%;
     height: 100%;
     display: flex;
   }
@@ -381,6 +403,7 @@ a {
     width: 100%;
     list-style-type: none;
     display: flex;
+    justify-content: space-between;
   }
   .header-container li {
     width: 100%;
@@ -393,6 +416,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #9E6F21;
   }
   .overlay {
     height: 100%;
@@ -402,22 +426,62 @@ a {
     display: none;
   }
   /*=====================
+  home-main
+  ======================*/
+  .home-main h3 {
+    font-size: 30px;
+  }
+  /*=====================
   search-sitter
   ======================*/
-  .search-sitter img {
-    height: 60vh;
-  }
-  .search-sitter figcaption {
-    width: 40%;
-    right: 4%;
+  .search-sitter {
+    height: 50vh;
   }
   .search-sitter h2 {
-    font-size: 28px;
+    font-size: 30px;
+  }
+  .search-sitter a {
+    display: none;
   }
   .search-sitter form {
-    width: 30vh;
-    bottom: 10%;
-    left: 32vh;
+    padding-top: 2vh;
+    padding-right: 2vh;
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search-sitter form > section {
+    background-color: #FFEEB3;
+    width: 45%;
+    padding: 2vh;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px;
+  }
+  .search-sitter form section,
+  .search-sitter form article,
+  .search-sitter form aside {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-sitter .dogorcat {
+    flex-direction: row;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+    padding-bottom: 2%;
+  }
+  .search-sitter .dogorcat aside {
+    flex-direction: row;
+    -moz-column-gap: 10%;
+         column-gap: 10%;
+  }
+  .search-sitter input, .search-sitter select {
+    padding: 1%;
+    margin-bottom: 2%;
+    border-color: gray;
+    border-radius: 5px;
+  }
+  .search-sitter label {
+    font-weight: 600;
   }
   /*=====================
   about
@@ -472,7 +536,7 @@ a {
   contact
   ======================*/
   .contact form {
-    width: 80%;
+    width: 60%;
   }
   /*=====================
   location
@@ -489,7 +553,7 @@ a {
     padding-right: 2%;
   }
   .location h3 {
-    width: 55%;
+    width: 40%;
   }
   /*=====================
   footer
@@ -508,19 +572,14 @@ a {
 }
 @media (min-width: 1000px) {
   /*=====================
+  header
+  ======================*/
+  .header-contain nav {
+    width: 60vh;
+  }
+  /*=====================
   search-sitter
   ======================*/
-  .search-sitter img {
-    height: 80vh;
-  }
-  .search-sitter h2 {
-    font-size: 40px;
-  }
-  .search-sitter form {
-    width: 60vh;
-    bottom: 10%;
-    left: 70vh;
-  }
   /*=====================
   services
   ======================*/

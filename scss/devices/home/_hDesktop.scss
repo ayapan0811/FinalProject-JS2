@@ -1,21 +1,17 @@
 @media (min-width: $desktopScreen){
 
   /*=====================
-  search-sitter
+  header
   ======================*/
-  .search-sitter{
-    img{
-      height: 80vh;
-    }
-    h2{
-      font-size: 40px;
-    }
-     form{
+  .header-contain{
+    nav{
       width: 60vh;
-      bottom: 10%;
-      left:70vh;
     }
   }
+  /*=====================
+  search-sitter
+  ======================*/
+ 
    /*=====================
   services
   ======================*/
