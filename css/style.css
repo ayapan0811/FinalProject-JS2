@@ -30,6 +30,7 @@ a {
   .booking-flow > section,
   .booking-flow > article,
   .blog,
+  .QandA,
   .contact,
   .contact form,
   .location,
@@ -251,6 +252,48 @@ a {
     padding-right: 2vh;
   }
   /*=====================
+  QandA
+  ======================*/
+  .QandA {
+    padding: 5vh 0;
+    align-items: center;
+  }
+  .QandA section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .QandA h3 {
+    width: 90%;
+    border-bottom: 2px solid;
+  }
+  .QandA p {
+    display: none;
+  }
+  .QandA h4 {
+    font-size: 14px;
+    position: relative;
+    background-color: #D4F4FC;
+    padding: 1vh;
+    cursor: pointer;
+  }
+  .QandA h4::after {
+    content: "+";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: 0.4s;
+  }
+  .QandA span {
+    color: #9E6F21;
+  }
+  .QandA article.appear p {
+    display: block;
+  }
+  .QandA article.appear h4::after {
+    transform: rotate(45deg);
+  }
+  /*=====================
   contact
   ======================*/
   .contact {
@@ -367,110 +410,6 @@ a {
   }
   .link a {
     color: dimgrey;
-  }
-}
-@media (min-width: 300px) {
-  .sitterList-main {
-    padding-top: 5vh;
-    display: flex;
-    justify-content: center;
-  }
-  .sitterList-main > section {
-    display: flex;
-    flex-direction: column;
-    row-gap: 5vh;
-    width: 90%;
-  }
-  .sitterList-main img {
-    width: 15vh;
-  }
-  .sitterList-main h2 {
-    font-size: 30px;
-    padding-bottom: 2vh;
-    color: #9E6F21;
-  }
-  form {
-    padding: 2vh;
-    background-color: #FFEEB3;
-  }
-  form > section {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2vh;
-  }
-  form input, form select {
-    padding: 2%;
-    border-color: gray;
-    border-radius: 5px;
-    color: gray;
-  }
-  form aside, form article {
-    display: flex;
-    flex-direction: column;
-  }
-  .dogorcat {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1vh;
-  }
-  .dogorcat section {
-    display: flex;
-    -moz-column-gap: 2vh;
-         column-gap: 2vh;
-  }
-  .dogorcat small {
-    font-size: 16px;
-  }
-  .dogorcat aside {
-    flex-direction: row;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-  }
-  .right-list > section {
-    width: 100%;
-    border-top: 1px solid gray;
-  }
-  .right-list h3 {
-    font-size: 20px;
-  }
-  .right-list figure {
-    display: flex;
-    padding: 2vh 0;
-    -moz-column-gap: 3vh;
-         column-gap: 3vh;
-  }
-  .right-list figcaption {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1vh;
-    width: 100%;
-  }
-  .right-list figcaption aside {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-  }
-  .right-list figcaption article {
-    display: none;
-  }
-  .right-list .fa-shield-dog {
-    font-size: 18px;
-  }
-  .right-list span {
-    padding-right: 1vh;
-  }
-  .right-list ul {
-    list-style-type: none;
-    display: flex;
-    -moz-column-gap: 2vh;
-         column-gap: 2vh;
-  }
-  .right-list li {
-    display: flex;
-    background-color: #D4F4FC;
-    border-radius: 10px;
-    padding: 1%;
   }
 }
 @media (min-width: 700px) {
@@ -646,6 +585,15 @@ a {
     display: none;
   }
   /*=====================
+  QandA
+  ======================*/
+  .QandA h4 {
+    font-size: 25px;
+  }
+  .QandA article.appear p {
+    font-size: 20px;
+  }
+  /*=====================
   contact
   ======================*/
   .contact form {
@@ -681,31 +629,6 @@ a {
   }
   .link {
     width: 25%;
-  }
-}
-@media (min-width: 700px) {
-  .sitterList-main form {
-    padding: 4vh;
-  }
-  .sitterList-main label {
-    font-size: 20px;
-  }
-  .right-list > section:hover {
-    transition: 0.6s;
-    background-color: #B8E7E1;
-  }
-  .right-list h3 {
-    font-size: 30px;
-  }
-  .right-list img {
-    width: 20vh;
-    height: 15vh;
-  }
-  .right-list figcaption article {
-    display: block;
-  }
-  .right-list .fa-shield-dog {
-    font-size: 28px;
   }
 }
 @media (min-width: 1000px) {
@@ -759,6 +682,16 @@ a {
     height: 30vh;
   }
   /*=====================
+  QandA
+  ======================*/
+  .QandA h4 {
+    font-size: 30px;
+    padding: 2vh;
+  }
+  .QandA article.appear p {
+    font-size: 25px;
+  }
+  /*=====================
   contact
   ======================*/
   .contact form {
@@ -770,12 +703,5 @@ a {
   .location h3 {
     width: 47%;
     font-size: 24px;
-  }
-}
-@media (min-width: 1000px) {
-  .sitterList-main > section {
-    flex-direction: row;
-    -moz-column-gap: 3vh;
-         column-gap: 3vh;
   }
 }/*# sourceMappingURL=style.css.map */

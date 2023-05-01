@@ -3,10 +3,12 @@
         >section{
             width: 100%;
             flex-direction: row;
+            justify-content: space-around;
             column-gap: 3vh;
         }
     }
     .right-list{
+        width: 100%;
         display: flex;
         >section{
             width: 60vh;

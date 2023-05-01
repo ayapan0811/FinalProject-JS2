@@ -13,7 +13,7 @@
     <header>
         <section class="header-container">
             <section>
-                <a href="#">
+                <a href="index.html">
                     <i class="fa-solid fa-dog"></i>
                 </a>
                 <h1>Bawwau Sitter</h1>
@@ -92,18 +92,27 @@
                         </article>
                         <article><!--select day time-->
                             <aside>
-                                <label for="day">For these days</label>
-                                <input type="date">
+                                <label for="day">For which days?</label>
+                               <select name="day" id="day">
+                                <option value="none" disabled selected>Select day</option>
+                                <option value="Sunday">Sunday</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                               </select>
                             </aside>
                         </article>
                         <article><!--select size-->
                             <label for="select-size">My Dog Size</label>
                             <select name="select-size" id="select-size">
                                 <option value="none" disabled selected>Select your dog size</option>
-                                <option value="-10">-10</option>
-                                <option value="11-25">11-25</option>
-                                <option value="25-45">25-45</option>
-                                <option value="46-">46-</option>
+                                <option value="-10">~10kg</option>
+                                <option value="11-25">10~25kg</option>
+                                <option value="25-45">25~45kg</option>
+                                <option value="46-">45kg~</option>
                             </select>
                         </article>
                     </section>
@@ -250,8 +259,38 @@
             </section>
         </section><!--blog-->
 
-        <section class="contact" id="qa">
+        <section class="QandA" id="QandA">
             <h3>Q & A</h3>
+            <section><!--dl-->
+                <article><!--div-->
+                    <h4><span>Q: </span> Who is gonna provide pet food?</h4><!--dt-->
+                    <p><!--dd-->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                    </p>
+                </article>
+                <article><!--div-->
+                    <h4><span>Q: </span> Do you accept animals other than dogs and cats?</h4><!--dt-->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                    </p>
+                </article>
+                <article><!--div-->
+                    <h4><span>Q: </span>Allergy, diseases?</h4><!--dt-->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                    </p>
+                </article>
+                <article><!--div-->
+                    <h4><span>Q: </span>Method of payment?</h4><!--dt-->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                    </p>
+                </article>
+            </section>
+        </section>
+
+        <section class="contact" id="contact">
+            <h3>Contact</h3>
             <form action="#">
                 <input type="text" name="name" id="name" placeholder="Your Name">
                 <input type="mail" name="mail" id="mail" placeholder="Your Email">
