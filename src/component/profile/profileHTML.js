@@ -21,7 +21,6 @@ jQuery.extend({
 })
 
 let sittersData = $.getJsonData(sitterUrl);
-console.log(sittersData);
 //END: getting JSON file
 //START: Profile page top part
 function ProfileTop(){
@@ -223,7 +222,7 @@ function App(){
     $("#root").ready(function(){
 
         //START: showing Json file data to profile page
-        let selectedSitterId = 17;
+        let selectedSitterId = 49;
         let selectedSitter = sittersData[selectedSitterId];
 
         $('[alt="mainPic"]').attr("src",selectedSitter.picture);
