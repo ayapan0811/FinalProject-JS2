@@ -129,8 +129,8 @@ function ProfileLeft(){
         <section className="proLeft">
             <SitterAvailability/>
             <figure>
-                <img src="img/proCat.jpg" alt="sitterPic1"/>
-                <img src="img/proDog.jpg" alt="sitterPic2"/>
+                <img src="http://127.0.0.1:5500/src/img/proCat.jpg" alt="sitterPic1"/>
+                <img src="http://127.0.0.1:5500/src/img/proDog.jpg" alt="sitterPic2"/>
             </figure>
             <article>
                 <p>
