@@ -17,691 +17,125 @@ a {
 }
 
 @media (min-width: 300px) {
-  p {
-    color: dimgray;
+  .sitterList-main {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
   }
-  body,
-  .home-main,
-  .about > section,
-  .services,
-  .services > section,
-  .service,
-  .booking-flow,
-  .booking-flow > section,
-  .booking-flow > article,
-  .blog,
-  .QandA,
-  .contact,
-  .contact form,
-  .location,
-  .location article {
+  .sitterList-main > section {
     display: flex;
     flex-direction: column;
+    row-gap: 5vh;
+    width: 90%;
   }
-  .home-main > section {
-    display: flex;
-    flex-direction: column;
+  .sitterList-main img {
+    width: 15vh;
   }
-  /*=====================
-  header
-  ======================*/
-  .header-container {
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2vh;
-  }
-  .header-container > section {
-    display: flex;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-  }
-  .header-container > section i {
-    font-size: 25px;
+  .sitterList-main h2 {
+    font-size: 30px;
+    padding-bottom: 2vh;
     color: #9E6F21;
   }
-  .header-container .fa-bars {
-    font-size: 20px;
-  }
-  .header-container h1 {
-    color: #9E6F21;
-  }
-  .overlay {
-    display: none;
-  }
-  /*=====================
-  search-sitter
-  ======================*/
-  .search-sitter {
-    height: 50vh;
-    background-image: url(/img/home-img/home-dog7.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .search-sitter h2, .search-sitter p {
-    width: 45%;
-    color: white;
-  }
-  .search-sitter p {
-    padding-bottom: 3vh;
-  }
-  .search-sitter a {
-    background-color: sandybrown;
+  form {
     padding: 2vh;
-    color: white;
-    border: 1px solid sandybrown;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-right: 4vh;
-  }
-  .search-sitter .ss-container > article {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2vh;
-    padding-top: 7vh;
-    padding-right: 2vh;
-    align-items: flex-end;
-  }
-  .search-sitter form {
-    display: none;
-  }
-  /*=====================
-  about
-  ======================*/
-  .about {
-    padding-top: 10vh;
-    padding-bottom: 8vh;
-    display: flex;
-    align-items: center;
-  }
-  .about > section {
-    width: 90%;
-    text-align: center;
-    row-gap: 3vh;
-  }
-  /*=====================
-  services
-  ======================*/
-  .services {
-    padding: 5vh 0;
-    background-color: #D4F4FC;
-    row-gap: 5vh;
-    align-items: center;
-  }
-  .services > section {
-    width: 90%;
-  }
-  .services h3 {
-    width: 50%;
-    text-align: center;
-  }
-  .service {
-    row-gap: 5vh;
-  }
-  .service aside {
-    display: flex;
-    -moz-column-gap: 2vh;
-         column-gap: 2vh;
-    background-color: white;
-    padding: 3%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px lightgray;
-  }
-  .service i {
-    font-size: 40px;
-    color: #9E6F21;
-  }
-  .trust-sitter {
-    margin-top: 5vh;
-    border: 1px solid dimgray;
-    padding: 3vh 0;
-  }
-  .trust-sitter aside {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-    padding-bottom: 2vh;
-  }
-  .trust-sitter ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 3vh;
-    align-items: center;
-    justify-content: center;
-  }
-  .trust-sitter li {
-    display: flex;
-    width: 80%;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-  }
-  .trust-sitter i {
-    color: mediumseagreen;
-  }
-  /*=====================
-  booking-flow
-  ======================*/
-  .booking-flow {
-    padding: 8vh 0;
-    align-items: center;
-    justify-content: center;
-    row-gap: 5vh;
-  }
-  .booking-flow > section,
-  .booking-flow > article {
-    width: 90%;
-    text-align: center;
-  }
-  .booking-flow > article {
-    row-gap: 5vh;
-  }
-  .booking-flow aside {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2vh;
-  }
-  .booking-flow i {
-    font-size: 40px;
-  }
-  /*=====================
-  blog
-  ======================*/
-  .blog {
-    padding: 8vh 0;
-    background-color: #B8E7E1;
-    align-items: center;
-    justify-content: center;
-    row-gap: 3vh;
-  }
-  .blog > section {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 5vh;
-  }
-  .blog img {
-    height: 30vh;
-  }
-  .blog figure {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2vh;
-    background-color: white;
-    padding-bottom: 2vh;
-    box-shadow: 2px 2px 3px gray;
-  }
-  .blog figcaption {
-    display: flex;
-    flex-direction: column;
-    padding: 0 2vh;
-  }
-  .blog a {
-    padding-left: 2vh;
-  }
-  .blog aside {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-    justify-content: flex-end;
-    padding-right: 2vh;
-  }
-  /*=====================
-  QandA
-  ======================*/
-  .QandA {
-    padding: 5vh 0;
-    align-items: center;
-  }
-  .QandA section {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-  }
-  .QandA h3 {
-    width: 90%;
-    border-bottom: 2px solid;
-  }
-  .QandA p {
-    display: none;
-  }
-  .QandA h4 {
-    font-size: 14px;
-    position: relative;
-    background-color: #D4F4FC;
-    padding: 1vh;
-    cursor: pointer;
-  }
-  .QandA h4::after {
-    content: "+";
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    transition: 0.4s;
-  }
-  .QandA span {
-    color: #9E6F21;
-  }
-  .QandA article.appear p {
-    display: block;
-  }
-  .QandA article.appear h4::after {
-    transform: rotate(45deg);
-  }
-  /*=====================
-  contact
-  ======================*/
-  .contact {
-    padding: 5vh 0;
     background-color: #FFEEB3;
-    align-items: center;
+  }
+  form > section {
+    display: flex;
+    flex-direction: column;
     row-gap: 2vh;
   }
-  .contact form {
-    width: 90%;
-    padding: 3vh;
-    row-gap: 2vh;
-  }
-  .contact input,
-  .contact textarea {
-    border: none;
-    padding: 2vh;
+  form input, form select {
+    padding: 2%;
+    border-color: gray;
     border-radius: 5px;
+    color: gray;
   }
-  .contact [type=submit] {
-    background-color: #9E6F21;
-    color: white;
-  }
-  /*=====================
-  location
-  ======================*/
-  .location {
-    padding: 8vh 0;
-    padding-left: 5%;
-    background-color: gray;
-    color: white;
-    row-gap: 4vh;
-  }
-  .location > article {
-    row-gap: 3vh;
-  }
-  .location ul {
-    padding-left: 4%;
-  }
-  .location h2 {
-    width: 70%;
-  }
-  .location h3 {
-    border-bottom: 1px solid white;
-    width: 25%;
-  }
-  .location a {
-    color: white;
-    -webkit-text-decoration: dashed;
-            text-decoration: dashed;
-  }
-  .location i {
-    font-size: 40px;
-  }
-  /*=====================
-  footer
-  ======================*/
-  footer {
-    padding-top: 8vh;
-    background-color: #FFEEB3;
+  form aside, form article {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
-  footer > section {
-    width: 90%;
-  }
-  footer > p {
-    width: 100%;
-    border-top: 1px solid dimgray;
-    padding: 2vh;
-    text-align: center;
-  }
-  .footer-aboutus {
-    padding-bottom: 3vh;
-  }
-  .footer-aboutus h4 {
-    font-size: 18px;
-  }
-  .footer-aboutus p {
-    padding-bottom: 3vh;
-  }
-  .footer-aboutus ul {
-    display: flex;
-    width: 70%;
-  }
-  .footer-aboutus li {
-    display: flex;
-    width: 100%;
-  }
-  .footer-aboutus a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5vh;
-    height: 5vh;
-    border: 2px solid #9E6F21;
-    border-radius: 50%;
-    background-color: #9E6F21;
-    color: white;
-  }
-  .link {
-    padding-bottom: 3vh;
-  }
-  .link ul {
-    list-style-type: none;
+  .dogorcat {
     display: flex;
     flex-direction: column;
     row-gap: 1vh;
   }
-  .link h4 {
-    padding-bottom: 2vh;
-  }
-  .link a {
-    color: dimgrey;
-  }
-}
-@media (min-width: 700px) {
-  /*=====================
-  header
-  ======================*/
-  .header-container {
-    height: 8vh;
-    padding: 0 5vh;
-  }
-  .header-container > section {
-    width: 50vh;
-    align-items: center;
-  }
-  .header-container > section i {
-    font-size: 35px;
-  }
-  .header-container h1 {
-    font-size: 30px;
-    font-weight: 900;
-  }
-  .header-container article {
-    width: 50vh;
-  }
-  .header-container .fa-bars {
-    display: none;
-  }
-  .header-container nav {
-    width: 100%;
-    height: 100%;
+  .dogorcat section {
     display: flex;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
   }
-  .header-container ul {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+  .dogorcat small {
+    font-size: 16px;
   }
-  .header-container li {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-  .header-container li a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #9E6F21;
-  }
-  .overlay {
-    height: 100%;
-    display: block;
-  }
-  .fa-xmark {
-    display: none;
-  }
-  /*=====================
-  home-main
-  ======================*/
-  .home-main h2 {
-    font-size: 35px;
-  }
-  .home-main h3 {
-    font-size: 30px;
-  }
-  .home-main li {
-    font-size: 20px;
-  }
-  .home-main p {
-    font-size: 18px;
-  }
-  /*=====================
-  search-sitter
-  ======================*/
-  .search-sitter {
-    height: 50vh;
-  }
-  .search-sitter h2 {
-    font-size: 30px;
-  }
-  .search-sitter a {
-    display: none;
-  }
-  .search-sitter form {
-    padding-top: 2vh;
-    padding-right: 2vh;
-    display: block;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .search-sitter form > section {
-    background-color: #FFEEB3;
-    width: 45%;
-    padding: 2vh;
-    border-radius: 15px;
-    box-shadow: 10px 10px 20px;
-  }
-  .search-sitter form section,
-  .search-sitter form article,
-  .search-sitter form aside {
-    display: flex;
-    flex-direction: column;
-  }
-  .search-sitter .dogorcat {
+  .dogorcat aside {
     flex-direction: row;
     -moz-column-gap: 1vh;
          column-gap: 1vh;
-    padding-bottom: 2%;
   }
-  .search-sitter .dogorcat aside {
-    flex-direction: row;
-    -moz-column-gap: 10%;
-         column-gap: 10%;
+  .right-list > section {
+    width: 100%;
+    border-top: 1px solid gray;
   }
-  .search-sitter input, .search-sitter select {
-    padding: 1%;
-    margin-bottom: 2%;
-    border-color: gray;
-    border-radius: 5px;
-  }
-  .search-sitter label {
-    font-weight: 600;
-  }
-  /*=====================
-  about
-  ======================*/
-  .about {
-    padding: 8vh 0;
-  }
-  .about > section {
-    width: 80%;
-  }
-  /*=====================
-  services
-  ======================*/
-  .services > section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .service {
-    width: 45%;
-  }
-  .trust-sitter {
-    width: 50%;
-    margin-top: 0;
-  }
-  /*=====================
-  booking-flow
-  ======================*/
-  .booking-flow > article {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .booking-flow aside {
-    width: 30%;
-  }
-  /*=====================
-  blog
-  ======================*/
-  .blog > section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .blog img {
-    height: 15vh;
-  }
-  .blog figure {
-    width: 30%;
-  }
-  .blog figcaption p {
-    display: none;
-  }
-  /*=====================
-  QandA
-  ======================*/
-  .QandA h4 {
-    font-size: 25px;
-  }
-  .QandA article.appear p {
+  .right-list h3 {
     font-size: 20px;
   }
-  /*=====================
-  contact
-  ======================*/
-  .contact form {
-    width: 60%;
-  }
-  /*=====================
-  location
-  ======================*/
-  .location > article {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .location aside {
-    width: 30%;
-  }
-  .location i {
-    font-size: 50px;
-    padding-right: 2%;
-  }
-  .location h3 {
-    width: 40%;
-  }
-  /*=====================
-  footer
-  ======================*/
-  footer > section {
+  .right-list figure {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 5vh;
+    padding: 2vh 0;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
   }
-  .footer-aboutus {
-    width: 60%;
+  .right-list figcaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    width: 100%;
   }
-  .link {
-    width: 25%;
+  .right-list figcaption aside {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+  }
+  .right-list figcaption article {
+    display: none;
+  }
+  .right-list .fa-shield-dog {
+    font-size: 18px;
+  }
+  .right-list span {
+    padding-right: 1vh;
+  }
+  .right-list ul {
+    list-style-type: none;
+    display: flex;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  .right-list li {
+    display: flex;
+    background-color: #D4F4FC;
+    border-radius: 10px;
+    padding: 1%;
   }
 }
 @media (min-width: 1000px) {
-  /*=====================
-  header
-  ======================*/
-  .header-contain nav {
+  .sitterList-main > section {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+  }
+  .right-list {
+    width: 100%;
+    display: flex;
+  }
+  .right-list > section {
     width: 60vh;
   }
-  /*=====================
-  search-sitter
-  ======================*/
-  .home-main p, .home-main a {
-    font-size: 20px;
-  }
-  .home-main h4 {
-    font-size: 30px;
-  }
-  .search-sitter {
-    height: 90vh;
-  }
-  .search-sitter h2 {
-    font-size: 45px;
-  }
-  .search-sitter p {
-    font-size: 20px;
-  }
-  .search-sitter form {
-    padding-top: 8vh;
-    padding-right: 8vh;
-  }
-  .search-sitter form > section {
-    width: 40%;
-  }
-  .search-sitter input, .search-sitter select {
-    padding: 2%;
-  }
-  .search-sitter label {
-    font-size: 20px;
-  }
-  /*=====================
-  services
-  ======================*/
-  .services {
-    padding: 10vh 0;
-  }
-  /*=====================
-  blog
-  ======================*/
-  .blog img {
-    height: 30vh;
-  }
-  /*=====================
-  QandA
-  ======================*/
-  .QandA h4 {
-    font-size: 30px;
-    padding: 2vh;
-  }
-  .QandA article.appear p {
-    font-size: 25px;
-  }
-  /*=====================
-  contact
-  ======================*/
-  .contact form {
-    width: 60%;
-  }
-  /*=====================
-  location
-  ======================*/
-  .location h3 {
-    width: 47%;
-    font-size: 24px;
+  .right-list figure {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
