@@ -222,7 +222,7 @@ function App(){
     $("#root").ready(function(){
 
         //START: showing Json file data to profile page
-        let selectedSitterId = 49;
+        let selectedSitterId = 43;
         let selectedSitter = sittersData[selectedSitterId];
 
         $('[alt="mainPic"]').attr("src",selectedSitter.picture);

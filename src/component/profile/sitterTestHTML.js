@@ -72,11 +72,11 @@ function App(){
             }
             
         function gettingId(ID){
+            console.log(ID);
             return ID;
         }
-        console.log(gettingId());
-
         // console.log(gettingId());
+
            
         // function selectId(){
         //     for(let i=0; i<100; i++){
