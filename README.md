@@ -13,7 +13,6 @@ Final document link: https://docs.google.com/document/d/1FNOnIXpqb_XpKr8QrBwdX_Q
 
 Presentation1 slide link: https://docs.google.com/presentation/d/15FPbFVBprP8zdSdIg20krDAzNC6MXJJXkTvhScE7E5U/edit#slide=id.g219fbed4c9c_0_651
 
-<<<<<<< HEAD
 
 出来なかったこと
 exportとimport：原因はtype moduleにあることだがbabelを外すとreact自体機能しなくなってしまう
@@ -21,6 +20,4 @@ exportとimport：原因はtype moduleにあることだがbabelを外すとreac
 この二つが解決出来たらシッターリストとプロフィールページがつなげられる
 
 a
-=======
 Presentation2 slide link: https://docs.google.com/presentation/d/1rNoFo03ATrIwcP1OfDFlZN1t96epAmFuEdEcBpj1FBI/edit?usp=sharing
->>>>>>> 02c503e07425efee9d63f0ae295a9dbdfade6872
