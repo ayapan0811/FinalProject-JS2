@@ -18,3 +18,5 @@ Presentation1 slide link: https://docs.google.com/presentation/d/15FPbFVBprP8zdS
 exportとimport：原因はtype moduleにあることだがbabelを外すとreact自体機能しなくなってしまう
 シッターidの取得：関数内では取得できるが、クリック時のイベントでreadyも必要なため関数外で獲得できない→exportできるようになっても送れない可能性大
 この二つが解決出来たらシッターリストとプロフィールページがつなげられる
+
+a
