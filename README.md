@@ -1,5 +1,4 @@
-# FinalProject-JS2
-
+FinalProject-JS2
 Members: Aya, John, Katsushi
 
 Producion: Production branch
