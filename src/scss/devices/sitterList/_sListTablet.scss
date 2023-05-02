@@ -1,35 +1,31 @@
 @media (min-width: $tabletScreen){
     .sitterList-main{
+        >section{
+            flex-direction: row;
+            align-items: space;
+            column-gap: 2vh;
+            width: 95%;
+        }
+        .left-form{
+            width: 45%;
+        }
+        .right-list{
+            width: 60%;
+        }
         form{
-            padding: 4vh;
+            padding: 3vh;
         }
         label{
             font-size: 20px;
         }
-    }
-    .right-list{
-        >section{
-            width: 100%;
+        ol{
+            >li{
+                padding: 2vh ;
+            }
             &:hover{
                 transition: .6s;
-                background-color:$box1;
+                background-color: $box;
             }
-        }
-        h3{
-            font-size: 30px;
-        }
-        img{
-            width: 20vh;
-            height: 15vh;
-        }
-        figcaption{
-            // width: 100%;
-            article{
-                display: block;
-            }
-        }
-        .fa-shield-dog{
-            font-size: 28px;
         }
     }
 }
