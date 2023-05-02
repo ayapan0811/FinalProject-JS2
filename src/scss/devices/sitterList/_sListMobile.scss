@@ -1,0 +1,95 @@
+@media (min-width: $mobileScreen){
+
+    .sitterList-main{
+        padding-top: 5vh;
+        display: flex;
+        justify-content: center;
+        >section{
+            @include columnRow(5vh);
+            width: 90%;
+        }
+        img{
+            width: 15vh;
+        }
+        h2{
+            font-size: 30px;
+            padding-bottom: 2vh;
+            color: $title;
+        }
+    }
+    form{
+        // position: fixed;
+        padding: 2vh;
+        background-color: $box2;
+        >section{
+            @include columnRow(2vh);
+        }
+        input,select{
+            padding: 2%;
+            border-color: gray;
+            border-radius: 5px;
+            color: gray
+        }
+        aside,article{
+            @include flex-column;
+        }
+    }
+    .dogorcat{
+        @include columnRow(1vh);
+        section{
+            display: flex;
+            column-gap: 2vh;
+        }
+        small{
+            font-size: 16px;
+        }
+        aside{
+            flex-direction: row;
+            column-gap: 1vh;
+        }
+    }
+    .right-list{
+        >section{
+            width: 100%;
+            border-top: 1px solid gray;
+
+        }
+        h3{
+            font-size: 20px;
+        }
+        figure{
+            display: flex;
+            padding: 2vh 0;
+            column-gap: 3vh;
+        }
+        figcaption{
+            @include columnRow(1vh);
+            width: 100%;
+            aside{
+                display: flex;
+                align-items: center;
+                column-gap: 1vh;
+            }
+            article{
+                display: none;
+            }
+        }
+        .fa-shield-dog{
+            font-size: 18px;
+        }
+        span{
+            padding-right: 1vh;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            column-gap: 2vh;
+        }
+        li{
+            display: flex;
+            background-color: $background;
+            border-radius: 10px;
+            padding: 1%;
+        }
+    }
+}

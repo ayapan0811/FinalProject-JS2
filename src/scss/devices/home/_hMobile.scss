@@ -1,0 +1,376 @@
+@media (min-width: $mobileScreen){
+
+  p{
+    color:dimgray;
+  }
+  body,
+  .home-main,
+  .about > section,
+  .services,
+  .services > section,
+  .service,
+  .booking-flow,
+  .booking-flow > section,
+  .booking-flow > article,
+  .blog,
+  .QandA,
+  .contact,
+  .contact form,
+  .location,
+  .location article{
+    @include flex-column;
+  }
+  .home-main{
+    > section{
+      @include flex-column;
+    }
+  }
+  /*=====================
+  header
+  ======================*/
+  .header-container{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vh;
+    >section{
+      display: flex;
+      column-gap: 1vh;
+      i{
+        font-size: 25px;
+        color:$title
+      }
+    }
+    .fa-bars{
+      font-size: 20px;
+    }
+    h1{
+      color: $title;
+    }
+  }
+  .overlay{
+    display: none;
+  }
+  /*=====================
+  search-sitter
+  ======================*/
+  .search-sitter{
+    height: 50vh;
+    background-image: url(/img/home-img/home-dog7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h2,p{
+      width: 45%;
+      color: white;
+    }
+    p{
+      padding-bottom: 3vh
+    }
+    a{
+      background-color:sandybrown;
+      padding: 2vh;
+      color: white;
+      border: 1px solid sandybrown;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-right: 4vh
+    }
+    .ss-container{
+      >article{
+        @include columnRow(2vh);
+        padding-top: 7vh;
+        padding-right: 2vh;
+        align-items: flex-end;
+      }
+    }
+    form{
+      display: none;
+    }
+
+  }
+
+  /*=====================
+  about
+  ======================*/
+  .about{
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    display: flex;
+    align-items: center;
+    >section{
+      width: 90%;
+      text-align: center;
+      row-gap: 3vh;
+    }
+  }
+  /*=====================
+  services
+  ======================*/
+  .services{
+    padding: 5vh 0;
+    background-color: $background;
+    row-gap: 5vh;
+    align-items: center;
+    > section{
+      width: 90%;
+    }
+    h3{
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .service{
+    row-gap: 5vh;
+    aside{
+      display: flex;
+      column-gap: 2vh;
+      background-color: white;
+      padding: 3%;
+      border-radius: 10px;
+      box-shadow: 2px 2px 3px lightgray;
+    }
+    i{
+      font-size: 40px;
+      color: $title
+    }
+  }
+  .trust-sitter{
+    margin-top: 5vh;
+    border: 1px solid dimgray;
+    padding: 3vh 0;
+    aside{
+      display: flex;
+      @include flex-center;
+      column-gap: 1vh;
+      padding-bottom: 2vh;
+    }
+    ul{
+      list-style-type: none;
+      @include columnRow(3vh);
+      @include flex-center;
+    }
+    li{
+      display: flex;
+      width: 80%;
+      column-gap: 1vh;
+    }
+    i{
+      color: mediumseagreen;
+    }
+  }
+  /*=====================
+  booking-flow
+  ======================*/
+  .booking-flow{
+    padding: 8vh 0;
+    @include flex-center;
+    row-gap: 5vh;
+    > section,
+    > article{
+      width: 90%;
+      text-align: center;
+    }
+    > article{
+      row-gap: 5vh;
+    }
+    aside{
+      @include columnRow(2vh);
+    }
+    i{
+      font-size: 40px;
+    }
+  }
+  /*=====================
+  blog
+  ======================*/
+  .blog{
+    padding: 8vh 0;
+    background-color: $box;
+    @include flex-center;
+    row-gap: 3vh;
+    > section{
+      width: 90%;
+      @include columnRow(5vh);
+    }
+    img{
+      height: 30vh;
+    }
+    figure{
+      @include columnRow(2vh);
+      background-color: white;
+      padding-bottom: 2vh;
+      box-shadow: 2px 2px 3px gray;
+    }
+    figcaption{
+      @include flex-column;
+      padding: 0 2vh;
+    }
+    a{
+      padding-left: 2vh;
+    }
+    aside{
+      display: flex;
+      align-items: center;
+      column-gap: 1vh;
+      justify-content: flex-end;
+      padding-right: 2vh;
+    }
+  }
+  /*=====================
+  QandA
+  ======================*/
+  .QandA{
+    padding: 5vh 0;
+    align-items: center;
+    section{
+      width: 90%;
+      @include flex-column;
+    }
+    h3{
+      width: 90%;
+      border-bottom: 2px solid ;
+    }
+    p{
+      display: none;
+    }
+    h4{
+      font-size: 14px;
+      position: relative;
+      background-color: $background;
+      padding: 1vh ;
+      cursor: pointer;
+    }
+    h4::after{
+      content:"+";
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      transition: .4s;
+    }
+    span{
+      color: $title;
+    }
+    article.appear p{
+      display: block;
+    }
+    article.appear h4::after{
+      transform: rotate(45deg);
+    }
+  }
+
+  /*=====================
+  contact
+  ======================*/
+  .contact{
+    padding: 5vh 0;
+    background-color: $box2;
+    align-items: center;
+    row-gap: 2vh;
+    form{
+      width: 90%;
+      padding: 3vh;
+      row-gap: 2vh;
+    }
+    input,
+    textarea{
+      border: none;
+      padding: 2vh;
+      border-radius: 5px;
+    }
+    [type="submit"]{
+      background-color:$title;
+      color: white;
+    }
+  }
+  /*=====================
+  location
+  ======================*/
+  .location{
+    padding: 8vh 0;
+    padding-left: 5%;
+    background-color: gray;
+    color: white;
+    row-gap: 4vh;
+    > article{
+      row-gap: 3vh;
+    }
+    ul{
+      padding-left: 4%;
+    }
+    h2{
+      width: 70%;
+    }
+    h3{
+      border-bottom: 1px solid white;
+      width: 25%;
+    }
+    a{
+      color:white;
+      text-decoration: dashed;
+    }
+    i{
+      font-size: 40px;
+    }
+  }
+  /*=====================
+  footer
+  ======================*/
+  footer{
+    padding-top: 8vh;
+    background-color: $box2;
+    @include flex-column;
+    @include flex-center;
+    >section{
+      width: 90%;
+    }
+    >p{
+      width: 100%;
+      border-top: 1px solid dimgray;
+      padding: 2vh;
+      text-align: center;
+    }
+  }
+  .footer-aboutus{
+    padding-bottom: 3vh;
+    h4{
+      font-size: 18px;
+    }
+    p{
+      padding-bottom: 3vh;
+    }
+    ul{
+      display: flex;
+      width: 70%;
+    }
+    li{
+      display: flex;
+      width: 100%;
+    }
+    a{
+      display: flex;
+      @include flex-center;
+      width:5vh;
+      height: 5vh;
+      border: 2px solid $title;
+      border-radius: 50%;
+      background-color: $title;
+      color: white;
+    }
+  }
+  .link{
+    padding-bottom: 3vh;
+    ul{
+      list-style-type: none;
+      @include flex-column;
+      row-gap: 1vh;
+    }
+    h4{
+      padding-bottom: 2vh;
+    }
+    a{
+      color: dimgrey;
+    }
+  }
+}
