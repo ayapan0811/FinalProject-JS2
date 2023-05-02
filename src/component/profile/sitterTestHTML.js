@@ -27,7 +27,7 @@ function ConfirmModal(){
     return(
         <section id="confirm">
             <p>Go to profile?</p>
-            <a href="profile.html">Yes</a>
+            <a>Yes</a>
             <button>No</button>
         </section>
     );
@@ -67,14 +67,10 @@ function App(){
             $('[class="sitterId"]').eq(i).click(()=>{
                     $("section").slideDown();
                     let selectedId = $('[class="sitterId"]').eq(i).text();
-                    gettingId(selectedId);
+                    $("a").attr("href",`profile.html?${selectedId}`)
                 })
             }
             
-        function gettingId(ID){
-            console.log(ID);
-            return ID;
-        }
         // console.log(gettingId());
 
            

@@ -221,8 +221,11 @@ function App(){
 
     $("#root").ready(function(){
 
+        //START: getting sitterid from sitter page 
+        let param = location.search;
+        let selectedSitterId = Number(param.slice(1,2));
+        //END: getting sitterid from sitter page 
         //START: showing Json file data to profile page
-        let selectedSitterId = 45;
         let selectedSitter = sittersData[selectedSitterId];
 
         $('[alt="mainPic"]').attr("src",selectedSitter.picture);
@@ -355,6 +358,7 @@ function App(){
     );
 
 }
+
 
 const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
 
