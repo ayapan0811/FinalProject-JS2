@@ -10,7 +10,7 @@ function SearchSitter(){
                 <form action="#">
                     <section>
                         <article className="dogorcat">
-                            <label for="dogcat">I'm looking for service for my:</label>
+                            <label htmlFor="dogcat">I'm looking for service for my:</label>
                             <aside>
                                 <input type="checkbox" name="dog" id="dog"/>
                                 <small>Dog</small>
@@ -21,17 +21,17 @@ function SearchSitter(){
                             </aside>
                         </article>
                         <article>
-                            <label for="select-service">Service:</label>
+                            <label htmlFor="select-service">Service:</label>
                             <select name="select-service" id="select-service">
-                                <option value="none" disabled selected>Select Service</option>
+                                <option value="none" >Select Service</option>
                                 <option value="boarding">Boarding</option>
                                 <option value="dogwalking">Dog Walking</option>
                             </select>
                         </article>
                         <article>
-                            <label for="select-location">Location:</label>
+                            <label htmlFor="select-location">Location:</label>
                             <select name="location" id="location">
-                                <option value="none" disabled selected>Select your location</option>
+                                <option value="none" disabled>Select your location</option>
                                 <optgroup label="Vancouver">
                                     <option value="Vancouver">Vancouver</option>
                                     <option value="Richmond">Richmond</option>
@@ -56,9 +56,9 @@ function SearchSitter(){
                         </article>
                         <article>
                             <aside>
-                                <label for="day">For which days?</label>
+                                <label htmlFor="day">For which days?</label>
                             <select name="day" id="day">
-                                <option value="none" disabled selected>Select day</option>
+                                <option value="none" disabled>Select day</option>
                                 <option value="Sunday">Sunday</option>
                                 <option value="Monday">Monday</option>
                                 <option value="Tuesday">Tuesday</option>
@@ -70,9 +70,9 @@ function SearchSitter(){
                             </aside>
                         </article>
                         <article>
-                            <label for="select-size">My Dog Size</label>
+                            <label htmlFor="select-size">My Dog Size</label>
                             <select name="select-size" id="select-size">
-                                <option value="none" disabled selected>Select your dog size</option>
+                                <option value="none" disabled>Select your dog size</option>
                                 <option value="-10">~10kg</option>
                                 <option value="11-25">10~25kg</option>
                                 <option value="25-45">25~45kg</option>
@@ -110,7 +110,7 @@ function Services(){
                     <section>
                         <h4>Boarding</h4>
                         <p>
-                            Your pets stay overnight in your sitter’s home. They’ll be treated like part of the family in a comfortable environment.
+                            Your pets stay overnight in your sitter's home. They'll be treated like part of the family in a comfortable environment.
                         </p>
                     </section>
                 </aside>
@@ -210,7 +210,7 @@ function Blog(){
                 <img src="http://127.0.0.1:5500/src/img/home-img/home-dog2.jpg" alt="dog2"/>
                 <aside>
                     <i className="fa-regular fa-clock"></i>
-                    <p>23/04/2023</p>
+                    <p>12/04/2023</p>
                 </aside>
                 <figcaption>
                     <h4>Reasons to become a pet sitter</h4>
@@ -225,7 +225,7 @@ function Blog(){
                 <img src="http://127.0.0.1:5500/src/img/home-img/home-dog3jpg.jpg" alt="dog3"/>
                 <aside>
                     <i className="fa-regular fa-clock"></i>
-                    <p>23/04/2023</p>
+                    <p>05/04/2023</p>
                 </aside>
                 <figcaption>
                     <h4>Dog sitters | how to greet a new dog</h4>
@@ -248,25 +248,25 @@ function QuestionAndAnswer(){
                 <article>
                     <h4><span>Q: </span> Who is gonna provide pet food?</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                        Basically, owners have to bring the food. If it doesn't seem to be possible, please ask the sitter for the preparation of the food before the confirmation of the contract.
                     </p>
                 </article>
                 <article>
                     <h4><span>Q: </span> Do you accept animals other than dogs and cats?</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                        No. If you want to leave an animal except dogs and cats, please find a pet hotel. We are not responsible for any issues other than dogs and cats.
                     </p>
                 </article>
                 <article>
                     <h4><span>Q: </span>Allergy, diseases?</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                        If your pets have allergies or diseases, please tell the sitters before giving the confirmation. If the sitter find the disease heavy, they can cancel the confirmation beforehands.
                     </p>
                 </article>
                 <article>
                     <h4><span>Q: </span>Method of payment?</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus itaque ipsum enim quam debitis voluptas, error velit sunt vitae nostrum nihil omnis voluptatem! Nesciunt, sint.
+                        This is up to the users. We are not responsible for the method of pay. If you have any problems, please contact us.
                     </p>
                 </article>
             </section>
@@ -281,8 +281,8 @@ function Contact(){
             <form action="#">
                 <input type="text" name="name" id="name" placeholder="Your Name"/>
                 <input type="mail" name="mail" id="mail" placeholder="Your Email"/>
-                <textarea name="message" id="message" placeholder=""></textarea>
-                <input type="submit" value="send message"/>
+                <textarea name="message" id="message" placeholder="Type your message"></textarea>
+                <input type="submit" value="Send Message"/>
             </form>
         </section>
     );
@@ -331,7 +331,7 @@ function Location(){
 function HomePage(){
     return(
         <main className="home-main">
-            {/* <SearchSitter/> */}
+            <SearchSitter/>
             <About/>
             <Services/>
             <BookingFlow/>
@@ -345,19 +345,22 @@ function HomePage(){
 
 function App(){
 
-    //START:Q&A accordion part
-    const h4s = document.querySelectorAll("h4");
-    h4s.forEach(h4=>{
-        h4.addEventListener("click",()=>{
-            h4.parentNode.classList.toggle("appear");
-            h4s.forEach(el=>{
-                if(h4 !== el){
-                    el.parentNode.classList.remove("appear");
-                }
+    $("#root").ready(function(){
+
+        //START:Q&A accordion part
+        const h4s = document.querySelectorAll("h4");
+        h4s.forEach((h4)=>{
+            h4.addEventListener("click",()=>{
+                h4.parentNode.classList.toggle("appear");
+                h4s.forEach((el)=>{
+                    if(h4 !== el){
+                        el.parentNode.classList.remove("appear");
+                    }
+                });
             });
         });
+        //END:Q&A accordion part
     });
-    //END:Q&A accordion part
 
     return(
         <React.Fragment>
