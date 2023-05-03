@@ -90,9 +90,9 @@ function ProfileRight(){
                 <article>
                     <aside>
                         <i className="fa-solid fa-location-arrow"></i>
-                        <h3 className="sitterPlace">City</h3>
+                        <h3 className="bigCity">City</h3>
                         <h3>,</h3>
-                        <h3 className="sitterCity">City</h3>
+                        <h3 className="smallCity">City</h3>
                     </aside>
                     <aside>
                         <h2 className="sitterYear">3</h2>
@@ -232,8 +232,8 @@ function App(){
         $('[class="sitterName"]').text(`${selectedSitter.name}`);
         $('[class="rating"]').text(`${selectedSitter.rating}/5`);
         $('[class="sitterMail"]').text(`${selectedSitter.email}`);
-        $('[class="sitterPlace"]').text(`${selectedSitter.city1}`);
-        $('[class="sitterCity"]').text(`${selectedSitter.city2}`);
+        $('[class="bigCity"]').text(`${selectedSitter.city1}`);
+        $('[class="smallCity"]').text(`${selectedSitter.city2}`);
         if(selectedSitter.sunday == false){
             $('[class="sunday"]').css("display","none");
         }
