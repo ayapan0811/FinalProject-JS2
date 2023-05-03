@@ -7,7 +7,10 @@
         justify-content: center;
         row-gap: 5vh;
         h1{
-            font-size: 30px;
+            font-size: 26px;
+            padding: 5px;
+            color: $title;
+            background-color: $box2;
         }
         form{
             display: flex;
@@ -15,6 +18,8 @@
             font-size: 18px;
             width: 80%;
             row-gap: 3vh;
+            background-color: $box2;
+            padding: 5px;
             aside{
                 display: flex;
                 flex-direction: column;
@@ -28,13 +33,14 @@
             label{
                 display: flex;
                 flex-direction: column;
+                color: $title;
             }
             button{
                 font-size: 16px;
                 padding: 3%;
                 border-radius: 50px;
-                border: 1px solid rgb(24, 125, 24);
-                background-color: rgb(24, 125, 24);
+                border: 1px solid $title;
+                background-color: $title;
                 color: white;
             }
         }

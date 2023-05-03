@@ -2,6 +2,8 @@
     .shop{
         @include flex-column;
         @include flex-center;
+        justify-content: center;
+        padding-bottom: 7vh;
         row-gap: 7vh;
         h2{
             font-size: 20px;
@@ -15,6 +17,7 @@
         #menu{
             display: flex;
             @include flex-center;
+            text-align: center;
             column-gap: 5vh;
             background-color: $box;
             padding: 5%;
@@ -23,6 +26,7 @@
         #box{
             @include flex-column;
             @include flex-center;
+            width: 100%;
             row-gap: 4vh;
             flex-wrap: wrap
         }
