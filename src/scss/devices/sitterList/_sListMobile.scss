@@ -16,22 +16,23 @@
             padding-bottom: 2vh;
             color: $title;
         }
-    }
-    form{
-        // position: fixed;
-        padding: 2vh;
-        background-color: $box2;
-        >section{
-            @include columnRow(2vh);
-        }
-        input,select{
-            padding: 2%;
-            border-color: gray;
-            border-radius: 5px;
-            color: gray
-        }
-        aside,article{
-            @include flex-column;
+        
+        form{
+            // position: fixed;
+            padding: 2vh;
+            background-color: $box2;
+            >section{
+                @include columnRow(2vh);
+            }
+            input,select{
+                padding: 2%;
+                border-color: gray;
+                border-radius: 5px;
+                color: gray
+            }
+            aside,article{
+                @include flex-column;
+            }
         }
     }
     .dogorcat{
