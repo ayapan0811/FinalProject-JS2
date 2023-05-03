@@ -248,7 +248,7 @@ function QuestionAndAnswer(){
                 <article>
                     <h4><span>Q: </span> Who is gonna provide pet food?</h4>
                     <p>
-                        Basically, owners have to bring the food. If it doesn't seem to be possible, please ask the sitter for the preparation of the food before the confirmation of the contract.
+                        Basically, owners have to bring the food. If it does not seem to be possible, please ask the sitter for the preparation of the food before the confirmation of the contract.
                     </p>
                 </article>
                 <article>
