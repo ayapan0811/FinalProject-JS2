@@ -280,7 +280,7 @@ function App(){
         $('[class="walkPay"]').text(`${Math.floor(Math.random()*10)+15}`);
         $('[class="boardPay"]').text(`${Math.floor(Math.random()*10)+15}`);
         //END: giving random numbers in profile page
-        
+
         //START: slideshow part
         let firstRev = $(".review1");
         let secondRev = $(".review2");
@@ -356,7 +356,6 @@ function App(){
 
 }
 
-const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
+const rootSitterListHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-rootProfileHTML.render(<App/>);
-//END: Profile page into #root
+rootSitterListHTML.render(<App/>);
