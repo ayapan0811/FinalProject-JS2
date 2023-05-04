@@ -370,6 +370,6 @@ function App(){
 }
 
 
-const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
+const rootHomePageHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-rootProfileHTML.render(<App/>);
+rootHomePageHTML.render(<App/>);

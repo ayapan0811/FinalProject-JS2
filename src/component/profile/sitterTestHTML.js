@@ -70,20 +70,6 @@ function App(){
                     $("a").attr("href",`profile.html?${selectedId}`)
                 })
             }
-            
-        // console.log(gettingId());
-
-           
-        // function selectId(){
-        //     for(let i=0; i<100; i++){
-        //         $('[class="sitterId"]').eq(i).click(()=>{
-        //             $("section").slideDown();
-        //             let selectedId = $('[class="sitterId"]').eq(i).text();
-        //             return selectedId;
-        //         })
-        //     }
-        // }
-        // console.log(selectId());
     });
 
     return(
@@ -95,7 +81,7 @@ function App(){
 }
 
 
-const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
+const rootSitterTestHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-rootProfileHTML.render(<App/>);
+rootsitterTestHTML.render(<App/>);
 //END: Profile page into #root
