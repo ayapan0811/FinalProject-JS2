@@ -223,7 +223,7 @@ function App(){
 
         //START: getting sitterid from sitter page 
         let param = location.search;
-        let selectedSitterId = Number(param.slice(1,2))-1;
+        let selectedSitterId = Number(param.slice(1,3))-1;
         //END: getting sitterid from sitter page 
         //START: showing Json file data to profile page
         let selectedSitter = sittersData[selectedSitterId];
