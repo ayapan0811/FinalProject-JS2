@@ -1,5 +1,4 @@
-# FinalProject-JS2
-
+FinalProject-JS2
 Members: Aya, John, Katsushi
 
 Producion: Production branch
@@ -13,3 +12,7 @@ Brainstorm & Flowchart link: https://www.canva.com/design/DAFgt2UNC90/u-TPNt0WO7
 Final document link: https://docs.google.com/document/d/1FNOnIXpqb_XpKr8QrBwdX_Q4M4nQGGmU/edit
 
 Presentation1 slide link: https://docs.google.com/presentation/d/15FPbFVBprP8zdSdIg20krDAzNC6MXJJXkTvhScE7E5U/edit#slide=id.g219fbed4c9c_0_651
+
+Presentation2 slide link: https://docs.google.com/presentation/d/1rNoFo03ATrIwcP1OfDFlZN1t96epAmFuEdEcBpj1FBI/edit?usp=sharing
+
+Presentation3 slide link: https://docs.google.com/presentation/d/104lQvqtCVoYOzoubEAGW7vvhxaDXCGcaxaRyyTW-CRA/edit#slide=id.p

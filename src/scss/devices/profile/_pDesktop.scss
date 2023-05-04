@@ -1,7 +1,4 @@
 @media (min-width:$desktopScreen){
-    body {
-        background-color: transparent;
-    }
     .profile {
         flex-direction: row-reverse;
         flex-wrap: wrap;
@@ -14,6 +11,7 @@
             column-gap: 15vh;
             align-items: center;
         }
+        
         span { //rating
             font-size: 24px;
         }

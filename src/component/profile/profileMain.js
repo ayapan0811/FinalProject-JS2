@@ -1,26 +1,26 @@
 //START: getting JSON file
-// const sitterUrl = "http://127.0.0.1:5500/src/data/sitters.json";
+const sitterUrl = "http://127.0.0.1:5500/src/data/sitters.json";
 
-// jQuery.extend({
-//     getJsonData: function(url){
-//         let result = null;
-//         $.ajax({
-//             docType: "json",
-//             async: false,
-//             type: "GET",
-//             url: url,
-//             success: function(data){
-//                 result = data;
-//             },
-//             error: function(xhr,status,error){
-//                 console.log(error);
-//             }
-//         })
-//         return result;
-//     }
-// })
+jQuery.extend({
+    getJsonData: function(url){
+        let result = null;
+        $.ajax({
+            docType: "json",
+            async: false,
+            type: "GET",
+            url: url,
+            success: function(data){
+                result = data;
+            },
+            error: function(xhr,status,error){
+                console.log(error);
+            }
+        })
+        return result;
+    }
+})
 
-// let sittersData = $.getJsonData(sitterUrl);
+let sittersData = $.getJsonData(sitterUrl);
 //END: getting JSON file
 //START: Profile page top part
 function ProfileTop(){
@@ -90,9 +90,9 @@ function ProfileRight(){
                 <article>
                     <aside>
                         <i className="fa-solid fa-location-arrow"></i>
-                        <h3 className="sitterPlace">City</h3>
+                        <h3 className="bigCity">City</h3>
                         <h3>,</h3>
-                        <h3 className="sitterCity">City</h3>
+                        <h3 className="smallCity">City</h3>
                     </aside>
                     <aside>
                         <h2 className="sitterYear">3</h2>
@@ -219,134 +219,134 @@ function ProfilePage(){
 
 function App(){
 
-    // $("#root").ready(function(){
+    $("#root").ready(function(){
 
-    //     //START: showing Json file data to profile page
-    //     let selectedSitterId = 49;
-    //     let selectedSitter = sittersData[selectedSitterId];
+        //START: showing Json file data to profile page
+        let selectedSitterId = 49;
+        let selectedSitter = sittersData[selectedSitterId];
 
-    //     $('[alt="mainPic"]').attr("src",selectedSitter.picture);
-    //     $('[class="sitterName"]').text(`${selectedSitter.name}`);
-    //     $('[class="rating"]').text(`${selectedSitter.rating}/5`);
-    //     $('[class="sitterMail"]').text(`${selectedSitter.email}`);
-    //     $('[class="sitterPlace"]').text(`${selectedSitter.city1}`);
-    //     $('[class="sitterCity"]').text(`${selectedSitter.city2}`);
-    //     if(selectedSitter.sunday == false){
-    //         $('[class="sunday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.monday == false){
-    //         $('[class="monday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.tuesday == false){
-    //         $('[class="tuesday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.wednesday == false){
-    //         $('[class="wednesday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.thursday == false){
-    //         $('[class="thursday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.friday == false){
-    //         $('[class="friday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.saturday == false){
-    //         $('[class="saturday"]').css("display","none");
-    //     }
-    //     if(selectedSitter.service == "Walk"){
-    //         $('[class="liBoarding"]').css("display","none");
-    //     }else if(selectedSitter.service == "Board"){
-    //         $('[class="liWalking"]').css("display","none");
-    //     }
-    //     if(selectedSitter.size == "1"){
-    //         $('[class="span1"]').css("display","none");
-    //         $('[class="size2"]').css("display","none");
-    //         $('[class="span2"]').css("display","none");
-    //         $('[class="size3"]').css("display","none");
-    //         $('[class="span3"]').css("display","none");
-    //         $('[class="size4"]').css("display","none");
-    //     }else if(selectedSitter.size == "2"){
-    //         $('[class="span2"]').css("display","none");
-    //         $('[class="size3"]').css("display","none");
-    //         $('[class="span3"]').css("display","none");
-    //         $('[class="size4"]').css("display","none");
-    //     }else if(selectedSitter.size == "3"){
-    //         $('[class="span3"]').css("display","none");
-    //         $('[class="size4"]').css("display","none");
-    //     }
-    //     //END: showing Json file data to profile page
-    //     //START: giving random numbers in profile page
-    //     $('[class="reviewNum"]').text(`(${Math.floor(Math.random()*20)+2} reviews)`);
-    //     $('[class="sitterYear"]').text(`${Math.floor(Math.random()*10)}`);
-    //     $('[class="walkPay"]').text(`${Math.floor(Math.random()*10)+15}`);
-    //     $('[class="boardPay"]').text(`${Math.floor(Math.random()*10)+15}`);
-    //     //END: giving random numbers in profile page
+        $('[alt="mainPic"]').attr("src",selectedSitter.picture);
+        $('[class="sitterName"]').text(`${selectedSitter.name}`);
+        $('[class="rating"]').text(`${selectedSitter.rating}/5`);
+        $('[class="sitterMail"]').text(`${selectedSitter.email}`);
+        $('[class="sitterPlace"]').text(`${selectedSitter.city1}`);
+        $('[class="sitterCity"]').text(`${selectedSitter.city2}`);
+        if(selectedSitter.sunday == false){
+            $('[class="sunday"]').css("display","none");
+        }
+        if(selectedSitter.monday == false){
+            $('[class="monday"]').css("display","none");
+        }
+        if(selectedSitter.tuesday == false){
+            $('[class="tuesday"]').css("display","none");
+        }
+        if(selectedSitter.wednesday == false){
+            $('[class="wednesday"]').css("display","none");
+        }
+        if(selectedSitter.thursday == false){
+            $('[class="thursday"]').css("display","none");
+        }
+        if(selectedSitter.friday == false){
+            $('[class="friday"]').css("display","none");
+        }
+        if(selectedSitter.saturday == false){
+            $('[class="saturday"]').css("display","none");
+        }
+        if(selectedSitter.service == "Walk"){
+            $('[class="liBoarding"]').css("display","none");
+        }else if(selectedSitter.service == "Board"){
+            $('[class="liWalking"]').css("display","none");
+        }
+        if(selectedSitter.size == "1"){
+            $('[class="span1"]').css("display","none");
+            $('[class="size2"]').css("display","none");
+            $('[class="span2"]').css("display","none");
+            $('[class="size3"]').css("display","none");
+            $('[class="span3"]').css("display","none");
+            $('[class="size4"]').css("display","none");
+        }else if(selectedSitter.size == "2"){
+            $('[class="span2"]').css("display","none");
+            $('[class="size3"]').css("display","none");
+            $('[class="span3"]').css("display","none");
+            $('[class="size4"]').css("display","none");
+        }else if(selectedSitter.size == "3"){
+            $('[class="span3"]').css("display","none");
+            $('[class="size4"]').css("display","none");
+        }
+        //END: showing Json file data to profile page
+        //START: giving random numbers in profile page
+        $('[class="reviewNum"]').text(`(${Math.floor(Math.random()*20)+2} reviews)`);
+        $('[class="sitterYear"]').text(`${Math.floor(Math.random()*10)}`);
+        $('[class="walkPay"]').text(`${Math.floor(Math.random()*10)+15}`);
+        $('[class="boardPay"]').text(`${Math.floor(Math.random()*10)+15}`);
+        //END: giving random numbers in profile page
         
-    //     //START: slideshow part
-    //     let firstRev = $(".review1");
-    //     let secondRev = $(".review2");
-    //     let lastRev = $(".review4");
-    //     firstRev.addClass("shownSlide"); //giving class for default
-    //     firstRev.addClass("shown2Slides"); //giving classes for default (desktop)
-    //     secondRev.addClass("shown2Slides"); //giving classes for default (desktop)
+        //START: slideshow part
+        let firstRev = $(".review1");
+        let secondRev = $(".review2");
+        let lastRev = $(".review4");
+        firstRev.addClass("shownSlide"); //giving class for default
+        firstRev.addClass("shown2Slides"); //giving classes for default (desktop)
+        secondRev.addClass("shown2Slides"); //giving classes for default (desktop)
 
-    //     // START: slideshow for mobile & tablet version
-    //     $(".prevBtn").click(()=>{
-    //         let shownRev = $(".shownSlide");
-    //         if(firstRev.hasClass("shownSlide")){
-    //             lastRev.addClass("shownSlide");
-    //             firstRev.removeClass("shownSlide");
-    //         }else{
-    //             shownRev.prev().addClass("shownSlide");
-    //             shownRev.removeClass("shownSlide");
-    //         }
-    //     })
+        // START: slideshow for mobile & tablet version
+        $(".prevBtn").click(()=>{
+            let shownRev = $(".shownSlide");
+            if(firstRev.hasClass("shownSlide")){
+                lastRev.addClass("shownSlide");
+                firstRev.removeClass("shownSlide");
+            }else{
+                shownRev.prev().addClass("shownSlide");
+                shownRev.removeClass("shownSlide");
+            }
+        })
 
-    //     $(".nextBtn").click(()=>{
-    //         let shownRev = $(".shownSlide");
-    //         if(lastRev.hasClass("shownSlide")){
-    //             firstRev.addClass("shownSlide");
-    //             lastRev.removeClass("shownSlide");
-    //         }else{
-    //             shownRev.next().addClass("shownSlide");
-    //             shownRev.eq(0).removeClass("shownSlide");
-    //         }
-    //     })
-    //     // END: slideshow for mobile & tablet version
-    //     // START: slideshow for desktop version
-    //     $(".prevBtn").click(()=>{
-    //         let shownRevs = $(".shown2Slides");
-    //         $(".proBottom .slideShow").css("flex-direction","row");
-    //         if(firstRev.hasClass("shown2Slides") && firstRev.next().hasClass("shown2Slides")){
-    //             lastRev.addClass("shown2Slides");
-    //             shownRevs.eq(1).removeClass("shown2Slides");
-    //             $(".proBottom .slideShow").css("flex-direction","row-reverse")
-    //         }else if(firstRev.hasClass("shown2Slides") && lastRev.hasClass("shown2Slides")){
-    //             lastRev.prev().addClass("shown2Slides");
-    //             shownRevs.eq(0).removeClass("shown2Slides");
-    //         }else{
-    //             shownRevs.eq(0).prev().addClass("shown2Slides");
-    //             shownRevs.eq(1).removeClass("shown2Slides");
-    //         }
-    //     })
+        $(".nextBtn").click(()=>{
+            let shownRev = $(".shownSlide");
+            if(lastRev.hasClass("shownSlide")){
+                firstRev.addClass("shownSlide");
+                lastRev.removeClass("shownSlide");
+            }else{
+                shownRev.next().addClass("shownSlide");
+                shownRev.eq(0).removeClass("shownSlide");
+            }
+        })
+        // END: slideshow for mobile & tablet version
+        // START: slideshow for desktop version
+        $(".prevBtn").click(()=>{
+            let shownRevs = $(".shown2Slides");
+            $(".proBottom .slideShow").css("flex-direction","row");
+            if(firstRev.hasClass("shown2Slides") && firstRev.next().hasClass("shown2Slides")){
+                lastRev.addClass("shown2Slides");
+                shownRevs.eq(1).removeClass("shown2Slides");
+                $(".proBottom .slideShow").css("flex-direction","row-reverse")
+            }else if(firstRev.hasClass("shown2Slides") && lastRev.hasClass("shown2Slides")){
+                lastRev.prev().addClass("shown2Slides");
+                shownRevs.eq(0).removeClass("shown2Slides");
+            }else{
+                shownRevs.eq(0).prev().addClass("shown2Slides");
+                shownRevs.eq(1).removeClass("shown2Slides");
+            }
+        })
 
-    //     $(".nextBtn").click(()=>{
-    //         let shownRevs = $(".shown2Slides");
-    //         $(".proBottom .slideShow").css("flex-direction","row");
-    //         if(lastRev.prev().hasClass("shown2Slides") && lastRev.hasClass("shown2Slides")){
-    //             firstRev.addClass("shown2Slides");
-    //             shownRevs.eq(0).removeClass("shown2Slides");
-    //             $(".proBottom .slideShow").css("flex-direction","row-reverse")
-    //         }else if(firstRev.hasClass("shown2Slides") && lastRev.hasClass("shown2Slides")){
-    //             firstRev.next().addClass("shown2Slides");
-    //             shownRevs.eq(1).removeClass("shown2Slides");
-    //         }else{
-    //             shownRevs.eq(1).next().addClass("shown2Slides");
-    //             shownRevs.eq(0).removeClass("shown2Slides");
-    //         }
-    //     })
-    //     // END: slideshow for desktop version
-    //     // END: slideshow part
-    // });
+        $(".nextBtn").click(()=>{
+            let shownRevs = $(".shown2Slides");
+            $(".proBottom .slideShow").css("flex-direction","row");
+            if(lastRev.prev().hasClass("shown2Slides") && lastRev.hasClass("shown2Slides")){
+                firstRev.addClass("shown2Slides");
+                shownRevs.eq(0).removeClass("shown2Slides");
+                $(".proBottom .slideShow").css("flex-direction","row-reverse")
+            }else if(firstRev.hasClass("shown2Slides") && lastRev.hasClass("shown2Slides")){
+                firstRev.next().addClass("shown2Slides");
+                shownRevs.eq(1).removeClass("shown2Slides");
+            }else{
+                shownRevs.eq(1).next().addClass("shown2Slides");
+                shownRevs.eq(0).removeClass("shown2Slides");
+            }
+        })
+        // END: slideshow for desktop version
+        // END: slideshow part
+    });
 
     return(
         <div className="App">
@@ -356,9 +356,7 @@ function App(){
 
 }
 
-export default App;
+const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-// const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
-
-// rootProfileHTML.render(<App/>);
-// END: Profile page into #root
+rootProfileHTML.render(<App/>);
+//END: Profile page into #root

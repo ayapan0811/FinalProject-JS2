@@ -1,0 +1,79 @@
+@media (min-width: $mobileScreen){
+
+    .sitterList-main{
+        padding-top: 5vh;
+        display: flex;
+        justify-content: center;
+        >section{
+            @include columnRow(5vh);
+            width: 90%;
+        }
+        h2{
+            font-size: 30px;
+            padding-bottom: 2vh;
+            color: $title;
+        }
+    }
+    form{
+        // position: fixed;
+        padding: 2vh;
+        background-color: $box2;
+        >section{
+            @include columnRow(2vh);
+        }
+        input,select{
+            padding: 2%;
+            border-color: gray;
+            border-radius: 5px;
+            color: gray
+        }
+        aside,article{
+            @include flex-column;
+        }
+    }
+    .dogorcat{
+        @include columnRow(1vh);
+        section{
+            display: flex;
+            column-gap: 2vh;
+        }
+        small{
+            font-size: 16px;
+        }
+        aside{
+            flex-direction: row;
+            column-gap: 1vh;
+        }
+    }
+    .right-list{
+        >section{
+            width: 100%;
+            border-top: 1px solid gray;
+
+        }
+        aside{
+            display: flex;
+            align-items: center;
+            column-gap: 2vh;
+        }
+        ul{
+            display: flex;
+            column-gap: 3vh;
+            list-style-type: none;
+        }
+        >li{
+            padding: 3vh 0;
+            @include columnRow(1vh);
+            border-top: 1px solid gray;
+        }
+        .sitter-available{
+            li{
+                background-color: $background;
+                padding: 1%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+}
