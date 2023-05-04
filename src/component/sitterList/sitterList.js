@@ -191,6 +191,12 @@ function SitterListPage(){
 }
 
 function App(){
+
+    $("#root").ready(function(){
+        
+    })
+
+
     return(
         <React.Fragment>
             <SitterListPage/>
