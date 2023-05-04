@@ -108,65 +108,33 @@ function LeftForm(){
     );
 }
 
-
-function RightList(props){
+function SitterList(props){
     return(
-        <section className="right-list">
-            <ol className="list">
-                <li>
-                    <aside>
-                        <h3><span>1</span>{props.name}</h3>
-                        <i className="fa-solid fa-shield-dog"></i>
-                    </aside>
-                    <aside>
-                        <i className="fa-solid fa-location-arrow"></i>
-                        <h4 className="sitterPlace">City1</h4>
-                        <h4>,</h4>
-                        <h4 className="sitterCity">City2</h4>
-                    </aside>
-                    <ul className="sitter-available">
-                        <li>Dog Walking</li>
-                        <li>Boarding</li>
-                    </ul>
-                    <article>
-                        <h4>Available Day</h4>
-                        <ul className="sitter-available">
-                            <li>Monday</li>
-                            <li>Tuesday</li>
-                            <li>Wednesday</li>
-                            <li>Thursday</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <h4>Accepted Size</h4>
-                        <ul className="sitter-available">
-                            <li>~10kg</li>
-                            <li>10kg~25kg</li>
-                            <li>25kg~45kg</li>
-                            <li>45kg~</li>
-                        </ul>
-                    </article>
-                </li>
-            </ol>
-        </section>
+        <ol>
+            <li>{props.id}</li>
+            <li>{props.name}</li>
+            <li>{props.email}</li>
+
+        </ol>
     );
 }
-// function SitterName(){
-//     return(
-//         <section>
-//             {
-//                 sittersData.map(
-//                     (sitter)=>(
-//                         <RightList
-//                         // key={sitter.name}
-//                         name={sitter.name}
-//                         />
-//                     )
-//                 )
-//             }
-//         </section>
-//     );
-// }
+
+function RightList(){
+    return(
+        <section>
+            {
+                sittersData.map((sitter)=>( //jsondataのシッター情報を一人一人見てマップ（配列みたいなもの）にしている
+                    <SitterList
+                        key={sitter.id} //keyは設定しないといけないから書いてるだけ、この場面で意味はない
+                        id={sitter.id} //左のidは上にあるprops.idのid、右のidはjsonファイルのプロパティ
+                        name={sitter.name}
+                        email={sitter.email}
+                    />
+                ))
+            }
+        </section>
+    )
+}
 
 function SitterListPage(){
     return(
