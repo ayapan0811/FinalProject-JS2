@@ -26,6 +26,29 @@
     p{
       font-size: 20px;
     }
+    
+    a{
+      display: none;
+    }
+    form{
+      padding-top: 2vh;
+      padding-right: 2vh;
+      display: block;
+      display: flex;
+      justify-content: flex-end;
+      >section{
+        background-color: $box2;
+        width: 45%;
+        padding: 2vh;
+        border-radius: 15px;
+        box-shadow: 10px 10px 20px;
+      }
+      section,
+      article,
+      aside{
+        @include flex-column;
+      }
+    }
     form{
       padding-top: 8vh;
       padding-right: 8vh;

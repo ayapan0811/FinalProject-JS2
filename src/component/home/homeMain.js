@@ -23,7 +23,7 @@ function SearchSitter(){
                         <article>
                             <label htmlFor="select-service">Service:</label>
                             <select name="select-service" id="select-service">
-                                <option value="none" >Select Service</option>
+                                <option value="" >Select Service</option>
                                 <option value="boarding">Boarding</option>
                                 <option value="dogwalking">Dog Walking</option>
                             </select>
@@ -31,7 +31,7 @@ function SearchSitter(){
                         <article>
                             <label htmlFor="select-location">Location:</label>
                             <select name="location" id="location">
-                                <option value="none" disabled>Select your location</option>
+                                <option value="">Select your location</option>
                                 <optgroup label="Vancouver">
                                     <option value="Vancouver">Vancouver</option>
                                     <option value="Richmond">Richmond</option>
@@ -58,7 +58,7 @@ function SearchSitter(){
                             <aside>
                                 <label htmlFor="day">For which days?</label>
                             <select name="day" id="day">
-                                <option value="none" disabled>Select day</option>
+                                <option value="">Select day</option>
                                 <option value="Sunday">Sunday</option>
                                 <option value="Monday">Monday</option>
                                 <option value="Tuesday">Tuesday</option>
@@ -72,7 +72,7 @@ function SearchSitter(){
                         <article>
                             <label htmlFor="select-size">My Dog Size</label>
                             <select name="select-size" id="select-size">
-                                <option value="none" disabled>Select your dog size</option>
+                                <option value="">Select your dog size</option>
                                 <option value="-10">~10kg</option>
                                 <option value="11-25">10~25kg</option>
                                 <option value="25-45">25~45kg</option>

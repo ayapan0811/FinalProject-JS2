@@ -83,5 +83,5 @@ function App(){
 
 const rootSitterTestHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-rootsitterTestHTML.render(<App/>);
+rootSitterTestHTML.render(<App/>);
 //END: Profile page into #root
