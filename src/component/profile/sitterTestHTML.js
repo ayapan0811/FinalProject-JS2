@@ -62,7 +62,6 @@ function App(){
     $("#root").ready(function(){
         $("section").hide();
         
-        // let selectedId = 0;
         for(let i=0; i<100; i++){
             $('[class="sitterId"]').eq(i).click(()=>{
                     $("section").slideDown();
