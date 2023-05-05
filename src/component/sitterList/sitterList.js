@@ -21,6 +21,7 @@ jQuery.extend({
 })
 
 let sittersData = $.getJsonData(sitterUrl);
+console.log(sittersData);
 //END: getting JSON file
 
 function LeftForm(){
@@ -30,7 +31,7 @@ function LeftForm(){
           <h2>Find the Perfect Match</h2>
           <section>
               <article className="dogorcat">
-                  <label for="dogcat">I'm looking for service for my</label>
+                  <label htmlFor="dogcat">I'm looking for service for my</label>
                   <section>
                       <aside>
                           <input type="checkbox" name="dog" id="dog"/>
@@ -43,17 +44,17 @@ function LeftForm(){
                   </section>
               </article>
               <article>
-                  <label for="select-service">Service</label>
+                  <label htmlFor="select-service">Service</label>
                   <select name="select-service" id="select-service">
-                      <option value="none" disabled selected>Select Service</option>
+                      <option value="none" disabled>Select Service</option>
                       <option value="boarding">Boarding</option>
                       <option value="dogwalking">Dog Walking</option>
                   </select>
               </article>
               <article>
-                  <label for="select-location">Location</label>
+                  <label htmlFor="select-location">Location</label>
                   <select name="location" id="location">
-                      <option value="none" disabled selected>Select your location</option>
+                      <option value="none" disabled>Select your location</option>
                       <optgroup label="Vancouver">
                           <option value="Vancouver">Vancouver</option>
                           <option value="Richmond">Richmond</option>
@@ -78,9 +79,9 @@ function LeftForm(){
               </article>
               <article>
                   <aside>
-                      <label for="day">For these days</label>
+                      <label htmlFor="day">For these days</label>
                       <select name="day" id="day">
-                          <option value="none" disabled selected>Select day</option>
+                          <option value="none" disabled>Select day</option>
                           <option value="Sunday">Sunday</option>
                           <option value="Monday">Monday</option>
                           <option value="Tuesday">Tuesday</option>
@@ -92,9 +93,9 @@ function LeftForm(){
                   </aside>
               </article>
               <article>
-                  <label for="select-size">My Dog Size</label>
+                  <label htmlFor="select-size">My Dog Size</label>
                   <select name="select-size" id="select-size">
-                      <option value="none" disabled selected>Select your dog size</option>
+                      <option value="none" disabled>Select your dog size</option>
                       <option value="-10">~10kg</option>
                       <option value="10-25">10~25kg</option>
                       <option value="25-45">25~45kg</option>
@@ -108,84 +109,105 @@ function LeftForm(){
     );
 }
 
+// function RightList(){
+//     return(
+//         <section className="right-list">
+//             <ol className="list">
+//                 <li>
+//                     <button>
 
-function RightList(props){
+//                     </button>
+//                     <aside>
+//                         <SitterName/>
+//                         {/* <h3><span>1</span>UserName</h3>
+//                         <i className="fa-solid fa-shield-dog"></i> */}
+//                     </aside>
+//                     <aside>
+//                         <i className="fa-solid fa-location-arrow"></i>
+//                         <h4 className="sitterPlace">City1</h4>
+//                         <h4>,</h4>
+//                         <h4 className="sitterCity">City2</h4>
+//                     </aside>
+//                     <ul className="sitter-available">
+//                         <li>Dog Walking</li>
+//                         <li>Boarding</li>
+//                     </ul>
+//                     <article>
+//                         <h4>Available Day</h4>
+//                         <ul className="sitter-available">
+//                             <li>Monday</li>
+//                             <li>Tuesday</li>
+//                             <li>Wednesday</li>
+//                             <li>Thursday</li>
+//                         </ul>
+//                     </article>
+//                     <article>
+//                         <h4>Accepted Size</h4>
+//                         <ul className="sitter-available">
+//                             <li>~10kg</li>
+//                             <li>10kg~25kg</li>
+//                             <li>25kg~45kg</li>
+//                             <li>45kg~</li>
+//                         </ul>
+//                     </article>
+//                 </li>
+//             </ol>
+//         </section>
+//     );
+// }
+// function SitterId(props){
+//     return(
+//         <h3><span>{props.sitterId}</span>{props.sitterName}</h3>
+//     );
+// }
+function RightList(){
     return(
-        // <section className="right-list">
-            <ol className="list">
-            <li>
-                <aside>
-                    <h3><span>1</span>{props.name}</h3>
-                    <i className="fa-solid fa-shield-dog"></i>
-                </aside>
-                <aside>
-                    <i className="fa-solid fa-location-arrow"></i>
-                    <h4 className="sitterPlace">City1</h4>
-                    <h4>,</h4>
-                    <h4 className="sitterCity">City2</h4>
-                </aside>
-                <ul className="sitter-available">
-                    <li>Dog Walking</li>
-                    <li>Boarding</li>
-                </ul>
-                <article>
-                    <h4>Available Day</h4>
-                    <ul className="sitter-available">
-                        <li>Monday</li>
-                        <li>Tuesday</li>
-                        <li>Wednesday</li>
-                        <li>Thursday</li>
-                    </ul>
-                </article>
-                <article>
-                    <h4>Accepted Size</h4>
-                    <ul className="sitter-available">
-                        <li>~10kg</li>
-                        <li>10kg~25kg</li>
-                        <li>25kg~45kg</li>
-                        <li>45kg~</li>
-                    </ul>
-                </article>
-            </li>
-        </ol>
-        // </section>
+        <li>
+            {
+                sittersData.map((sitter)=>(
+                    <SitterList
+                    key={sitter.id}
+                    sitterId={sitter.id}
+                    sitterName={sitter.name}
+                    city1={sitter.city1}
+                    city2={sitter.city2}
+                    service={sitter.service}
+                    />
+                ))
+            }
+        </li>
     );
 }
-function SitterName(){
+function SitterList(props){
     return(
-        <section>
-            {
-                sittersData.map(
-                    (sitter)=>(
-                        <RightList
-                        // key={sitter.name}
-                        name={sitter.name}
-                        />
-                    )
-                )
-            }
-        </section>
+        <ol className="list">
+            <aside>
+                <li className="sitterId">
+                    <button>{props.sitterId}</button>
+                </li>
+                <li className="sitterName">
+                    <h3>{props.sitterName}</h3>
+                    <i className="fa-solid fa-shield-dog"></i>
+                </li>
+            </aside>
+            <li className="sitterLocation">
+                <i className="fa-solid fa-location-arrow"></i>
+                <h5 className="sitterPlace">{props.city1}</h5>
+                <h5>,</h5>
+                <h5 className="sitterCity">{props.city2}</h5>
+            </li>
+            <li className="sitterService">
+                <h4>Available Service:<span>{props.service}</span></h4>
+            </li>
+        </ol>
     );
 }
 
 function SitterListPage(){
     return(
         <main className="sitterList-main">
-            <section>
-                <LeftForm/>
-                <section className="right-list">
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                    <RightList/>
-                </section>
-            </section>
+            <LeftForm/>
+            <RightList/>
         </main>
     );
 }
@@ -193,9 +215,7 @@ function SitterListPage(){
 function App(){
 
     $("#root").ready(function(){
-        
     })
-
 
     return(
         <React.Fragment>
@@ -203,6 +223,7 @@ function App(){
         </React.Fragment>
     );
 }
+
 const rootSitterListHTML = ReactDOM.createRoot(document.getElementById("root"));
 
 rootSitterListHTML.render(<App/>);

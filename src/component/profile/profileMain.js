@@ -42,7 +42,6 @@ function ProfileTop(){
             </figcaption>
         </figure>
     );
-
 }
 //END: Profile page top part
 //START: Sitter Availability part
