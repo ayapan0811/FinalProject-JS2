@@ -1,29 +1,38 @@
-//copied from johns file
+// variable to receive the JSON file
+const filePath = "../data/sitter.json";
+// 
+const fileManager = require('fs');
 
-// // variable to receive the JSON file
-// const filePath = "../data/Shop.json";
-// // 
-// const fileManager = require('fs');
+// defining and analyzing the list of products
+let sitterList = JSON.parse(fileManager.readFileSync(filePath, "utf8"));
+console.log(sitterList);
 
-// // defining and analyzing the list of products
-// let productList = JSON.parse(fileManager.readFileSync(filePath, "utf8"));
+// export default sitterList;
 
-// // setting port for new page
-// const PORT = 5500;
-// const express = require('express');
-// const cors = require('cors');
-// const app = express();
+// setting port for new page
+const PORT = 3100;
+const express = require('express');
+const app = express();
+const cors = require("cors")
 
-// // 
-// app.use(express.json());
-// app.use(cors());
+// 
+app.use(express.json());
+app.use(cors())
 
-// // the APP variable gets a complement and a function to check the json file
-// app.get("/product-api",function(req, res){
-//     res.json(productList);
-// });
+// the APP variable gets a complement and a function to check the json file
+app.get("/sitter-api",function(req, res){
+    res.json(sitterList);
+});
 
-// // 
-// app.listen(PORT, function(){
-//     console.log(`Server is running port ${PORT}`);
-// });
+// 
+app.listen(PORT, function(){
+    console.log(`Server is running port ${PORT}`);
+});
+
+// function JSONloader(){
+//     return(
+//         <section>
+//             {sitterList}
+//         </section>
+//     );
+// }

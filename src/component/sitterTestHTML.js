@@ -2,7 +2,7 @@ import React from "react";
 import $ from 'jquery';
 
 //START: getting JSON file
-const sitterUrl = "http://127.0.0.1:5500/src/data/sitters.json";
+const sitterUrl = "../src/data/sitter.json";
 
 $.extend({
     getJsonData: function(url){
