@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import ProfilePage from './component/profileMain';
+import './css/style.css';
+// import './scss/style.scss';
+// import App from './App';
+import SitterListTestApp from './component/sitterTestHTML';
+import ProApp from './component/profileMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';
 
@@ -10,8 +13,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App/>}/>
-      <Route path="/profile" element={<ProfilePage/>}/>
+      <Route path='/sitterlisttest' element={<SitterListTestApp/>}/>
+      <Route path="/profile" element={<ProApp/>}/>
     </Routes>
   </BrowserRouter>
   // <React.StrictMode>

@@ -1,7 +1,10 @@
+import React from "react";
+import $ from 'jquery';
+
 //START: getting JSON file
 const sitterUrl = "http://127.0.0.1:5500/src/data/sitters.json";
 
-jQuery.extend({
+$.extend({
     getJsonData: function(url){
         let result = null;
         $.ajax({
@@ -58,7 +61,7 @@ function SitterTestPage(){
         </ul>
     );
 }
-function App(){
+function SitterListTestApp(){
     $("#root").ready(function(){
         $("section").hide();
         
@@ -66,7 +69,8 @@ function App(){
             $('[class="sitterId"]').eq(i).click(()=>{
                     $("section").slideDown();
                     let selectedId = $('[class="sitterId"]').eq(i).text();
-                    $("a").attr("href",`profile.html?${selectedId}`)
+                    // $("a").attr("href",`profile.html?${selectedId}`)
+                    $("a").attr("href",`/profile?5`)
                 })
             }
     });
@@ -79,8 +83,9 @@ function App(){
     );
 }
 
+export default SitterListTestApp;
 
-const rootSitterTestHTML = ReactDOM.createRoot(document.getElementById("root"));
+// const rootSitterTestHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-rootsitterTestHTML.render(<App/>);
+// rootsitterTestHTML.render(<App/>);
 //END: Profile page into #root
