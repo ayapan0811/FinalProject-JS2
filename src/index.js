@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import './css/style.css';
 // import './scss/style.scss';
-// import App from './App';
+import HomeApp from './component/homeMain';
 import SitterListTestApp from './component/sitterTestHTML';
 import ProApp from './component/profileMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -14,7 +14,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       {/* <Route path='/jsonfile' element={<SitterListTestApp/>}/> */}
-      <Route path='/sitterlisttest' element={<SitterListTestApp/>}/>
+      <Route path='/' element={<HomeApp/>}/>
+      <Route path='/sittertest' element={<SitterListTestApp/>}/>
       <Route path="/profile" element={<ProApp/>}/>
     </Routes>
   </BrowserRouter>

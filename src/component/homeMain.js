@@ -1,3 +1,6 @@
+import $, { data } from 'jquery';
+import React, { useState, useEffect } from "react";
+
 function SearchSitter(){
     return(
         <section className="search-sitter">
@@ -343,24 +346,21 @@ function HomePage(){
     );
 }
 
-function App(){
+function HomeApp(){
 
-    $("#root").ready(function(){
-
-        //START:Q&A accordion part
-        const h4s = document.querySelectorAll("h4");
-        h4s.forEach((h4)=>{
-            h4.addEventListener("click",()=>{
-                h4.parentNode.classList.toggle("appear");
-                h4s.forEach((el)=>{
-                    if(h4 !== el){
-                        el.parentNode.classList.remove("appear");
-                    }
-                });
+    //START:Q&A accordion part
+    const h4s = document.querySelectorAll("h4");
+    h4s.forEach((h4)=>{
+        h4.addEventListener("click",()=>{
+            h4.parentNode.classList.toggle("appear");
+            h4s.forEach((el)=>{
+                if(h4 !== el){
+                    el.parentNode.classList.remove("appear");
+                }
             });
         });
-        //END:Q&A accordion part
     });
+    //END:Q&A accordion part
 
     return(
         <React.Fragment>
@@ -369,7 +369,8 @@ function App(){
     );
 }
 
+export default HomeApp;
 
-const rootHomePageHTML = ReactDOM.createRoot(document.getElementById("root"));
+// const rootHomePageHTML = ReactDOM.createRoot(document.getElementById("root"));
 
-rootHomePageHTML.render(<App/>);
+// rootHomePageHTML.render(<App/>);
