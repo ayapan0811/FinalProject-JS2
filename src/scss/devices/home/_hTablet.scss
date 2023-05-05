@@ -81,27 +81,11 @@
       font-size: 30px;
     }
     a{
-      display: none;
+      font-size: 22px;
+      margin-right: 13vh;
+      margin-top: 5vh;
     }
-    form{
-      padding-top: 2vh;
-      padding-right: 2vh;
-      display: block;
-      display: flex;
-      justify-content: flex-end;
-      >section{
-        background-color: $box2;
-        width: 45%;
-        padding: 2vh;
-        border-radius: 15px;
-        box-shadow: 10px 10px 20px;
-      }
-      section,
-      article,
-      aside{
-        @include flex-column;
-      }
-    }
+
     .dogorcat{
       flex-direction: row;
       column-gap: 1vh;

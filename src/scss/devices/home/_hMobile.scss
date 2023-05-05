@@ -60,7 +60,7 @@
     pointer-events: none;
     transition: opacity .6s;
     ul{
-      @include columnRow(2vh);
+      @include columnRow(4vh);
       list-style-type: none;
     }
     a{

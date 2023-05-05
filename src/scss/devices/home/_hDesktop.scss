@@ -19,18 +19,33 @@
     }
   }
   .search-sitter{
-    height: 90vh;
+    height: 100vh;
     h2{
       font-size: 45px;
     }
     p{
       font-size: 20px;
     }
+     a{
+      display: none;
+    }
     form{
-      padding-top: 8vh;
-      padding-right: 8vh;
+      padding-top: 2vh;
+      padding-right: 7vh;
+      display: block;
+      display: flex;
+      justify-content: flex-end;
       >section{
+        background-color: $box2;
         width: 40%;
+        padding: 3vh;
+        border-radius: 15px;
+        box-shadow: 10px 10px 20px;
+      }
+      section,
+      article,
+      aside{
+        @include flex-column;
       }
     }
     input,select{
@@ -39,6 +54,23 @@
     label{
       font-size: 20px;
     }
+  }
+  .home-search{
+    padding-top: 2vh;
+    display: flex;
+    align-items: center;
+    input{
+      width: 40%;
+      background-color: sandybrown;
+      border: 3px solid sandybrown;
+      color: white;
+      &:hover{
+        transition: .6s;
+        background-color: transparent;
+        color: sandybrown;
+      }
+    }
+
   }
 
    /*=====================
