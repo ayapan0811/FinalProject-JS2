@@ -33,7 +33,7 @@
         .box{
             width: 80%;
             border: 10px solid $box2;
-            background-color: $box2;
+            background-color: $box2;      
             img{
                 width: 50%;
             }
@@ -43,7 +43,7 @@
             @include flex-center;
             text-align: center;
         }
-        figcaption :nth-child(1){
+        figcaption{
             color: $title;
         }
         

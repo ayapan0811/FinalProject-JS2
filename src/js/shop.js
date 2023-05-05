@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 function Item(props) {
 
   return (
-    <>
-      <img src={props.img} alt={props.name}/>
-      <figcaption>
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
-        <h3>{props.price}</h3>
-      </figcaption>
-    </>
+    <div className="box">
+        <figure>
+            <img src={props.img} alt={props.name}/>
+            <figcaption>
+                <h3>{props.name}</h3>
+                <p>{props.description}</p>
+                <h3>{props.price}</h3>
+            </figcaption>
+        </figure>
+    </div>
   );
 }
 function Shop() {
@@ -25,18 +27,18 @@ function Shop() {
   return (
     <>
         <header>
-        <section class="header-container">
+        <section className="header-container">
             <section>
                 <a href="#">
-                    <i class="fa-solid fa-dog"></i>
+                    <i className="fa-solid fa-dog"></i>
                 </a>
                 <h1>Bawwau Sitter</h1>
             </section>
-            <aside class="hg-menu">
-                <i class="fa-solid fa-bars" id="open"></i>
+            <aside className="hg-menu">
+                <i className="fa-solid fa-bars" id="open"></i>
             </aside>
-            <article class="overlay">
-                <i class="fa-solid fa-xmark" id="close"></i>
+            <article className="overlay">
+                <i className="fa-solid fa-xmark" id="close"></i>
                 <nav>
                     <ul>
                         <li><a href="#">Our Service</a></li>
@@ -48,7 +50,7 @@ function Shop() {
         </section>
         {/* header-container */}
     </header>
-    <main class="shop">
+    <main className="shop">
         <section id="menu">
             <h2>
                 Animal
@@ -61,8 +63,6 @@ function Shop() {
             </h2>
         </section>
         <section id="box">
-            <div class="box">
-              <figure>
                 {localProductList.map((item) => (
                   <Item 
                     name={item.name}
@@ -72,13 +72,11 @@ function Shop() {
                     key={item.id}
                   />
                 ))}
-              </figure>
-            </div>
         </section>
     </main>
     <footer>
         <section>
-            <section class="footer-aboutus">
+            <section className="footer-aboutus">
                 <h4>Bawwow sitter</h4>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nam ipsa placeat aut? Accusamus doloribus laudantium quo saepe magnam. Repellat animi deserunt inventore eum officia itaque corporis velit aspernatur ipsam?
@@ -86,47 +84,47 @@ function Shop() {
                 <ul>
                     <li>
                         <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
+                            <i className="fa-brands fa-twitter"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i className="fa-brands fa-facebook"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i className="fa-brands fa-linkedin-in"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                 </ul>
             </section>
-            <section class="link">
+            <section className="link">
                 <h3>Quick Links</h3>
                 <ul>
                     <li>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                         <a href="">About us</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                         <a href="">Our Services</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                         <a href="#">Blog</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                         <a href="#">Contact Us</a>
                     </li>
                 </ul>
