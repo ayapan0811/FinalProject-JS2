@@ -2,13 +2,16 @@ import $ from 'jquery';
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldDog, faLocationArrow } from '@fortawesome/free-solid-svg-icons';
+import { click } from '@testing-library/user-event/dist/click';
 
 function ConfirmModal(){
     return(
         <section id="confirm">
             <p>Go to profile?</p>
-            <button><a>Yes</a></button>
-            <button>No</button>
+            <aside>
+                <button><a className='goBtn'>Go</a></button>
+                <button>Cancel</button>
+            </aside>
         </section>
     );
 }
@@ -35,7 +38,7 @@ function LeftForm(){
               <article>
                   <label htmlFor="select-service">Service</label>
                   <select name="select-service" id="select-service">
-                      <option value="none" disabled selected>Select Service</option>
+                      <option value="none">Select Service</option>
                       <option value="boarding">Boarding</option>
                       <option value="dogwalking">Dog Walking</option>
                   </select>
@@ -43,7 +46,7 @@ function LeftForm(){
               <article>
                   <label htmlFor="select-location">Location</label>
                   <select name="location" id="location">
-                      <option value="none" disabled selected>Select your location</option>
+                      <option value="none">Select your location</option>
                       <optgroup label="Vancouver">
                           <option value="Vancouver">Vancouver</option>
                           <option value="Richmond">Richmond</option>
@@ -70,7 +73,7 @@ function LeftForm(){
                   <aside>
                       <label htmlFor="day">For these days</label>
                       <select name="day" id="day">
-                          <option value="none" disabled selected>Select day</option>
+                          <option value="none">Select day</option>
                           <option value="Sunday">Sunday</option>
                           <option value="Monday">Monday</option>
                           <option value="Tuesday">Tuesday</option>
@@ -117,11 +120,19 @@ function RightList(){
     );
 }
 function SitterList(props){
+   
     return(
         <ol className="list">
             <aside>
                 <li className="sitterId">
-                    <button>{props.sitterId}</button>
+                    <button value={props.sitterId} onClick={(e)=>{
+                        $("#confirm").show(); //modal pop up
+                        let selectedId = e.target.parentNode.value;
+                        console.log(selectedId);
+                        $(".goBtn").attr("href",`/profile?${selectedId}`);
+                    }}>
+                        <a href='#confirm'>Check</a>
+                    </button>
                 </li>
                 <li className="sitterName">
                     <h3>{props.sitterName}</h3>
@@ -129,7 +140,7 @@ function SitterList(props){
                 </li>
             </aside>
             <li className="sitterLocation">   
-                <FontAwesomeIcon icon={faLocationArrow} size="l"/>
+                <FontAwesomeIcon icon={faLocationArrow}/>
                 <h5 className="sitterPlace">{props.city1}</h5>
                 <h5>,</h5>
                 <h5 className="sitterCity">{props.city2}</h5>
@@ -152,24 +163,6 @@ function SitterListPage(){
 }
 
 function ListApp(){
-
-        // $("#root").ready(function(){
-        
-        // });
-        
-
-        // for(let i=0; i<100; i++){
-        //         $('[class="sitterId"]').eq(i).click(()=>{
-        //         $("section").slideDown();
-        //         let selectedId = $('[class="sitterId"]').eq(i).text();
-        //         console.log(selectedId);
-        //         $("#confirm a").attr("href",`/profile?${selectedId}`);
-        //         // $("a").attr("href",`/profile?5`);
-
-        //     })
-        // }
-
-
     return(
         <React.Fragment>
             <SitterListPage/>
@@ -178,6 +171,3 @@ function ListApp(){
 }
 
 export default ListApp;
-// const rootSitterListHTML = ReactDOM.createRoot(document.getElementById("root"));
-
-// rootSitterListHTML.render(<App/>);

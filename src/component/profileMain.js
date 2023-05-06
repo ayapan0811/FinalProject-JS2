@@ -1,16 +1,17 @@
 import $ from 'jquery';
 import React, { useState, useEffect } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow,faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import proCat from "../img/proCat.jpg";
 import proDog from "../img/proDog.jpg";
-import sitterImg1 from "../img/sitter-1.jpg";
+// import sitterImg1 from "../img/sitter-1.jpg";
 import sitterImg2 from "../img/sitter-2.jpg";
-import sitterImg3 from "../img/sitter-3.jpg";
-import sitterImg4 from "../img/sitter-4.jpg";
-import sitterImg5 from "../img/sitter-5.jpg";
-import sitterImg6 from "../img/sitter-6.jpg";
-import sitterImg7 from "../img/sitter-7.jpg";
+// import sitterImg3 from "../img/sitter-3.jpg";
+// import sitterImg4 from "../img/sitter-4.jpg";
+// import sitterImg5 from "../img/sitter-5.jpg";
+// import sitterImg6 from "../img/sitter-6.jpg";
+// import sitterImg7 from "../img/sitter-7.jpg";
 
 //START: Profile page top part
 function ProfileTop(){
@@ -198,7 +199,6 @@ function ProfileBottom(){
 //END: Profile page bottom part
 //START: Profile page into #root
 function ProfilePage(){
-
     return(
         <main className="profile">
             <ProfileTop/>
@@ -219,22 +219,23 @@ function ProApp(){
         .then(setSitterList)
     }, []); 
     //END: getting JSON file
-
+    
+    const location = useLocation(); 
     $("#root").ready(function(){
-
+        
         //START: getting sitterid from sitter page 
-        // let param = location.search;
-        // let selectedSitterId = Number(param.slice(1,2))-1;
-        let selectedSitterId = 0;
+        let selectedSitterId = Number(location.search.slice(1,4))-1;
         //END: getting sitterid from sitter page 
         //START: showing Json file data to profile page
         let selectedSitter = localSitterList[selectedSitterId];
 
+        //START: picture
         // let picNumber = (Math.floor(Math.random()*7)+1);
         // $('[alt="mainPic"]').attr("src",JSON.parse(`sitterImg${picNumber}`));
         //could not get pictures from the json file, and it was not able to do it randomly, so putting one picture for now 
-
         $('[alt="mainPic"]').attr("src",sitterImg2);
+        //END: picture
+
         $('[class="sitterName"]').text(`${selectedSitter?.name}`);
         $('[class="rating"]').text(`${selectedSitter?.rating}/5`);
         $('[class="rating"]').css("color","orange");
