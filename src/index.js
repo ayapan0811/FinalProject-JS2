@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 // import './index.css';
 import './css/style.css';
 import HomeApp from './component/homeMain';
-import ListApp from './component/sitterList';
+import ListApp from './component/sitterListMain';
 import ProApp from './component/profileMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';

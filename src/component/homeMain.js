@@ -1,11 +1,14 @@
 // import $, { data } from 'jquery';
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouseChimneyWindow, faDog, faShieldDog, faMagnifyingGlass, faCalendarDays, faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
+import { faHouseChimneyWindow, faDog, faShieldDog, faMagnifyingGlass, faCalendarDays, faEarthAmericas, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faFacebook, faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSquareCheck, faCreditCard, faClock } from "@fortawesome/free-regular-svg-icons";
 import dogImg1 from "../img/home-img/home-dog1.jpg";
 import dogImg2 from "../img/home-img/home-dog2.jpg";
 import dogImg3 from "../img/home-img/home-dog3.jpg";
+import Header from "./header";
+import FooterLinkList from "./footerList";
 
 function SearchSitter(){
     return(
@@ -14,7 +17,7 @@ function SearchSitter(){
                 <article>
                     <h2>Loving pet care in your neighborhood</h2>
                     <p> Book trusted sitters and dog walkers</p>
-                    <a href="sitterlist.html">Search Sitter</a>
+                    <a href="/list">Search Sitter</a>
                 </article>
                 <form action="#">
                     <section>
@@ -352,6 +355,66 @@ function HomePage(){
     );
 }
 
+//START: footer part
+const homeFooter = [
+    {name:"Home", link:"/"},
+    {name:"Our Services", link:"#services"},
+    {name:"Q&A", link:"#QandA"},
+    {name:"Search Sitter", link:"/list"},
+    {name:"Sign In", link:"#"},
+    {name:"Sign Up", link:"#"}
+]
+function Footer(){
+    return(
+        <footer>
+            <section>
+                <section className="footer-aboutus">
+                    <h4>Bawwow sitter</h4>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nam ipsa placeat aut? Accusamus doloribus laudantium quo saepe magnam. Repellat animi deserunt inventore eum officia itaque corporis velit aspernatur ipsam?
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <FontAwesomeIcon icon={faTwitter}/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <FontAwesomeIcon icon={faFacebook}/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <FontAwesomeIcon icon={faLinkedinIn}/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <FontAwesomeIcon icon={faInstagram}/>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section className="link">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        {homeFooter.map((homeFoot)=>(
+                            <FooterLinkList
+                                key={homeFoot.name}
+                                name={homeFoot.name}
+                                link={homeFoot.link}
+                            />
+                        ))}
+                    </ul>
+                </section>
+            </section>
+            <p>Copyright &copy; Bawwow sitter service </p>
+        </footer>
+    );
+}
+//END: footer part
+
 function HomeApp(){
 
     //START:Q&A accordion part
@@ -370,13 +433,11 @@ function HomeApp(){
 
     return(
         <React.Fragment>
+            <Header/>
             <HomePage/>
+            <Footer/>
         </React.Fragment>
     );
 }
 
 export default HomeApp;
-
-// const rootHomePageHTML = ReactDOM.createRoot(document.getElementById("root"));
-
-// rootHomePageHTML.render(<App/>);
