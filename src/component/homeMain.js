@@ -1,5 +1,11 @@
-import $, { data } from 'jquery';
+// import $, { data } from 'jquery';
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseChimneyWindow, faDog, faShieldDog, faMagnifyingGlass, faCalendarDays, faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
+import { faSquareCheck, faCreditCard, faClock } from "@fortawesome/free-regular-svg-icons";
+import dogImg1 from "../img/home-img/home-dog1.jpg";
+import dogImg2 from "../img/home-img/home-dog2.jpg";
+import dogImg3 from "../img/home-img/home-dog3.jpg";
 
 function SearchSitter(){
     return(
@@ -109,7 +115,7 @@ function Services(){
         <section>
             <article className="service">
                 <aside>
-                    <i className="fa-solid fa-house-chimney-window"></i>
+                    <FontAwesomeIcon icon={faHouseChimneyWindow} size="2xl"/>
                     <section>
                         <h4>Boarding</h4>
                         <p>
@@ -118,7 +124,7 @@ function Services(){
                     </section>
                 </aside>
                 <aside>
-                    <i className="fa-solid fa-dog"></i>
+                    <FontAwesomeIcon icon={faDog} size="2xl"/>
                     <section>
                         <h4>Dog Walking</h4>
                         <p>
@@ -130,20 +136,20 @@ function Services(){
             <article className="trust-sitter">
                 <section>
                     <aside>
-                        <i className="fa-solid fa-shield-dog"></i>
+                        <FontAwesomeIcon icon={faShieldDog} size="xl"/>
                         <h4>Pet sitters you can trust</h4>
                     </aside>
                     <ul>
                         <li>
-                            <i className="fa-regular fa-square-check"></i>
+                            <FontAwesomeIcon icon={faSquareCheck} size="l"/>
                             <p>All sitters pass a background check</p>
                         </li>
                         <li>
-                            <i className="fa-regular fa-square-check"></i>
+                            <FontAwesomeIcon icon={faSquareCheck} size="l"/>
                             <p>All sitters provide a detailed profile and personal information</p>
                         </li>
                         <li>
-                            <i className="fa-regular fa-square-check"></i>
+                            <FontAwesomeIcon icon={faSquareCheck} size="l"/>
                             <p>All sitters are approved by our team of sitter specialists</p>
                         </li>
                     </ul>
@@ -165,21 +171,21 @@ function BookingFlow(){
             </section>
             <article>
                 <aside>
-                    <i className="fa-solid fa-magnifying-glass"></i>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} size="2xl"/>
                     <h4>1. Search</h4>
                     <p>
                         Read verified reviews by pet parents like you and choose a sitter who’s a great match for you and your pets.
                     </p>
                 </aside>
                 <aside>
-                    <i className="fa-solid fa-calendar-days"></i>
+                    <FontAwesomeIcon icon={faCalendarDays} size="2xl"/>
                     <h4>2. Arrange a meet & greet</h4>
                     <p>
                         Get to know your sitter in person, obligation-free.
                     </p>
                 </aside>
                 <aside>
-                    <i className="fa-regular fa-credit-card"></i>
+                    <FontAwesomeIcon icon={faCreditCard} size="2xl"/>
                     <h4>3.Pay</h4>
                     <p>
                         Book your sitter through our safe online system, with flexible cancellations in case your plans change.
@@ -196,9 +202,9 @@ function Blog(){
         <h3>Blog</h3>
         <section>
             <figure>
-                <img src="http://127.0.0.1:5500/src/img/home-img/home-dog1.jpg" alt="dog1"/>
+                <img src={dogImg1} alt="dog1"/>
                 <aside>
-                    <i className="fa-regular fa-clock"></i>
+                    <FontAwesomeIcon icon={faClock} size="xl"/>
                     <p>23/04/2023</p>
                 </aside>
                 <figcaption>
@@ -210,9 +216,9 @@ function Blog(){
                 <a href="#">Read More</a>
             </figure>
             <figure>
-                <img src="http://127.0.0.1:5500/src/img/home-img/home-dog2.jpg" alt="dog2"/>
+                <img src={dogImg2} alt="dog2"/>
                 <aside>
-                    <i className="fa-regular fa-clock"></i>
+                    <FontAwesomeIcon icon={faClock} size="xl"/>
                     <p>12/04/2023</p>
                 </aside>
                 <figcaption>
@@ -225,9 +231,9 @@ function Blog(){
                 <a href="#">Read More</a>
             </figure>
             <figure>
-                <img src="http://127.0.0.1:5500/src/img/home-img/home-dog3jpg.jpg" alt="dog3"/>
+                <img src={dogImg3} alt="dog3"/>
                 <aside>
-                    <i className="fa-regular fa-clock"></i>
+                    <FontAwesomeIcon icon={faClock} size="xl"/>
                     <p>05/04/2023</p>
                 </aside>
                 <figcaption>
@@ -325,7 +331,7 @@ function Location(){
                         <li>Durham</li>
                     </ul>
                 </aside>
-                <i className="fa-solid fa-earth-americas"></i>
+                <FontAwesomeIcon icon={faEarthAmericas} size="2xl"/>
             </article>
         </section>
     );

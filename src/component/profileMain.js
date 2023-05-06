@@ -1,7 +1,16 @@
-import $, { data } from 'jquery';
+import $ from 'jquery';
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faLocationArrow,faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import proCat from "../img/proCat.jpg";
+import proDog from "../img/proDog.jpg";
+import sitterImg1 from "../img/sitter-1.jpg";
+import sitterImg2 from "../img/sitter-2.jpg";
+import sitterImg3 from "../img/sitter-3.jpg";
+import sitterImg4 from "../img/sitter-4.jpg";
+import sitterImg5 from "../img/sitter-5.jpg";
+import sitterImg6 from "../img/sitter-6.jpg";
+import sitterImg7 from "../img/sitter-7.jpg";
 
 //START: Profile page top part
 function ProfileTop(){
@@ -71,7 +80,7 @@ function ProfileRight(){
             <section>
                 <article>
                     <aside>
-                        <i className="fa-solid fa-location-arrow"></i>
+                        <FontAwesomeIcon icon={faLocationArrow} size='xl'/>
                         <h3 className="bigCity">City</h3>
                         <h3>,</h3>
                         <h3 className="smallCity">City</h3>
@@ -111,8 +120,8 @@ function ProfileLeft(){
         <section className="proLeft">
             <SitterAvailability/>
             <figure>
-                <img src="img/proCat.jpg" alt="sitterPic1"/>
-                <img src="img/proDog.jpg" alt="sitterPic2"/>
+                <img src={proCat} alt="sitterPic1"/>
+                <img src={proDog} alt="sitterPic2"/>
             </figure>
             <article>
                 <p>
@@ -160,13 +169,13 @@ function ProfileBottom(){
             <section>
                 <article>
                     <button className="prevBtn">
-                        <i className="fa-sharp fa-solid fa-chevron-left fa-beat fa-lg"></i>
+                        <FontAwesomeIcon icon={faChevronLeft}/>
                     </button>
                     <section className="slideShow">
                         {
                             reviewList.map((review)=>(
                                 <Review
-                                    key={review.name}
+                                key={review.name}
                                     name={review.name}
                                     star={review.star}
                                     feedback={review.feedback}
@@ -175,7 +184,7 @@ function ProfileBottom(){
                         }
                     </section>
                     <button className="nextBtn">
-                        <i className="fa-sharp fa-solid fa-chevron-right fa-beat fa-lg"></i>
+                        <FontAwesomeIcon icon={faChevronRight}/>
                     </button>
                 </article>
                 <section>
@@ -216,13 +225,16 @@ function ProApp(){
         //START: getting sitterid from sitter page 
         // let param = location.search;
         // let selectedSitterId = Number(param.slice(1,2))-1;
-        let selectedSitterId = 87;
+        let selectedSitterId = 0;
         //END: getting sitterid from sitter page 
         //START: showing Json file data to profile page
-
         let selectedSitter = localSitterList[selectedSitterId];
 
-        // $('[alt="mainPic"]').attr("src",selectedSitter.picture);
+        // let picNumber = (Math.floor(Math.random()*7)+1);
+        // $('[alt="mainPic"]').attr("src",JSON.parse(`sitterImg${picNumber}`));
+        //could not get pictures from the json file, and it was not able to do it randomly, so putting one picture for now 
+
+        $('[alt="mainPic"]').attr("src",sitterImg2);
         $('[class="sitterName"]').text(`${selectedSitter?.name}`);
         $('[class="rating"]').text(`${selectedSitter?.rating}/5`);
         $('[class="rating"]').css("color","orange");

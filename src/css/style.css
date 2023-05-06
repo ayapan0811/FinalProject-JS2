@@ -110,7 +110,7 @@ li {
   ======================*/
   .search-sitter {
     height: 50vh;
-    background-image: url(/src/img/home-img/home-dog7.jpg);
+    background-image: url(/src/img/home-img/homebg-dog.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -658,13 +658,12 @@ li {
   .sitterList-main {
     padding-top: 5vh;
     display: flex;
-    justify-content: center;
-  }
-  .sitterList-main > section {
-    display: flex;
     flex-direction: column;
-    row-gap: 5vh;
-    width: 90%;
+    row-gap: 3vh;
+    align-items: center;
+    /*=======================
+    sitterList-form
+    ========================*/
   }
   .sitterList-main h2 {
     font-size: 30px;
@@ -674,6 +673,9 @@ li {
   .sitterList-main form {
     padding: 2vh;
     background-color: #FFEEB3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
   }
   .sitterList-main form > section {
     display: flex;
@@ -690,51 +692,77 @@ li {
     display: flex;
     flex-direction: column;
   }
-  .dogorcat {
+  .sitterList-main .dogorcat {
     display: flex;
     flex-direction: column;
     row-gap: 1vh;
   }
-  .dogorcat section {
+  .sitterList-main .dogorcat section {
     display: flex;
     -moz-column-gap: 2vh;
          column-gap: 2vh;
   }
-  .dogorcat small {
+  .sitterList-main .dogorcat small {
     font-size: 16px;
   }
-  .dogorcat aside {
+  .sitterList-main .dogorcat aside {
     flex-direction: row;
     -moz-column-gap: 1vh;
          column-gap: 1vh;
   }
-  .right-list > section {
-    width: 100%;
+  /*=======================
+  list
+  ========================*/
+  .list {
     border-top: 1px solid gray;
-  }
-  .right-list aside {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 2vh;
-         column-gap: 2vh;
-  }
-  .right-list ul {
-    display: flex;
-    -moz-column-gap: 3vh;
-         column-gap: 3vh;
     list-style-type: none;
-  }
-  .right-list > li {
-    padding: 3vh 0;
     display: flex;
     flex-direction: column;
     row-gap: 1vh;
-    border-top: 1px solid gray;
   }
-  .right-list .sitter-available li {
+  .list .sitterLocation {
+    display: flex;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+    padding-left: 1vh;
+  }
+  .list aside {
+    padding-top: 2vh;
+    display: flex;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+  }
+  .list .sitterName {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+  }
+  .list .sitterService {
+    padding-bottom: 2vh;
+  }
+  .list i {
+    color: #9E6F21;
+    font-size: 20px;
+  }
+  .list button {
+    width: 4vh;
+    height: 4vh;
+    background-color: #B8E7E1;
+    border-color: white;
+    margin-left: 1vh;
+  }
+  .list h4 {
+    padding-left: 3vh;
+  }
+  .list span {
+    padding: 2%;
     background-color: #D4F4FC;
-    padding: 1%;
     border-radius: 10px;
+    margin-left: 1vh;
+  }
+  .list h3 {
+    color: #9E6F21;
   }
 }
 @media (min-width: 700px) {
@@ -809,6 +837,29 @@ li {
   }
   .search-sitter h2 {
     font-size: 30px;
+  }
+  .search-sitter a {
+    display: none;
+  }
+  .search-sitter form {
+    padding-top: 2vh;
+    padding-right: 2vh;
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search-sitter form > section {
+    background-color: #FFEEB3;
+    width: 45%;
+    padding: 2vh;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px;
+  }
+  .search-sitter form section,
+  .search-sitter form article,
+  .search-sitter form aside {
+    display: flex;
+    flex-direction: column;
   }
   .search-sitter .dogorcat {
     flex-direction: row;
@@ -983,6 +1034,27 @@ li {
     color: #FFEEB3;
   }
 }
+@media (min-width: 700px) {
+  .sitterList-main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  .left-form {
+    width: 40%;
+  }
+  /*=======================
+  list
+  ========================*/
+  .list {
+    width: 100%;
+  }
+  .list:hover {
+    background-color: #B8E7E1;
+  }
+}
 @media (min-width: 1000px) {
   /*=====================
   header
@@ -1007,29 +1079,6 @@ li {
   }
   .search-sitter p {
     font-size: 20px;
-  }
-  .search-sitter a {
-    display: none;
-  }
-  .search-sitter form {
-    padding-top: 2vh;
-    padding-right: 2vh;
-    display: block;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .search-sitter form > section {
-    background-color: #FFEEB3;
-    width: 45%;
-    padding: 2vh;
-    border-radius: 15px;
-    box-shadow: 10px 10px 20px;
-  }
-  .search-sitter form section,
-  .search-sitter form article,
-  .search-sitter form aside {
-    display: flex;
-    flex-direction: column;
   }
   .search-sitter form {
     padding-top: 8vh;

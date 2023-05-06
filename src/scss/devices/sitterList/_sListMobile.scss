@@ -2,22 +2,21 @@
 
     .sitterList-main{
         padding-top: 5vh;
-        display: flex;
-        justify-content: center;
-        >section{
-            @include columnRow(5vh);
-            width: 90%;
-        }
+        @include columnRow(3vh);
+        align-items: center;
         h2{
             font-size: 30px;
             padding-bottom: 2vh;
             color: $title;
         }
-        
+        /*=======================
+        sitterList-form
+        ========================*/
         form{
             // position: fixed;
             padding: 2vh;
             background-color: $box2;
+            @include columnRow(1vh);
             >section{
                 @include columnRow(2vh);
             }
@@ -31,50 +30,64 @@
                 @include flex-column;
             }
         }
-    }
-    .dogorcat{
-        @include columnRow(1vh);
-        section{
-            display: flex;
-            column-gap: 2vh;
-        }
-        small{
-            font-size: 16px;
-        }
-        aside{
-            flex-direction: row;
-            column-gap: 1vh;
-        }
-    }
-    .right-list{
-        >section{
-            width: 100%;
-            border-top: 1px solid gray;
-
-        }
-        aside{
-            display: flex;
-            align-items: center;
-            column-gap: 2vh;
-        }
-        ul{
-            display: flex;
-            column-gap: 3vh;
-            list-style-type: none;
-        }
-        >li{
-            padding: 3vh 0;
+        .dogorcat{
             @include columnRow(1vh);
-            border-top: 1px solid gray;
+            section{
+                display: flex;
+                column-gap: 2vh;
+            }
+            small{
+                font-size: 16px;
+            }
+            aside{
+                flex-direction: row;
+                column-gap: 1vh;
+            }
         }
-        .sitter-available{
-            li{
+        }
+        /*=======================
+        list
+        ========================*/
+        .list{
+            border-top: 1px solid gray;
+            list-style-type: none;
+            @include columnRow(1vh);
+            .sitterLocation{
+                display: flex;
+                column-gap: 1vh;
+                padding-left: 1vh;
+            }
+            aside{
+                padding-top: 2vh;
+                display: flex;
+                column-gap: 1vh;
+            }
+            .sitterName{
+                display: flex;
+                align-items: center;
+                column-gap: 1vh;
+            }
+            .sitterService{
+                padding-bottom: 2vh;
+            }
+            button{
+                width: 4vh;
+                height: 4vh;
+                background-color: $box;
+                border-color: white;
+                margin-left: 1vh;
+            }
+            h4{
+                padding-left: 3vh;
+            }
+            span{
+                padding: 2%;
                 background-color: $background;
-                padding: 1%;
                 border-radius: 10px;
+                margin-left: 1vh;
+            }
+            h3{
+                color: $title;
             }
         }
     }
-
-
-}

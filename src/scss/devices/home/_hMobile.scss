@@ -85,7 +85,7 @@
   ======================*/
   .search-sitter{
     height: 50vh;
-    background-image: url(/src/img/home-img/home-dog7.jpg);
+    background-image: url(/src/img/home-img/homebg-dog.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,10 +159,6 @@
       border-radius: 10px;
       box-shadow: 2px 2px 3px lightgray;
     }
-    i{
-      font-size: 40px;
-      color: $title
-    }
   }
   .trust-sitter{
     margin-top: 5vh;
@@ -184,9 +180,6 @@
       width: 80%;
       column-gap: 1vh;
     }
-    i{
-      color: mediumseagreen;
-    }
   }
   /*=====================
   booking-flow
@@ -205,9 +198,6 @@
     }
     aside{
       @include columnRow(2vh);
-    }
-    i{
-      font-size: 40px;
     }
   }
   /*=====================
@@ -337,9 +327,6 @@
     a{
       color:white;
       text-decoration: dashed;
-    }
-    i{
-      font-size: 40px;
     }
   }
   /*=====================

@@ -50,32 +50,6 @@ function SitterTestPage(){
     );
 }
 function SitterListTestApp(){
-    // $("#root").ready(function(){
-        
-        // });
-        
-        // const confirm = document.getElementsByClassName("confirm");
-        // confirm.style.display = "none";
-        
-        console.log($("section"));
-        $("section").hide();
-
-        // for(let i=0; i<100; i++){
-        //         $('[class="sitterId"]').eq(i).click(()=>{
-        //         $("section").slideDown();
-        //         let selectedId = $('[class="sitterId"]').eq(i).text();
-        //         console.log(selectedId);
-        //         $("#confirm a").attr("href",`/profile?${selectedId}`);
-        //         // $("a").attr("href",`/profile?5`);
-
-        //     })
-        // }
-
-
-
-
-        
-        
 
     return(
         <React.Fragment>

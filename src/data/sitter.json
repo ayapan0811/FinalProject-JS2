@@ -15,7 +15,7 @@
         "thursday": false,
         "friday": true,
         "saturday": false,
-        "picture": "./img/sitter-3.jpg"
+        "picture": "sitterImg1"
     },
     {
         "id": 2,
