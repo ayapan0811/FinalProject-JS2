@@ -1,0 +1,14 @@
+@media(min-width:$desktopScreen){
+    .singUp{
+        form{
+            width: 50%;
+            aside{
+                display: flex;
+                flex-direction: column;
+            }
+            button{
+                width: 50%;
+            }
+        }
+    }
+}

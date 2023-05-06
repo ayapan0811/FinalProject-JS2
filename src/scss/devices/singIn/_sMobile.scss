@@ -1,0 +1,47 @@
+@media(min-width:$mobileScreen) {
+    .singUp{
+        font-family: $fontFamily;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5vh;
+        h1{
+            font-size: 26px;
+            padding: 5px;
+            color: $title;
+            background-color: $box2;
+        }
+        form{
+            @include columnRow(1vh);
+            font-size: 18px;
+            width: 50%;
+            background-color: $box2;
+            border-radius: 20px;
+            padding: 3vh;
+            margin: 10vh 5vh;
+            aside{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            input,select{
+                padding: 1vh;
+                border: 1px solid gray;
+                border-radius: 10px;
+            }
+            label{
+                color: $title;
+            }
+            button{
+                margin-top: 2vh;
+                font-size: 16px;
+                padding: 2vh;
+                border: 1px solid $title;
+                border-radius: 10px;
+                background-color: $title;
+                color: white;
+            }
+        }
+    }
+}
