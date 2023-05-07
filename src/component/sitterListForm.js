@@ -1,13 +1,9 @@
-import React from "react";
 import $ from 'jquery';
 
 function LocationSelect() {
-    
-    // test=()=>{
-        // let location = document.getElementById("location");
-        // console.log(document.getElementById("location"));
 
         const smallCities = ["Vancouver","Richmond","Burnaby","North Vancouver","West Vancouver","Downtown","South West","Plateau","Cote-des-Niege","City of Toronto","Halton","Peel","York","Durham"];
+        const daysOfWeek = ["listSun","listMon","listTue","listWed","listThu","listFri","listSat"];
 
         $("#location").ready(function(){
             $(".listForm").submit((e)=>{
@@ -31,14 +27,36 @@ function LocationSelect() {
                 //START: location select
                 for(let smallCity of smallCities){
                     if($("#location").val() == smallCity){
-                        for(let j=0;j<100;j++){
-                            if($(".sitterCity").eq(j).text() != smallCity){
-                                $(".list").eq(j).hide();
+                        for(let i=0;i<100;i++){
+                            if($(".sitterCity").eq(i).text() != smallCity){
+                                $(".list").eq(i).hide();
                             }
                         }
                     }
                 }
                 //END: location select
+                //START: day select
+                for(let dayOfWeek of daysOfWeek){
+                    if($("#day").val() == dayOfWeek){
+                        for(let i=0;i<100;i++){
+                            if($(`.${dayOfWeek}`).eq(i).attr('id') == "false"){
+                                $(".list").eq(i).hide();
+                            }
+                        }  
+                    }
+                }
+                //END: day select
+                //START: size select
+                // console.log($(".acceptedSize span").text());
+                if($("#selected-size").val() == "~10kg"){
+                    for(let i=0;i<100;i++){
+                        if($(".acceptedSize span").eq(i).text() != "~10kg"){
+                            $(".list").eq(i).hide();
+                        }
+                        //textでなくidでみるべきだった上参照
+                    }  
+                }
+                //END: size select
             })
         })
     // }

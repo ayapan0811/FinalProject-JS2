@@ -21,62 +21,70 @@ function ConfirmModal(){
 function LeftForm(){
     return(
         <section className="left-form">
-        <form className='listForm' action="#">
-          <h2>Find the Perfect Match</h2>
-          <section>
-              <article>
-                  <label htmlFor="select-service">Service</label>
-                  <select name="select-service" id="select-service">
-                      <option value="none">Select Service</option>
-                      <option value="boarding">Boarding</option>
-                      <option value="walking">Dog Walking</option>
-                  </select>
-              </article>
-              <article>
-                  <label htmlFor="select-location">Location</label>
-                  <select name="location" id="location">
-                      <option value="none">Select your location</option>
-                      <optgroup label="Vancouver">
-                          <option value="Vancouver">Vancouver</option>
-                          <option value="Richmond">Richmond</option>
-                          <option value="Burnaby">Burnaby</option>
-                          <option value="North Vancouver">North Vancouver</option>
-                          <option value="West Vancouver">West Vancouver</option>
-                      </optgroup>
-                      <optgroup label="Montreal">
-                          <option value="Downtown">Downtown</option>
-                          <option value="South West">South West</option>
-                          <option value="Plateau">Plateau</option>
-                          <option value="Cote-des-Niege">Cote-des-Niege</option>
-                      </optgroup>
-                      <optgroup label="Toronto">
-                          <option value="City of Toronto">City of Toronto</option>
-                          <option value="Halton">Halton</option>
-                          <option value="Peel">Peel</option>
-                          <option value="York">York</option>
-                          <option value="Durham">Durham</option>
-                      </optgroup>
-                  </select>
-              </article>
-              <article>
-                  <aside>
-                      <label htmlFor="day">Day of week</label>
-                      <select name="day" id="day">
-                          <option value="none">Select day</option>
-                          <option value="Sunday">Sunday</option>
-                          <option value="Monday">Monday</option>
-                          <option value="Tuesday">Tuesday</option>
-                          <option value="Wednesday">Wednesday</option>
-                          <option value="Thursday">Thursday</option>
-                          <option value="Friday">Friday</option>
-                          <option value="Saturday">Saturday</option>
-                      </select>
-                  </aside>
-              </article>
-              <input type="submit" value="Search Sitter"/>
-          </section>
-        </form>
-      </section>
+            <form className='listForm' action="#">
+                <h2>Find the Perfect Match</h2>
+                <section>
+                    <article>
+                        <label htmlFor="select-service">Accepted Service</label>
+                        <select name="select-service" id="select-service">
+                            <option value="none">Select Service</option>
+                            <option value="boarding">Boarding</option>
+                            <option value="walking">Dog Walking</option>
+                        </select>
+                    </article>
+                    <article>
+                        <label htmlFor="select-location">Location</label>
+                        <select name="location" id="location">
+                            <option value="none">Select your location</option>
+                            <optgroup label="Vancouver">
+                                <option value="Vancouver">Vancouver</option>
+                                <option value="Richmond">Richmond</option>
+                                <option value="Burnaby">Burnaby</option>
+                                <option value="North Vancouver">North Vancouver</option>
+                                <option value="West Vancouver">West Vancouver</option>
+                            </optgroup>
+                            <optgroup label="Montreal">
+                                <option value="Downtown">Downtown</option>
+                                <option value="South West">South West</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Cote-des-Niege">Cote-des-Niege</option>
+                            </optgroup>
+                            <optgroup label="Toronto">
+                                <option value="City of Toronto">City of Toronto</option>
+                                <option value="Halton">Halton</option>
+                                <option value="Peel">Peel</option>
+                                <option value="York">York</option>
+                                <option value="Durham">Durham</option>
+                            </optgroup>
+                        </select>
+                    </article>
+                    <article>
+                        <label htmlFor="day">Available Days</label>
+                        <select name="day" id="day">
+                            <option value="none">Select day</option>
+                            <option value="listSun">Sunday</option>
+                            <option value="listMon">Monday</option>
+                            <option value="listTue">Tuesday</option>
+                            <option value="listWed">Wednesday</option>
+                            <option value="listThu">Thursday</option>
+                            <option value="listFri">Friday</option>
+                            <option value="listSat">Saturday</option>
+                        </select>
+                    </article>
+                    <article>
+                        <label htmlFor="size">Accepted Size</label>
+                        <select name="size" id="selected-size">
+                            <option value="none">Select size</option>
+                            <option value="~10kg">Under 10kg</option>
+                            <option value="~25kg">Under 25kg</option>
+                            <option value="~45kg">Under 45kg</option>
+                            <option value="All">All sizes</option>
+                        </select>
+                    </article>
+                    <input type="submit" value="Search Sitter"/>
+                </section>
+            </form>
+        </section>
     );
 }
 
@@ -93,6 +101,54 @@ function RightList(){
 
     return(
         <section>
+            <blockquote>
+                <button className='showSize' onClick={function showSize(e){
+                    //START: pop up size
+                    for(let i=0; i<100; i++){
+                        if($(".acceptedSize").eq(i).attr('id') == 1){
+                            $(".sizeOne").eq(i).show();
+                        }else if($(".acceptedSize").eq(i).attr('id') == 2){
+                            $(".sizeTwo").eq(i).show();
+                        }else if($(".acceptedSize").eq(i).attr('id') == 3){
+                            $(".sizeThree").eq(i).show();
+                        }else if($(".acceptedSize").eq(i).attr('id') == 4){
+                            $(".sizeFour").eq(i).show();
+                        }
+                    }
+                    //END: pop up size
+                }}>
+                    See accepted size
+                </button>
+                <button className='showDay' onClick={(e)=>{
+                    //START: pop up days of week
+                    for(let i=0; i<100; i++){
+                        if($(".listSun").eq(i).attr('id') == "true"){
+                            $(".listSun").eq(i).show();
+                        }
+                        if($(".listMon").eq(i).attr('id') == "true"){
+                            $(".listMon").eq(i).show();
+                        }
+                        if($(".listTue").eq(i).attr('id') == "true"){
+                            $(".listTue").eq(i).show();
+                        }
+                        if($(".listWed").eq(i).attr('id') == "true"){
+                            $(".listWed").eq(i).show();
+                        }
+                        if($(".listThu").eq(i).attr('id') == "true"){
+                            $(".listThu").eq(i).show();
+                        }
+                        if($(".listFri").eq(i).attr('id') == "true"){
+                            $(".listFri").eq(i).show();
+                        }
+                        if($(".listSat").eq(i).attr('id') == "true"){
+                            $(".listSat").eq(i).show();
+                        }
+                    }
+                    //END: pop up days of week
+                }}>
+                    See available days
+                </button>
+            </blockquote>
             {
                 localSitterList.map((sitter)=>(
                     <SitterList
@@ -104,6 +160,13 @@ function RightList(){
                     service={sitter.service}
                     rating={sitter.rating}
                     size={sitter.size}
+                    sunday={sitter.sunday}
+                    monday={sitter.monday}
+                    tuesday={sitter.tuesday}
+                    wednesday={sitter.wednesday}
+                    thursday={sitter.thursday}
+                    friday={sitter.friday}
+                    saturday={sitter.saturday}
                     />
                 ))
             }
@@ -116,10 +179,12 @@ function SitterList(props){
             <aside>
                 <li className="sitterId">
                     <button value={props.sitterId} onClick={(e)=>{
-                        $("#confirm").show(); //modal pop up
+                        //START: pop up modal and get sitter id
+                        $("#confirm").show();
                         let selectedId = e.target.parentNode.value;
                         console.log(selectedId);
                         $(".goBtn").attr("href",`/profile?${selectedId}`);
+                        //END: pop up modal and get sitter id
                     }}>
                         <a href='#confirm'>Check</a>
                     </button>
@@ -140,21 +205,21 @@ function SitterList(props){
                 <li className="sitterService">
                     <h4><span className='listService'>{props.service}</span></h4>
                 </li>
-                <li className='acceptedSize'>
-                    <h5><span className='sizeOne'>~10kg</span></h5>
-                    <h5><span className='sizeTwo'>~25kg</span></h5>
-                    <h5><span className='sizeThree'>~45kg</span></h5>
-                    <h5><span className='sizeFour'>All</span></h5>
+                <li className='acceptedSize' id={props.size}>
+                    <h4><span className='sizeOne'>~10kg</span></h4>
+                    <h4><span className='sizeTwo'>~25kg</span></h4>
+                    <h4><span className='sizeThree'>~45kg</span></h4>
+                    <h4><span className='sizeFour'>All</span></h4>
                 </li>
             </aside>
-            <aside>
-                <h5><span className='Sunday'>Sunday</span></h5>
-                <h5><span className='Monday'>Monday</span></h5>
-                <h5><span className='Tuesday'>Tuesday</span></h5>
-                <h5><span className='Wednesday'>Wednesday</span></h5>
-                <h5><span className='Thursday'>Thursday</span></h5>
-                <h5><span className='Friday'>Friday</span></h5>
-                <h5><span className='Saturday'>Saturday</span></h5>
+            <aside className='dayWeek'>
+                <h5><span className='listSun' id={props.sunday.toString()}>Sunday</span></h5>
+                <h5><span className='listMon' id={props.monday.toString()}>Monday</span></h5>
+                <h5><span className='listTue' id={props.tuesday.toString()}>Tuesday</span></h5>
+                <h5><span className='listWed' id={props.wednesday.toString()}>Wednesday</span></h5>
+                <h5><span className='listThu' id={props.thursday.toString()}>Thursday</span></h5>
+                <h5><span className='listFri' id={props.friday.toString()}>Friday</span></h5>
+                <h5><span className='listSat' id={props.saturday.toString()}>Saturday</span></h5>
             </aside>
         </ol>
     );

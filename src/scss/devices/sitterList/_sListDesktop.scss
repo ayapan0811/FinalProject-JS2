@@ -1,5 +1,5 @@
 @media (min-width: $desktopScreen){
-    .sitterList-main{
+        .sitterList-main{
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
@@ -13,13 +13,5 @@
        ========================*/
        .list{
            width: 100%;
-           &:hover{
-            background-color: $box;
-           }
-           button{
-            &:hover{
-                background-color: $box2;
-               }
-           }
        }
     }

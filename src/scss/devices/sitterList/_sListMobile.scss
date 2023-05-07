@@ -77,17 +77,24 @@
         .list{
             border-top: 1px solid gray;
             list-style-type: none;
-            @include columnRow(1vh);
-            padding: 2vh 0;
+            @include columnRow(2vh);
+            padding: 2vh 0 2vh 1vh;
             .sitterLocation{
                 display: flex;
                 column-gap: 1vh;
-                padding-left: 1vh;
+                padding-right: 2vh;
+                align-items: center;
             }
             aside{
                 display: flex;
                 align-items: center;
                 column-gap: 1vh;
+            }
+            .dayWeek{
+                column-gap: 0;
+                span{
+                    margin-right: 1vh;
+                }
             }
             .sitterName{
                 color: $title;
@@ -100,23 +107,47 @@
                 height: 4vh;
                 background-color: $box;
                 border-color: white;
-                margin-left: 1vh;
                 a{
                     width: 100%;
                     height: 100%;
                 }
             }
             span{
-                padding: 5%;
+                padding: 2% 1vh;
                 background-color: $background;
                 border-radius: 10px;
             }
             .sitterRating {
                 color: orange;
             }
-            .acceptedSize {
-                display: flex;
-                column-gap: 1vh;
+            .listService {
+                background-color: transparent;
+                border: 1px solid black;
             }
+        }
+        .sizeOne,
+        .sizeTwo,
+        .sizeThree,
+        .sizeFour,
+        .listSun,
+        .listMon,
+        .listTue,
+        .listWed,
+        .listThu,
+        .listFri,
+        .listSat{
+            display: none;
+        }
+        blockquote{
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 2vh;
+        }
+        .showSize,
+        .showDay{
+            width: 14vh;
+            height: 3vh;
+            background-color: $box;
+            border-color: white;
         }
     }

@@ -667,20 +667,28 @@ li {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    row-gap: 1vh;
-    padding: 2vh 0;
+    row-gap: 2vh;
+    padding: 2vh 0 2vh 1vh;
   }
   .list .sitterLocation {
     display: flex;
     -moz-column-gap: 1vh;
          column-gap: 1vh;
-    padding-left: 1vh;
+    padding-right: 2vh;
+    align-items: center;
   }
   .list aside {
     display: flex;
     align-items: center;
     -moz-column-gap: 1vh;
          column-gap: 1vh;
+  }
+  .list .dayWeek {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .list .dayWeek span {
+    margin-right: 1vh;
   }
   .list .sitterName {
     color: #9E6F21;
@@ -694,24 +702,47 @@ li {
     height: 4vh;
     background-color: #B8E7E1;
     border-color: white;
-    margin-left: 1vh;
   }
   .list button a {
     width: 100%;
     height: 100%;
   }
   .list span {
-    padding: 5%;
+    padding: 2% 1vh;
     background-color: #D4F4FC;
     border-radius: 10px;
   }
   .list .sitterRating {
     color: orange;
   }
-  .list .acceptedSize {
+  .list .listService {
+    background-color: transparent;
+    border: 1px solid black;
+  }
+  .sizeOne,
+  .sizeTwo,
+  .sizeThree,
+  .sizeFour,
+  .listSun,
+  .listMon,
+  .listTue,
+  .listWed,
+  .listThu,
+  .listFri,
+  .listSat {
+    display: none;
+  }
+  blockquote {
     display: flex;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
+    justify-content: space-around;
+    padding-bottom: 2vh;
+  }
+  .showSize,
+  .showDay {
+    width: 14vh;
+    height: 3vh;
+    background-color: #B8E7E1;
+    border-color: white;
   }
 }
 @media (min-width: 300px) {
@@ -1027,6 +1058,20 @@ li {
     color: #FFEEB3;
   }
 }
+@media (min-width: 1000px) {
+  .list {
+    transition: 0.4s;
+  }
+  .list:hover {
+    background-color: #B8E7E1;
+  }
+  button {
+    transition: 0.4s;
+  }
+  button:hover {
+    background-color: #FFEEB3;
+  }
+}
 @media (min-width: 300px) {
   footer > section {
     display: flex;
@@ -1216,11 +1261,5 @@ li {
   ========================*/
   .list {
     width: 100%;
-  }
-  .list:hover {
-    background-color: #B8E7E1;
-  }
-  .list button:hover {
-    background-color: #FFEEB3;
   }
 }/*# sourceMappingURL=style.css.map */

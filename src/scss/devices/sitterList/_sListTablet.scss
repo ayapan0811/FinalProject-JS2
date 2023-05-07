@@ -1,1 +1,14 @@
-
+@media (min-width: $desktopScreen){
+        .list{
+            transition: .4s;
+            &:hover{
+                background-color: $box;
+            }
+        }
+        button{
+            transition: .4s;
+            &:hover{
+                background-color: $box2;
+            }
+        }
+    }
