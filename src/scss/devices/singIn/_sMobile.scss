@@ -1,11 +1,18 @@
 @media(min-width:$mobileScreen) {
     .singUp{
-        font-family: $fontFamily;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 5vh;
+        background-image: url(/src/img/home-img/home-dog5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        section{
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         h1{
             font-size: 26px;
             padding: 5px;
@@ -32,6 +39,10 @@
             }
             label{
                 color: $title;
+            }
+            #message{
+                font-size: 14px;
+                color: black;
             }
             button{
                 margin-top: 2vh;

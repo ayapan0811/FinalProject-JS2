@@ -13,14 +13,15 @@
         font-size: 35px;
       }
     }
+    .pc-menu{
+      display: block;
+      width: 90%;
+    }
     h1{
       font-size: 30px;
       font-weight: 900;
     }
-    article{
-      width: 50vh;
-    }
-    .fa-bars{
+    article,aside{
       display: none;
     }
     nav{
@@ -47,13 +48,8 @@
         color: $title;
       }
     }
-
   }
-  .overlay{
-    height: 100%;
-    // display: block;
 
-  }
   /*=====================
   home-main
   ======================*/
@@ -70,13 +66,12 @@
     p{
       font-size: 18px;
     }
-
   }
   /*=====================
   search-sitter
   ======================*/
   .search-sitter{
-    height: 50vh;
+    height: 60vh;
     h2{
       font-size: 30px;
     }
