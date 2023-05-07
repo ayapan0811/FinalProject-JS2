@@ -47,14 +47,14 @@ function LocationSelect() {
                 }
                 //END: day select
                 //START: size select
-                // console.log($(".acceptedSize span").text());
-                if($("#selected-size").val() == "~10kg"){
-                    for(let i=0;i<100;i++){
-                        if($(".acceptedSize span").eq(i).text() != "~10kg"){
-                            $(".list").eq(i).hide();
-                        }
-                        //textでなくidでみるべきだった上参照
-                    }  
+                for(let j=1; j<5; j++){
+                    if($("#selected-size").val() == j){
+                        for(let i=0;i<100;i++){
+                            if($(".acceptedSize").eq(i).attr('id') != j){
+                                $(".list").eq(i).hide();
+                            }
+                        }  
+                    }
                 }
                 //END: size select
             })

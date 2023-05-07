@@ -75,10 +75,10 @@ function LeftForm(){
                         <label htmlFor="size">Accepted Size</label>
                         <select name="size" id="selected-size">
                             <option value="none">Select size</option>
-                            <option value="~10kg">Under 10kg</option>
-                            <option value="~25kg">Under 25kg</option>
-                            <option value="~45kg">Under 45kg</option>
-                            <option value="All">All sizes</option>
+                            <option value="1">Under 10kg</option>
+                            <option value="2">Under 25kg</option>
+                            <option value="3">Under 45kg</option>
+                            <option value="4">All sizes</option>
                         </select>
                     </article>
                     <input type="submit" value="Search Sitter"/>
