@@ -2,7 +2,9 @@ import $ from 'jquery';
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldDog, faLocationArrow } from '@fortawesome/free-solid-svg-icons';
-import { click } from '@testing-library/user-event/dist/click';
+import FooterLinkList from "./footerList";
+import FooterSNS from './footerSNS';
+import LocationSelect from './sitterListForm';
 
 function ConfirmModal(){
     return(
@@ -19,28 +21,15 @@ function ConfirmModal(){
 function LeftForm(){
     return(
         <section className="left-form">
-        <form action="#">
+        <form className='listForm' action="#">
           <h2>Find the Perfect Match</h2>
           <section>
-              <article className="dogorcat">
-                  <label htmlFor="dogcat">I'm looking for service for my</label>
-                  <section>
-                      <aside>
-                          <input type="checkbox" name="dog" id="dog"/>
-                          <small>Dog</small>
-                      </aside>
-                      <aside>
-                          <input type="checkbox" name="cat" id="cat"/>
-                          <small>Cat</small>
-                      </aside>
-                  </section>
-              </article>
               <article>
                   <label htmlFor="select-service">Service</label>
                   <select name="select-service" id="select-service">
                       <option value="none">Select Service</option>
                       <option value="boarding">Boarding</option>
-                      <option value="dogwalking">Dog Walking</option>
+                      <option value="walking">Dog Walking</option>
                   </select>
               </article>
               <article>
@@ -51,17 +40,17 @@ function LeftForm(){
                           <option value="Vancouver">Vancouver</option>
                           <option value="Richmond">Richmond</option>
                           <option value="Burnaby">Burnaby</option>
-                          <option value="NorthVancouver">North Vancouver</option>
-                          <option value="WestVancouver">West Vancouver</option>
+                          <option value="North Vancouver">North Vancouver</option>
+                          <option value="West Vancouver">West Vancouver</option>
                       </optgroup>
                       <optgroup label="Montreal">
                           <option value="Downtown">Downtown</option>
-                          <option value="SouthWest">South West</option>
+                          <option value="South West">South West</option>
                           <option value="Plateau">Plateau</option>
                           <option value="Cote-des-Niege">Cote-des-Niege</option>
                       </optgroup>
                       <optgroup label="Toronto">
-                          <option value="CityOfToronto">City of Toronto</option>
+                          <option value="City of Toronto">City of Toronto</option>
                           <option value="Halton">Halton</option>
                           <option value="Peel">Peel</option>
                           <option value="York">York</option>
@@ -71,7 +60,7 @@ function LeftForm(){
               </article>
               <article>
                   <aside>
-                      <label htmlFor="day">For these days</label>
+                      <label htmlFor="day">Day of week</label>
                       <select name="day" id="day">
                           <option value="none">Select day</option>
                           <option value="Sunday">Sunday</option>
@@ -103,7 +92,7 @@ function RightList(){
     //END: getting JSON file
 
     return(
-        <li>
+        <section>
             {
                 localSitterList.map((sitter)=>(
                     <SitterList
@@ -113,14 +102,15 @@ function RightList(){
                     city1={sitter.city1}
                     city2={sitter.city2}
                     service={sitter.service}
+                    rating={sitter.rating}
+                    size={sitter.size}
                     />
                 ))
             }
-        </li>
+        </section>
     );
 }
 function SitterList(props){
-   
     return(
         <ol className="list">
             <aside>
@@ -138,16 +128,34 @@ function SitterList(props){
                     <h3>{props.sitterName}</h3>
                     <FontAwesomeIcon icon={faShieldDog} style={{ color: 'darkgoldenrod'}} size="xl"/>
                 </li>
+                <li><h3 className='sitterRating'>{props.rating}/5</h3></li>
             </aside>
-            <li className="sitterLocation">   
-                <FontAwesomeIcon icon={faLocationArrow}/>
-                <h5 className="sitterPlace">{props.city1}</h5>
-                <h5>,</h5>
-                <h5 className="sitterCity">{props.city2}</h5>
-            </li>
-            <li className="sitterService">
-                <h4>Available Service:<span>{props.service}</span></h4>
-            </li>
+            <aside>
+                <li className="sitterLocation">   
+                    <FontAwesomeIcon icon={faLocationArrow}/>
+                    <h4 className="sitterPlace">{props.city1}</h4>
+                    <h4>,</h4>
+                    <h4 className="sitterCity">{props.city2}</h4>
+                </li>
+                <li className="sitterService">
+                    <h4><span className='listService'>{props.service}</span></h4>
+                </li>
+                <li className='acceptedSize'>
+                    <h5><span className='sizeOne'>~10kg</span></h5>
+                    <h5><span className='sizeTwo'>~25kg</span></h5>
+                    <h5><span className='sizeThree'>~45kg</span></h5>
+                    <h5><span className='sizeFour'>All</span></h5>
+                </li>
+            </aside>
+            <aside>
+                <h5><span className='Sunday'>Sunday</span></h5>
+                <h5><span className='Monday'>Monday</span></h5>
+                <h5><span className='Tuesday'>Tuesday</span></h5>
+                <h5><span className='Wednesday'>Wednesday</span></h5>
+                <h5><span className='Thursday'>Thursday</span></h5>
+                <h5><span className='Friday'>Friday</span></h5>
+                <h5><span className='Saturday'>Saturday</span></h5>
+            </aside>
         </ol>
     );
 }
@@ -162,10 +170,44 @@ function SitterListPage(){
     );
 }
 
+//START: footer part
+const listFooter = [
+    {name:"Home", link:"/"},
+    {name:"Search Sitter", link:"/list"},
+    {name:"Sign In", link:"#"},
+    {name:"Sign Up", link:"#"}
+]
+
+function Footer(){
+    return(
+        <footer>
+            <section>
+                <FooterSNS/>
+                <section className="link">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        {listFooter.map((listFoot)=>(
+                            <FooterLinkList
+                                key={listFoot.name}
+                                name={listFoot.name}
+                                link={listFoot.link}
+                            />
+                        ))}
+                    </ul>
+                </section>
+            </section>
+            <p>Copyright &copy; Bawwow sitter service </p>
+        </footer>
+    );
+}
+//END: footer part
+
 function ListApp(){
+    LocationSelect();
     return(
         <React.Fragment>
             <SitterListPage/>
+            <Footer/>
         </React.Fragment>
     );
 }

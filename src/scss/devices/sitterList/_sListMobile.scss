@@ -78,23 +78,22 @@
             border-top: 1px solid gray;
             list-style-type: none;
             @include columnRow(1vh);
+            padding: 2vh 0;
             .sitterLocation{
                 display: flex;
                 column-gap: 1vh;
                 padding-left: 1vh;
             }
             aside{
-                padding-top: 2vh;
-                display: flex;
-                column-gap: 1vh;
-            }
-            .sitterName{
                 display: flex;
                 align-items: center;
                 column-gap: 1vh;
             }
-            .sitterService{
-                padding-bottom: 2vh;
+            .sitterName{
+                color: $title;
+                display: flex;
+                align-items: center;
+                column-gap: 1vh;
             }
             button{
                 width: 6vh;
@@ -107,17 +106,17 @@
                     height: 100%;
                 }
             }
-            h4{
-                padding-left: 3vh;
-            }
             span{
-                padding: 2%;
+                padding: 5%;
                 background-color: $background;
                 border-radius: 10px;
-                margin-left: 1vh;
             }
-            h3{
-                color: $title;
+            .sitterRating {
+                color: orange;
+            }
+            .acceptedSize {
+                display: flex;
+                column-gap: 1vh;
             }
         }
     }

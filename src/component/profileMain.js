@@ -12,6 +12,8 @@ import sitterImg2 from "../img/sitter-2.jpg";
 // import sitterImg5 from "../img/sitter-5.jpg";
 // import sitterImg6 from "../img/sitter-6.jpg";
 // import sitterImg7 from "../img/sitter-7.jpg";
+import FooterLinkList from "./footerList";
+import FooterSNS from "./footerSNS";
 
 //START: Profile page top part
 function ProfileTop(){
@@ -147,7 +149,7 @@ function Review(props){
                 <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }}/>
                 <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }}/>
             </span>
-            <aside>{props.name}{props.feedback}</aside>
+            <aside>{props.feedback}</aside>
         </blockquote>
     );//後でasideをpに変える
 }
@@ -209,6 +211,37 @@ function ProfilePage(){
     );
 }
 
+//START: footer part
+const proFooter = [
+    {name:"Home", link:"/"},
+    {name:"Search Sitter", link:"/list"},
+    {name:"Sign In", link:"#"},
+    {name:"Sign Up", link:"#"}
+]
+function Footer(){
+    return(
+        <footer>
+            <section>
+                <FooterSNS/>
+                <section className="link">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        {proFooter.map((proFoot)=>(
+                            <FooterLinkList
+                                key={proFoot.name}
+                                name={proFoot.name}
+                                link={proFoot.link}
+                            />
+                        ))}
+                    </ul>
+                </section>
+            </section>
+            <p>Copyright &copy; Bawwow sitter service </p>
+        </footer>
+    );
+}
+//END: footer part
+
 function ProApp(){
     // START: getting JSON file
     const [localSitterList, setSitterList] = useState([]);
@@ -221,7 +254,7 @@ function ProApp(){
     //END: getting JSON file
     
     const location = useLocation(); 
-    $("#root").ready(function(){
+    $("main").ready(function(){
         
         //START: getting sitterid from sitter page 
         let selectedSitterId = Number(location.search.slice(1,4))-1;
@@ -364,6 +397,7 @@ function ProApp(){
     return(
         <React.Fragment>
             <ProfilePage/>
+            <Footer/>
         </React.Fragment>
     );
 
