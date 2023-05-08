@@ -1,0 +1,62 @@
+@media(min-width:$mobileScreen) {
+    .sign{
+        background-image: url(/src/img/home-img/home-dog5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        section{
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 26px;
+            padding: 5px;
+            color: $title;
+            background-color: $box2;
+        }
+        form{
+            @include columnRow(1vh);
+            font-size: 18px;
+            width: 50%;
+            background-color: $box2;
+            border-radius: 20px;
+            padding: 3vh;
+            margin: 10vh 5vh;
+            aside{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            input,select{
+                padding: 1vh;
+                border: 1px solid gray;
+                border-radius: 10px;
+            }
+            label{
+                color: $title;
+            }
+            #message{
+                font-size: 14px;
+                color: black;
+            }
+            button{
+                margin-top: 2vh;
+                font-size: 16px;
+                padding: 2vh;
+                border: 1px solid $title;
+                border-radius: 10px;
+                background-color: $title;
+                a{
+                    color: white;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

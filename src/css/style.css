@@ -21,30 +21,6 @@ li {
 }
 
 @media (min-width: 300px) {
-  .home-main,
-  .about > section,
-  .services,
-  .services > section,
-  .service,
-  .booking-flow,
-  .booking-flow > section,
-  .booking-flow > article,
-  .blog,
-  .QandA,
-  .contact,
-  .contact form,
-  .location,
-  .location article {
-    display: flex;
-    flex-direction: column;
-  }
-  .home-main > section {
-    display: flex;
-    flex-direction: column;
-  }
-  /*=====================
-  header
-  ======================*/
   .header-container {
     height: 8vh;
     display: flex;
@@ -84,7 +60,7 @@ li {
   .overlay ul {
     display: flex;
     flex-direction: column;
-    row-gap: 2vh;
+    row-gap: 4vh;
     list-style-type: none;
   }
   .overlay a {
@@ -104,6 +80,32 @@ li {
   }
   .hg-menu #open.hide {
     display: none;
+  }
+  .pc-menu {
+    display: none;
+  }
+}
+@media (min-width: 300px) {
+  .home-main,
+  .about > section,
+  .services,
+  .services > section,
+  .service,
+  .booking-flow,
+  .booking-flow > section,
+  .booking-flow > article,
+  .blog,
+  .QandA,
+  .contact,
+  .contact form,
+  .location,
+  .location article {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-main > section {
+    display: flex;
+    flex-direction: column;
   }
   /*=====================
   search-sitter
@@ -605,6 +607,7 @@ li {
     height: 100%;
   }
   .sitterList-main {
+    border-top: 3px solid black;
     padding-top: 5vh;
     display: flex;
     flex-direction: column;
@@ -746,6 +749,70 @@ li {
   }
 }
 @media (min-width: 300px) {
+  .sign {
+    background-image: url(/src/img/home-img/home-dog5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sign section {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign h1 {
+    font-size: 26px;
+    padding: 5px;
+    color: #9E6F21;
+    background-color: #FFEEB3;
+  }
+  .sign form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    font-size: 18px;
+    width: 50%;
+    background-color: #FFEEB3;
+    border-radius: 20px;
+    padding: 3vh;
+    margin: 10vh 5vh;
+  }
+  .sign form aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sign form input, .sign form select {
+    padding: 1vh;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+  .sign form label {
+    color: #9E6F21;
+  }
+  .sign form #message {
+    font-size: 14px;
+    color: black;
+  }
+  .sign form button {
+    margin-top: 2vh;
+    font-size: 16px;
+    padding: 2vh;
+    border: 1px solid #9E6F21;
+    border-radius: 10px;
+    background-color: #9E6F21;
+  }
+  .sign form button a {
+    color: white;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 300px) {
   footer {
     padding-top: 8vh;
     background-color: #FFEEB3;
@@ -819,14 +886,22 @@ li {
   .header-container > section i {
     font-size: 35px;
   }
+  .header-container .pc-menu {
+    display: block;
+    width: 90%;
+  }
+  .header-container .pc-menu a {
+    transition: 0.4s;
+    font-size: 18px;
+  }
+  .header-container .pc-menu a:hover {
+    font-size: 24px;
+  }
   .header-container h1 {
     font-size: 30px;
     font-weight: 900;
   }
-  .header-container article {
-    width: 50vh;
-  }
-  .header-container .fa-bars {
+  .header-container article, .header-container aside {
     display: none;
   }
   .header-container nav {
@@ -853,9 +928,8 @@ li {
     align-items: center;
     color: #9E6F21;
   }
-  .overlay {
-    height: 100%;
-  }
+}
+@media (min-width: 700px) {
   /*=====================
   home-main
   ======================*/
@@ -1072,6 +1146,35 @@ li {
     background-color: #FFEEB3;
   }
 }
+@media (min-width: 700px) {
+  .sign h1 {
+    font-size: 30px;
+  }
+  .sign form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    margin: 20vh 5vh;
+    padding: 3vh;
+  }
+  .sign form input, .sign form select {
+    padding: 1vh;
+  }
+  .sign form aside {
+    display: flex;
+    flex-direction: column;
+  }
+  .sign form .sign-up {
+    display: flex;
+    align-items: center;
+  }
+  .sign form button {
+    width: 50%;
+    margin-top: 2vh;
+    font-size: 20px;
+    padding: 1vh;
+  }
+}
 @media (min-width: 300px) {
   footer > section {
     display: flex;
@@ -1084,14 +1187,19 @@ li {
   .link {
     width: 25%;
   }
+  .link a {
+    transition: 0.5s;
+  }
+  .link a:hover {
+    text-decoration: underline;
+  }
 }
 @media (min-width: 1000px) {
-  /*=====================
-  header
-  ======================*/
-  .header-contain nav {
-    width: 60vh;
+  .header-container .pc-menu {
+    width: 50%;
   }
+}
+@media (min-width: 1000px) {
   /*=====================
   search-sitter
   ======================*/
@@ -1261,5 +1369,17 @@ li {
   ========================*/
   .list {
     width: 100%;
+  }
+}
+@media (min-width: 1000px) {
+  .sign form {
+    width: 50%;
+  }
+  .sign form aside {
+    display: flex;
+    flex-direction: column;
+  }
+  .sign form button {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */

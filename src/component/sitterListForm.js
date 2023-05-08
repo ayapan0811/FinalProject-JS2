@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-function LocationSelect() {
+function SitterListForm() {
 
         const smallCities = ["Vancouver","Richmond","Burnaby","North Vancouver","West Vancouver","Downtown","South West","Plateau","Cote-des-Niege","City of Toronto","Halton","Peel","York","Durham"];
         const daysOfWeek = ["listSun","listMon","listTue","listWed","listThu","listFri","listSat"];
@@ -62,4 +62,4 @@ function LocationSelect() {
     // }
 }
 
-export default LocationSelect;
+export default SitterListForm;

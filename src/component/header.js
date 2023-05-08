@@ -11,6 +11,16 @@ function Header(){
                     </a>
                     <h1>Bawwau Sitter</h1>
                 </section>
+                <div className="pc-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/list">Sitter List</a></li>
+                            <li><a href="/signUp">Sign Up</a></li>
+                            <li><a href="/signIn">Sign In</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <aside className="hg-menu">
                     <FontAwesomeIcon icon={faBars} id="open"/>
                 </aside>
@@ -18,10 +28,10 @@ function Header(){
                     <FontAwesomeIcon icon={faXmark} id="close"/>
                     <nav>
                         <ul>
-                            <li><a href="#services">Our Service</a></li>
-                            <li><a href="sitterlist.html">Sitter List</a></li>
-                            <li><a href="signUp.html">Sign Up</a></li>
-                            <li><a href="signIn.html">Sign In</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/list">Sitter List</a></li>
+                            <li><a href="/signUp">Sign Up</a></li>
+                            <li><a href="/signIn">Sign In</a></li>
                         </ul>
                     </nav>
                 </article>

@@ -1,0 +1,62 @@
+@media (min-width: $mobileScreen){
+    .header-container{
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2vh;
+        >section{
+          display: flex;
+          column-gap: 1vh;
+          i{
+            font-size: 25px;
+            color:$title
+          }
+        }
+        .fa-bars{
+          font-size: 20px;
+          cursor: pointer;
+        }
+        h1{
+          color: $title;
+        }
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 42%;
+        right: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.95);
+        text-align: center;
+        padding: 10%;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .6s;
+        ul{
+          @include columnRow(4vh);
+          list-style-type: none;
+        }
+        a{
+          color: black;
+          font-size: 20px;
+        }
+        #close {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+      }
+      .overlay.show {
+        opacity: 0.9;
+        pointer-events: auto;
+      }
+      .hg-menu #open.hide {
+        display: none;
+      }
+      .pc-menu{
+        display: none;
+      }
+}

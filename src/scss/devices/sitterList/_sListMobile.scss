@@ -27,6 +27,7 @@
     }
 
     .sitterList-main{
+        border-top: 3px solid black;
         padding-top: 5vh;
         @include columnRow(3vh);
         align-items: center;

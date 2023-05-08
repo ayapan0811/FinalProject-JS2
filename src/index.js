@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/style.css';
-import HomeApp from './component/homeMain';
-import ListApp from './component/sitterListMain';
-import ProApp from './component/profileMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './css/style.css';
+import HomeApp from './component/homeHTML';
+import ListApp from './component/sitterListHTML';
+import ProApp from './component/profileHTML';
+import SignInApp from './component/signInHTML';
+import SignUpApp from './component/signUpHTML';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +17,8 @@ root.render(
       <Route path='/' element={<HomeApp/>}/>
       <Route path='/list' element={<ListApp/>}/>
       <Route path="/profile" element={<ProApp/>}/>
+      <Route path="/signIn" element={<SignInApp/>}/>
+      <Route path="/signUp" element={<SignUpApp/>}/>
     </Routes>
   </BrowserRouter>
   // <React.StrictMode>

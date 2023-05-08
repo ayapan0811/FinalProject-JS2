@@ -1,0 +1,29 @@
+@media(min-width:$tabletScreen){
+    .sign{
+        h1{
+            font-size: 30px;
+        }
+        form{
+            @include columnRow(1vh);
+            margin: 20vh 5vh;
+            padding: 3vh;
+            input,select{
+                padding: 1vh;
+            }
+            aside{
+                display: flex;
+                flex-direction: column;
+            }
+            .sign-up{
+                display: flex;
+                align-items: center;
+            }
+            button{
+                width: 50%;
+                margin-top: 2vh;
+                font-size: 20px;
+                padding: 1vh;
+            }
+        }
+    }
+}

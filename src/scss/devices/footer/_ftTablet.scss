@@ -11,5 +11,11 @@
   }
   .link{
     width: 25%;
+    a{
+      transition: .5s;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 }
