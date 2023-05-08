@@ -13,7 +13,11 @@ function ConfirmModal(){
             <p>Go to profile?</p>
             <aside>
                 <button><a className='goBtn'>Go</a></button>
-                <button>Cancel</button>
+                <button onClick={()=>{
+                    $("#confirm").hide();
+                }}>
+                    <a>Cancel</a>
+                </button>
             </aside>
         </section>
     );

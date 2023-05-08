@@ -64,7 +64,7 @@ li {
     list-style-type: none;
   }
   .overlay a {
-    color: black;
+    color: #9E6F21;
     font-size: 20px;
   }
   .overlay #close {
@@ -587,7 +587,7 @@ li {
     position: absolute;
     background-color: #B8E7E1;
     width: 70%;
-    padding: 30vh 0;
+    padding: 10vh 0;
     font-size: 36px;
     border: 3px solid black;
     border-radius: 40px;
@@ -595,14 +595,16 @@ li {
   #confirm aside {
     display: flex;
     justify-content: space-around;
-    padding-top: 10vh;
+    padding-top: 5vh;
   }
   #confirm button {
     padding: 2% 0;
     width: 10vh;
     font-size: 20px;
+    border-radius: 20px;
   }
   #confirm button a {
+    color: black;
     width: 100%;
     height: 100%;
   }
@@ -890,13 +892,6 @@ li {
     display: block;
     width: 90%;
   }
-  .header-container .pc-menu a {
-    transition: 0.4s;
-    font-size: 18px;
-  }
-  .header-container .pc-menu a:hover {
-    font-size: 24px;
-  }
   .header-container h1 {
     font-size: 30px;
     font-weight: 900;
@@ -927,6 +922,11 @@ li {
     justify-content: center;
     align-items: center;
     color: #9E6F21;
+    transition: 0.4s;
+    font-size: 18px;
+  }
+  .header-container li a:hover {
+    font-size: 24px;
   }
 }
 @media (min-width: 700px) {
@@ -1133,6 +1133,12 @@ li {
   }
 }
 @media (min-width: 1000px) {
+  #confirm {
+    padding: 30vh 0;
+  }
+  #confirm aside {
+    padding-top: 10vh;
+  }
   .list {
     transition: 0.4s;
   }

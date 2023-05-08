@@ -1,4 +1,4 @@
-// import $, { data } from 'jquery';
+import $ from 'jquery';
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimneyWindow, faDog, faShieldDog, faMagnifyingGlass, faCalendarDays, faEarthAmericas, faAngleRight } from "@fortawesome/free-solid-svg-icons";
@@ -258,25 +258,41 @@ function QuestionAndAnswer(){
             <h3>Q & A</h3>
             <section>
                 <article>
-                    <h4><span>Q: </span> Who is gonna provide pet food?</h4>
+                    <h4 onClick={(e)=>{
+                        e.target.parentNode.classList.toggle("appear");
+                    }}>
+                        <span>Q: </span> Who is gonna provide pet food?
+                    </h4>
                     <p>
                         Basically, owners have to bring the food. If it does not seem to be possible, please ask the sitter for the preparation of the food before the confirmation of the contract.
                     </p>
                 </article>
                 <article>
-                    <h4><span>Q: </span> Do you accept animals other than dogs and cats?</h4>
+                    <h4 onClick={(e)=>{
+                        e.target.parentNode.classList.toggle("appear");
+                    }}>
+                        <span>Q: </span> Do you accept animals other than dogs and cats?
+                    </h4>
                     <p>
                         No. If you want to leave an animal except dogs and cats, please find a pet hotel. We are not responsible for any issues other than dogs and cats.
                     </p>
                 </article>
                 <article>
-                    <h4><span>Q: </span>Allergy, diseases?</h4>
+                    <h4 onClick={(e)=>{
+                        e.target.parentNode.classList.toggle("appear");
+                    }}>
+                        <span>Q: </span>Allergy, diseases?
+                    </h4>
                     <p>
                         If your pets have allergies or diseases, please tell the sitters before giving the confirmation. If the sitter find the disease heavy, they can cancel the confirmation beforehands.
                     </p>
                 </article>
                 <article>
-                    <h4><span>Q: </span>Method of payment?</h4>
+                    <h4 onClick={(e)=>{
+                        e.target.parentNode.classList.toggle("appear");
+                    }}>
+                        <span>Q: </span>Method of payment?
+                    </h4>
                     <p>
                         This is up to the users. We are not responsible for the method of pay. If you have any problems, please contact us.
                     </p>
@@ -390,19 +406,7 @@ function Footer(){
 
 function HomeApp(){
 
-    //START:Q&A accordion part
-    const h4s = document.querySelectorAll("h4");
-    h4s.forEach((h4)=>{
-        h4.addEventListener("click",()=>{
-            h4.parentNode.classList.toggle("appear");
-            h4s.forEach((el)=>{
-                if(h4 !== el){
-                    el.parentNode.classList.remove("appear");
-                }
-            });
-        });
-    });
-    //END:Q&A accordion part
+ 
 
     return(
         <React.Fragment>

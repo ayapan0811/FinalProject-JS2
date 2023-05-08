@@ -1,3 +1,4 @@
+import $ from "jquery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDog, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,10 +23,16 @@ function Header(){
                     </nav>
                 </div>
                 <aside className="hg-menu">
-                    <FontAwesomeIcon icon={faBars} id="open"/>
+                    <FontAwesomeIcon icon={faBars} id="open" onClick={()=>{
+                        $(".overlay").addClass("show");
+                        $("#open").removeClass("show");
+                    }}/>
                 </aside>
                 <article className="overlay">
-                    <FontAwesomeIcon icon={faXmark} id="close"/>
+                    <FontAwesomeIcon icon={faXmark} id="close" onClick={()=>{
+                        $(".overlay").removeClass("show");
+                        $("#open").addClass("show");
+                    }}/>
                     <nav>
                         <ul>
                             <li><a href="/">Home</a></li>

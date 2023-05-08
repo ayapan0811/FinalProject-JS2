@@ -1,4 +1,11 @@
 @media (min-width: $desktopScreen){
+
+        #confirm{
+            padding: 30vh 0;
+            aside{
+                padding-top: 10vh;
+            }
+        }
         .list{
             transition: .4s;
             &:hover{

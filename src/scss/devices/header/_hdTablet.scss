@@ -12,13 +12,6 @@
         .pc-menu{
           display: block;
           width: 90%;
-          a{
-            transition: .4s;
-            font-size: 18px;
-            &:hover {
-              font-size: 24px;
-            }
-          }
         }
         h1{
           font-size: 30px;
@@ -49,6 +42,11 @@
             justify-content: center;
             align-items: center;
             color: $title;
+            transition: .4s;
+            font-size: 18px;
+            &:hover {
+              font-size: 24px;
+            }
           }
         }
       }
