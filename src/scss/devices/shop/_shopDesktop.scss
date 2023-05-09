@@ -10,5 +10,14 @@
             flex-wrap: wrap;
             column-gap: 3vh;
         }
+        #menu{
+            label{
+                font-size: 30px;
+            }
+            select{
+                width: 140px;
+                height: 25px;
+            }
+        }
     }
 }

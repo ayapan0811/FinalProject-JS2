@@ -9,5 +9,9 @@
         h3{
             font-size: 30px;
         }
+        label{
+            @include flex-column;
+            @include flex-center;
+        }
     }
 }

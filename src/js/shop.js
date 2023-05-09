@@ -1,4 +1,18 @@
 import React, { useState, useEffect } from "react";
+import $ from 'jquery';
+
+function selectType(props){
+    const types = [1,2];
+    for(let type of types){
+        if($("#animal").val()== type){
+            for(let i=0;i<100;i++){
+                if($(`.${type}`).eq(i).attr('typeId') == false){
+                    $("#box").eq(1).hide();
+                }
+            }
+        }
+    }
+}
 function Item(props) {
 
   return (
@@ -15,7 +29,7 @@ function Item(props) {
   );
 }
 function Shop() {
-
+    selectType()
   const [localProductList, setProductList] = useState([]);
 
   useEffect(function(){
@@ -52,12 +66,21 @@ function Shop() {
     </header>
     <main className="shop">
         <section id="menu">
-            <h2>
-                Animal
-            </h2>
-            <h2>
-                Product Type
-            </h2>
+            <label for="">Animal Type 
+                    <select name="animal" id="animal">
+                    <option value="null"></option>
+                        <option value="1">Dog</option>
+                        <option value="2">Cat</option>
+                    </select>
+            </label>
+            <label for="">Product Type
+                    <select name="product" id="product">
+                        <option value="null"></option>
+                        <option value="Portion">Portion</option>
+                        <option value="Doghouse">Doghouse</option>
+                        <option value="Toys">Toys</option>
+                    </select>
+            </label>
             <h2>
                 Cart
             </h2>

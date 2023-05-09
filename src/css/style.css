@@ -804,6 +804,12 @@ a {
     padding: 5%;
     width: 100%;
   }
+  .shop #menu select {
+    width: 70px;
+  }
+  .shop #menu label {
+    font-size: 20px;
+  }
   .shop #box {
     display: flex;
     flex-direction: column;
@@ -1165,6 +1171,12 @@ a {
   .shop h3 {
     font-size: 30px;
   }
+  .shop label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (min-width: 1000px) {
   /*=====================
@@ -1370,5 +1382,12 @@ a {
     flex-wrap: wrap;
     -moz-column-gap: 3vh;
          column-gap: 3vh;
+  }
+  .shop #menu label {
+    font-size: 30px;
+  }
+  .shop #menu select {
+    width: 140px;
+    height: 25px;
   }
 }/*# sourceMappingURL=style.css.map */
