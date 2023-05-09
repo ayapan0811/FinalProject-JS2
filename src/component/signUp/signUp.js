@@ -57,16 +57,7 @@ function App(){
         return false;
     }
     // Check that the password and confirm password fields match
-    // if(password != confirmPassword){
-    //     alert("The password and confirm password fields do not match");
-    //     return false;
-    // }
-
-    // Check that the password and confirm password
-    if($("#password").text() == $("#cnf-password").text() ){
-        $("#message").text("Password match!");
-        $("#message").css("color","green");
-    }else{
+    if($("#password") != $("#cnf-password") ){
         $("#message").text("Password don't match!");
         $("#message").css("color","red");
     }
@@ -84,34 +75,3 @@ return true;
 const rootSignUpHTML = ReactDOM.createRoot(document.getElementById("root"));
 
 rootSignUpHTML.render(<App/>);
-// $("form").submit(function(event){
-//     event.preventDefault();
-//     let name = $("#fName");
-//     let location = $("#location");
-//     let email = $("#email").val();
-//     let password = $("#password");
-//     let confirmPassword = $("#cnf-password");
-//     let message = $("#message");
-
-//     // Check that all required fields are filled out
-//     if(name == "" || location == "" || email == "" || password == "" || confirmPassword == ""){
-//         alert("All fields are required. Please complete the form");
-//         return false;
-//     }
-//     // Check that the password and confirm password fields match
-//     if(password != confirmPassword){
-//         alert("The password and confirm password fields do not match");
-//         return false;
-//     }
-
-//     // Check that the password and confirm password
-// //     if($("#password") == $("#cnf-password")){
-// //         $("#message").text("Password match!");
-// //         $("#message").css("color","green");
-// //     }else{
-// //         $("#message").text("Password don't match!");
-// //         $("#message").css("color","red");
-// //     }
-// });
-// // return true;
-// });
