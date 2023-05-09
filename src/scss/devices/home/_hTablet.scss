@@ -26,45 +26,18 @@
       font-size: 30px;
     }
     a{
-      display: none;
-    }
-    form{
-      padding-top: 2vh;
-      padding-right: 2vh;
-      display: block;
-      display: flex;
-      justify-content: flex-end;
-      >section{
-        background-color: $box2;
-        width: 45%;
-        padding: 2vh;
-        border-radius: 15px;
-        box-shadow: 10px 10px 20px;
-      }
-      section,
-      article,
-      aside{
-        @include flex-column;
+      margin-right: 15vw;
+      padding: 3%;
+      font-size: 24px;
+      transition: .3s;
+      &:hover{
+        background-color: transparent;
+        color: sandybrown;
+        border-width: 3px;
+        text-decoration: underline;
       }
     }
-    .dogorcat{
-      flex-direction: row;
-      column-gap: 1vh;
-      padding-bottom: 2%;
-      aside{
-        flex-direction: row;
-        column-gap: 10%;
-      }
-    }
-    input,select{
-      padding: 1%;
-      margin-bottom: 2%;
-      border-color: gray;
-      border-radius: 5px;
-    }
-    label{
-      font-weight: 600;
-    }
+    
   }
 
 

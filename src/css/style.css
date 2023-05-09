@@ -128,7 +128,7 @@ li {
     background-color: sandybrown;
     padding: 2vh;
     color: white;
-    border: 1px solid sandybrown;
+    border: 3px solid sandybrown;
     border-radius: 8px;
     font-size: 16px;
     margin-right: 4vh;
@@ -955,47 +955,16 @@ li {
     font-size: 30px;
   }
   .search-sitter a {
-    display: none;
+    margin-right: 15vw;
+    padding: 3%;
+    font-size: 24px;
+    transition: 0.3s;
   }
-  .search-sitter form {
-    padding-top: 2vh;
-    padding-right: 2vh;
-    display: block;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .search-sitter form > section {
-    background-color: #FFEEB3;
-    width: 45%;
-    padding: 2vh;
-    border-radius: 15px;
-    box-shadow: 10px 10px 20px;
-  }
-  .search-sitter form section,
-  .search-sitter form article,
-  .search-sitter form aside {
-    display: flex;
-    flex-direction: column;
-  }
-  .search-sitter .dogorcat {
-    flex-direction: row;
-    -moz-column-gap: 1vh;
-         column-gap: 1vh;
-    padding-bottom: 2%;
-  }
-  .search-sitter .dogorcat aside {
-    flex-direction: row;
-    -moz-column-gap: 10%;
-         column-gap: 10%;
-  }
-  .search-sitter input, .search-sitter select {
-    padding: 1%;
-    margin-bottom: 2%;
-    border-color: gray;
-    border-radius: 5px;
-  }
-  .search-sitter label {
-    font-weight: 600;
+  .search-sitter a:hover {
+    background-color: transparent;
+    color: sandybrown;
+    border-width: 3px;
+    text-decoration: underline;
   }
   /*=====================
   about
@@ -1145,10 +1114,12 @@ li {
   .list:hover {
     background-color: #B8E7E1;
   }
-  button {
+  button,
+  [type=submit] {
     transition: 0.4s;
   }
-  button:hover {
+  button:hover,
+  [type=submit]:hover {
     background-color: #FFEEB3;
   }
 }
@@ -1224,18 +1195,9 @@ li {
   .search-sitter p {
     font-size: 20px;
   }
-  .search-sitter form {
-    padding-top: 8vh;
-    padding-right: 8vh;
-  }
-  .search-sitter form > section {
-    width: 40%;
-  }
-  .search-sitter input, .search-sitter select {
-    padding: 2%;
-  }
-  .search-sitter label {
-    font-size: 20px;
+  .search-sitter a {
+    margin-top: 10vw;
+    font-size: 28px;
   }
   /*=====================
   services

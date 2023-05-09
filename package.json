@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "nodemon api/server.js"
+    "dev": "nodemon api/userServer.js"
   },
   "eslintConfig": {
     "extends": [

@@ -4,6 +4,19 @@ const fileManager = require('fs');
 let userList = JSON.parse(fileManager.readFileSync(filePath, "utf8"));
 console.log(userList);
 
+// fileManager.readFile(filePath, "utf8", function(error,data){
+    
+//     let newUser = {
+//         "id":userList[userList.length-1].id+1,
+//         "name": name,
+//         "email": email,
+//         "password": password
+//     }
+//     userList.push(newUser);
+//     fileManager.writeFileSync(filePath,JSON.stringify(userList)); 
+
+// })
+
 const PORT = 3200;
 const express = require('express');
 const app = express();

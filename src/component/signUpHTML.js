@@ -15,25 +15,32 @@ function SignUpPage(){
                         <input type="text" required name="name" id="name" placeholder="Name"/>
                     </aside>
                     <aside>
-                        <label htmlFor="location">Location</label>
-                        <select name="location" id="location">
-                            <option value="null"></option>
-                            <option value="Vancouver">Vancouver</option>
-                            <option value="Montreal">Montreal</option>
-                            <option value="Toronto">Toronto</option>
-                        </select>
-                    </aside>
-                    <aside>
                         <label htmlFor="email">Email</label>
                         <input type="text" required name="email" id="email"placeholder="Email"/>
                     </aside>
                     <aside>
                         <label htmlFor="password">Password</label>
-                        <input type="password" required name="password" id="password"placeholder="Password"/>
+                        <input type="password" required name="password" id="password"placeholder="Password" onChange={()=>{
+                            if($("#password").val() != $("#cnf-password").val()){
+                                $("#message").text("Password don't match!");
+                                $("#message").css("color","red");    
+                            }else{
+                                $("#message").text("Password match!");
+                                $("#message").css("color","green");
+                            }  
+                        }}/>
                     </aside>
                         <label htmlFor="cnf-password">Confirm Password</label>
                         <input type="password" name="cnf-password" id="cnf-password"
-                        placeholder="Confirm Password"/>
+                        placeholder="Confirm Password" onChange={()=>{
+                            if($("#password").val() != $("#cnf-password").val()){
+                                $("#message").text("Password don't match!");
+                                $("#message").css("color","red");    
+                            }else{
+                                $("#message").text("Password match!");
+                                $("#message").css("color","green");
+                            }
+                        }}/>
                         <p id="message"></p>
                     <aside className="sign-up">
                         <button><a>Sign Up</a></button>
@@ -75,35 +82,6 @@ function Footer(){
 //END: footer part
 
 function SignUpApp(){
-    $("#root").ready(function(){
-        //signUp
-        $("form").submit(function(event){
-            event.preventDefault();
-            let name = $("#name");
-            let location = $("#location");
-            let email = $("#email").val();
-            let password = $("#password");
-            let confirmPassword = $("#cnf-password");
-            let message = $("#message");
-
-            // Check that the password and confirm password fields match
-            // if(password != confirmPassword){
-            //     alert("The password and confirm password fields do not match");
-            //     return false;
-            // }
-
-            // Check that the password and confirm password
-            if($("#password") == $("#cnf-password")){
-                $("#message").text("Password match!");
-                $("#message").css("color","green");
-            }else{
-                $("#message").text("Password don't match!");
-                $("#message").css("color","red");
-            }
-        });
-        return true;
-    });
-
     return(
         <React.Fragment>
             <Header/>

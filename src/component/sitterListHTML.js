@@ -27,7 +27,7 @@ function LeftForm(){
     return(
         <section className="left-form">
             <form className='listForm' action="#">
-                <h2>Find the Perfect Match</h2>
+                <h2>Fill the requirements</h2>
                 <section>
                     <article>
                         <label htmlFor="select-service">Accepted Service</label>
@@ -111,13 +111,13 @@ function RightList(){
                     //START: pop up size
                     for(let i=0; i<100; i++){
                         if($(".acceptedSize").eq(i).attr('id') == 1){
-                            $(".sizeOne").eq(i).show();
+                            $(".sizeOne").eq(i).toggle();
                         }else if($(".acceptedSize").eq(i).attr('id') == 2){
-                            $(".sizeTwo").eq(i).show();
+                            $(".sizeTwo").eq(i).toggle();
                         }else if($(".acceptedSize").eq(i).attr('id') == 3){
-                            $(".sizeThree").eq(i).show();
+                            $(".sizeThree").eq(i).toggle();
                         }else if($(".acceptedSize").eq(i).attr('id') == 4){
-                            $(".sizeFour").eq(i).show();
+                            $(".sizeFour").eq(i).toggle();
                         }
                     }
                     //END: pop up size
@@ -128,25 +128,25 @@ function RightList(){
                     //START: pop up days of week
                     for(let i=0; i<100; i++){
                         if($(".listSun").eq(i).attr('id') == "true"){
-                            $(".listSun").eq(i).show();
+                            $(".listSun").eq(i).toggle();
                         }
                         if($(".listMon").eq(i).attr('id') == "true"){
-                            $(".listMon").eq(i).show();
+                            $(".listMon").eq(i).toggle();
                         }
                         if($(".listTue").eq(i).attr('id') == "true"){
-                            $(".listTue").eq(i).show();
+                            $(".listTue").eq(i).toggle();
                         }
                         if($(".listWed").eq(i).attr('id') == "true"){
-                            $(".listWed").eq(i).show();
+                            $(".listWed").eq(i).toggle();
                         }
                         if($(".listThu").eq(i).attr('id') == "true"){
-                            $(".listThu").eq(i).show();
+                            $(".listThu").eq(i).toggle();
                         }
                         if($(".listFri").eq(i).attr('id') == "true"){
-                            $(".listFri").eq(i).show();
+                            $(".listFri").eq(i).toggle();
                         }
                         if($(".listSat").eq(i).attr('id') == "true"){
-                            $(".listSat").eq(i).show();
+                            $(".listSat").eq(i).toggle();
                         }
                     }
                     //END: pop up days of week

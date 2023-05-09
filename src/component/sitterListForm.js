@@ -59,7 +59,6 @@ function SitterListForm() {
                 //END: size select
             })
         })
-    // }
 }
 
 export default SitterListForm;

@@ -12,7 +12,8 @@
                 background-color: $box;
             }
         }
-        button{
+        button,
+        [type='submit']{
             transition: .4s;
             &:hover{
                 background-color: $box2;
