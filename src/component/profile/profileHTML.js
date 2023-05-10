@@ -13,7 +13,7 @@ import ProfilePoper from './profileInfoPoper';
 //START: Profile page top part
 function ProfileTop(){
     return(
-        <figure className="proTop">
+        <figure className="proTop" id='proTop'>
             <img alt="mainPic" src="./img/sitter-1.jpg"/>
             <figcaption>
                 <section>
@@ -208,10 +208,12 @@ function ProfilePage(){
 
 //START: footer part
 const proFooter = [
+    {name:"Top", link:"#header"},
     {name:"Home", link:"/"},
     {name:"Search Sitter", link:"/list"},
-    {name:"Sign In", link:"#"},
-    {name:"Sign Up", link:"#"}
+    {name:"Sign In", link:"/signIn"},
+    {name:"Sign Up", link:"/signUp"},
+    {name:"Shop", link:"/shop"}
 ]
 function Footer(){
     return(

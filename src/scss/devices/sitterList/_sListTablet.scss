@@ -12,8 +12,8 @@
                 background-color: $box;
             }
         }
-        button,
-        [type='submit']{
+        .sitterList-main button,
+        .sitterList-main [type='submit']{
             transition: .4s;
             &:hover{
                 background-color: $box2;

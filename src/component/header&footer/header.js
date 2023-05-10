@@ -4,7 +4,7 @@ import { faDog, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function Header(){
     return(
-        <header>
+        <header id="header">
             <section className="header-container">
                 <section>
                     <a>
@@ -19,6 +19,7 @@ function Header(){
                             <li><a href="/list">Sitter List</a></li>
                             <li><a href="/signUp">Sign Up</a></li>
                             <li><a href="/signIn">Sign In</a></li>
+                            <li><a href="/shop">Shop</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -39,6 +40,7 @@ function Header(){
                             <li><a href="/list">Sitter List</a></li>
                             <li><a href="/signUp">Sign Up</a></li>
                             <li><a href="/signIn">Sign In</a></li>
+                            <li><a href="/shop">Shop</a></li>
                         </ul>
                     </nav>
                 </article>

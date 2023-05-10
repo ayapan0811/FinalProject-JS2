@@ -737,7 +737,7 @@ li {
   .listSat {
     display: none;
   }
-  blockquote {
+  .sitterList-main blockquote {
     display: flex;
     justify-content: space-around;
     padding-bottom: 2vh;
@@ -812,6 +812,69 @@ li {
     color: white;
     width: 100%;
     height: 100%;
+  }
+}
+@media (min-width: 300px) {
+  .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    padding-bottom: 7vh;
+    row-gap: 7vh;
+  }
+  .shop h2 {
+    font-size: 20px;
+    transition: 0.4s;
+    padding: 2px;
+  }
+  .shop h2:hover {
+    background-color: #FFEEB3;
+  }
+  .shop #menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+    background-color: #B8E7E1;
+    padding: 5%;
+    width: 100%;
+  }
+  .shop #menu select {
+    width: 70px;
+  }
+  .shop #menu label {
+    font-size: 20px;
+  }
+  .shop #box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 4vh;
+    flex-wrap: wrap;
+  }
+  .shop .box {
+    width: 80%;
+    border: 10px solid #FFEEB3;
+    background-color: #FFEEB3;
+  }
+  .shop .box img {
+    width: 50%;
+  }
+  .shop figure, .shop figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .shop figcaption {
+    color: #9E6F21;
   }
 }
 @media (min-width: 300px) {
@@ -1114,12 +1177,12 @@ li {
   .list:hover {
     background-color: #B8E7E1;
   }
-  button,
-  [type=submit] {
+  .sitterList-main button,
+  .sitterList-main [type=submit] {
     transition: 0.4s;
   }
-  button:hover,
-  [type=submit]:hover {
+  .sitterList-main button:hover,
+  .sitterList-main [type=submit]:hover {
     background-color: #FFEEB3;
   }
 }
@@ -1150,6 +1213,30 @@ li {
     margin-top: 2vh;
     font-size: 20px;
     padding: 1vh;
+  }
+}
+@media (min-width: 700px) {
+  .shop h2 {
+    font-size: 30px;
+  }
+  .shop #menu {
+    -moz-column-gap: 12vh;
+         column-gap: 12vh;
+  }
+  .shop h3 {
+    font-size: 30px;
+  }
+  .shop label {
+    row-gap: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .shop form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
   }
 }
 @media (min-width: 300px) {
@@ -1349,5 +1436,25 @@ li {
   }
   .sign form button {
     width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .shop .box {
+    width: 30%;
+    min-height: 60vh;
+  }
+  .shop #box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+  }
+  .shop #menu label {
+    font-size: 30px;
+  }
+  .shop #menu select {
+    width: 140px;
+    height: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

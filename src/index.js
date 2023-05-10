@@ -5,8 +5,10 @@ import './css/style.css';
 import HomeApp from './component/home/homeHTML';
 import ListApp from './component/sitterList/sitterListHTML';
 import ProApp from './component/profile/profileHTML';
-import SignInApp from './component/signIn&signUp/signInHTML';
-import SignUpApp from './component/signIn&signUp/signUpHTML';
+import SignInApp from './component/sign/signInHTML';
+// import SignUpApp from './component/signIn&signUp/signUpHTML';
+import SignUpForm from './component/sign/signUpTest';
+import Shop from './component/shop/shop';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +20,9 @@ root.render(
       <Route path='/list' element={<ListApp/>}/>
       <Route path="/profile" element={<ProApp/>}/>
       <Route path="/signIn" element={<SignInApp/>}/>
-      <Route path="/signUp" element={<SignUpApp/>}/>
+      {/* <Route path="/signUp" element={<SignUpApp/>}/> */}
+      <Route path="/signUp" element={<SignUpForm/>}/>
+      <Route path="/shop" element={<Shop/>}/>
     </Routes>
   </BrowserRouter>
   // <React.StrictMode>

@@ -19,80 +19,6 @@ function SearchSitter(){
                     <p> Book trusted sitters and dog walkers</p>
                     <a href="/list">Search Sitter</a>
                 </article>
-                <form action="#">
-                    <section>
-                        <article className="dogorcat">
-                            <label htmlFor="dogcat">I'm looking for service for my:</label>
-                            <aside>
-                                <input type="checkbox" name="dog" id="dog"/>
-                                <small>Dog</small>
-                            </aside>
-                            <aside>
-                                <input type="checkbox" name="cat" id="cat"/>
-                                <small>Cat</small>
-                            </aside>
-                        </article>
-                        <article>
-                            <label htmlFor="select-service">Service:</label>
-                            <select name="select-service" id="select-service">
-                                <option value="none" >Select Service</option>
-                                <option value="boarding">Boarding</option>
-                                <option value="dogwalking">Dog Walking</option>
-                            </select>
-                        </article>
-                        <article>
-                            <label htmlFor="select-location">Location:</label>
-                            <select name="location" id="location">
-                                <option value="none" disabled>Select your location</option>
-                                <optgroup label="Vancouver">
-                                    <option value="Vancouver">Vancouver</option>
-                                    <option value="Richmond">Richmond</option>
-                                    <option value="Burnaby">Burnaby</option>
-                                    <option value="NorthVancouver">North Vancouver</option>
-                                    <option value="WestVancouver">West Vancouver</option>
-                                </optgroup>
-                                <optgroup label="Montreal">
-                                    <option value="Downtown">Downtown</option>
-                                    <option value="SouthWest">South West</option>
-                                    <option value="Plateau">Plateau</option>
-                                    <option value="Cote-des-Niege">Cote-des-Niege</option>
-                                </optgroup>
-                                <optgroup label="Toronto">
-                                    <option value="CityOfToronto">City of Toronto</option>
-                                    <option value="Halton">Halton</option>
-                                    <option value="Peel">Peel</option>
-                                    <option value="York">York</option>
-                                    <option value="Durham">Durham</option>
-                                </optgroup>
-                            </select>
-                        </article>
-                        <article>
-                            <aside>
-                                <label htmlFor="day">For which days?</label>
-                            <select name="day" id="day">
-                                <option value="none" disabled>Select day</option>
-                                <option value="Sunday">Sunday</option>
-                                <option value="Monday">Monday</option>
-                                <option value="Tuesday">Tuesday</option>
-                                <option value="Wednesday">Wednesday</option>
-                                <option value="Thursday">Thursday</option>
-                                <option value="Friday">Friday</option>
-                                <option value="Saturday">Saturday</option>
-                            </select>
-                            </aside>
-                        </article>
-                        <article>
-                            <label htmlFor="select-size">My Dog Size</label>
-                            <select name="select-size" id="select-size">
-                                <option value="none" disabled>Select your dog size</option>
-                                <option value="-10">~10kg</option>
-                                <option value="11-25">10~25kg</option>
-                                <option value="25-45">25~45kg</option>
-                                <option value="46-">45kg~</option>
-                            </select>
-                        </article>
-                    </section>
-                </form>
             </section>
         </section>  
     );
@@ -104,7 +30,9 @@ function About(){
             <section>
                 <h3>About us</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatum amet quisquam dolorum inventore facilis officiis odio aliquam voluptatem. Velit reprehenderit deleniti temporibus, similique tenetur laborum facere nobis rem obcaecati error necessitatibus unde quis quod ullam est ex nam optio atque, ipsa praesentium, ducimus nulla!
+                    Dogs and cats are like family members.
+                    If you have to be away from home for a long period of time for work, or for travel, or if your are unable to walk the dog because of illness or injury. You can connect with a sitter near you and leave your precious pet with them.
+                    We have an online shop selling dog and cat food too!
                 </p>
             </section>
         </section>
@@ -114,7 +42,7 @@ function About(){
 function Services(){
     return(
         <section className="services" id="services">
-        <h3>Services for every dog and cat</h3>
+        <h3>Services</h3>
         <section>
             <article className="service">
                 <aside>
@@ -122,7 +50,7 @@ function Services(){
                     <section>
                         <h4>Boarding</h4>
                         <p>
-                            Your pets stay overnight in your sitter's home. They'll be treated like part of the family in a comfortable environment.
+                            Your pets stay overnight in your sitter's home. You can find a comfortable place for your pets!
                         </p>
                     </section>
                 </aside>
@@ -131,7 +59,7 @@ function Services(){
                     <section>
                         <h4>Dog Walking</h4>
                         <p>
-                            Your dog gets a walk around your neighborhood. Perfect for busy days and dogs with extra energy to burn.
+                            On days when you are busy, the sitter will walk your dogs for you!
                         </p>
                     </section>
                 </aside>
@@ -169,7 +97,7 @@ function BookingFlow(){
             <section>
                 <h3>Here's how works</h3>
                 <p>
-                    Search and connect with trusted pet sitters. It's easy as 1, 2, 3.
+                    Search and connect with sitters.
                 </p>
             </section>
             <article>
@@ -177,21 +105,21 @@ function BookingFlow(){
                     <FontAwesomeIcon icon={faMagnifyingGlass} size="2xl"/>
                     <h4>1. Search</h4>
                     <p>
-                        Read verified reviews by pet parents like you and choose a sitter who’s a great match for you and your pets.
+                        First, enter the service, day of the week, and location,then choose from the list of matched sitters.
                     </p>
                 </aside>
                 <aside>
                     <FontAwesomeIcon icon={faCalendarDays} size="2xl"/>
                     <h4>2. Arrange a meet & greet</h4>
                     <p>
-                        Get to know your sitter in person, obligation-free.
+                        Go to the sitter's profile, contact them, and set up a meeting!
                     </p>
                 </aside>
                 <aside>
                     <FontAwesomeIcon icon={faCreditCard} size="2xl"/>
                     <h4>3.Pay</h4>
                     <p>
-                        Book your sitter through our safe online system, with flexible cancellations in case your plans change.
+                        Have a connection with a sitter and discucc with your lovely pets.
                     </p>
                 </aside>
             </article>
@@ -281,7 +209,7 @@ function QuestionAndAnswer(){
                     <h4 onClick={(e)=>{
                         e.target.parentNode.classList.toggle("appear");
                     }}>
-                        <span>Q: </span>Allergy, diseases?
+                        <span>Q: </span>What about allergies and diseases?
                     </h4>
                     <p>
                         If your pets have allergies or diseases, please tell the sitters before giving the confirmation. If the sitter find the disease heavy, they can cancel the confirmation beforehands.
@@ -291,7 +219,7 @@ function QuestionAndAnswer(){
                     <h4 onClick={(e)=>{
                         e.target.parentNode.classList.toggle("appear");
                     }}>
-                        <span>Q: </span>Method of payment?
+                        <span>Q: </span>What is the method of payment?
                     </h4>
                     <p>
                         This is up to the users. We are not responsible for the method of pay. If you have any problems, please contact us.
@@ -319,7 +247,7 @@ function Contact(){
 function Location(){
     return(
         <section className="location">
-            <h2>Thousands of pet sitters across Canada</h2>
+            <h2>Sitter across Canada</h2>
             <article>
                 <aside>
                     <h3>Vancouver</h3>
@@ -373,12 +301,13 @@ function HomePage(){
 
 //START: footer part
 const homeFooter = [
-    {name:"Home", link:"/"},
+    {name:"Top", link:"#header"},
     {name:"Our Services", link:"#services"},
-    {name:"Q&A", link:"#QandA"},
+    {name:"Q&A", link:"/#QandA"},
     {name:"Search Sitter", link:"/list"},
-    {name:"Sign In", link:"#"},
-    {name:"Sign Up", link:"#"}
+    {name:"Sign In", link:"/signIn"},
+    {name:"Sign Up", link:"/signUp"},
+    {name:"Shop", link:"/shop"}
 ]
 function Footer(){
     return(

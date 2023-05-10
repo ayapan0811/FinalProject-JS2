@@ -242,10 +242,11 @@ function SitterListPage(){
 
 //START: footer part
 const listFooter = [
+    {name:"Top", link:"/list"},
     {name:"Home", link:"/"},
-    {name:"Search Sitter", link:"/list"},
-    {name:"Sign In", link:"#"},
-    {name:"Sign Up", link:"#"}
+    {name:"Sign In", link:"/signIn"},
+    {name:"Sign Up", link:"/signUp"},
+    {name:"Shop", link:"/shop"}
 ]
 
 function Footer(){

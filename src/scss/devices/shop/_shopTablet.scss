@@ -1,0 +1,23 @@
+@media(min-width:$tabletScreen){
+    .shop{
+        h2{
+            font-size: 30px;
+        }
+        #menu{
+            column-gap: 12vh;
+        }
+        h3{
+            font-size: 30px;
+        }
+        label{
+            row-gap: 2vh;
+            @include flex-column;
+            @include flex-center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2vh;
+        }
+    }
+}
