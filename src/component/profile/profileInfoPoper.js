@@ -1,13 +1,6 @@
 import $ from "jquery";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-// import sitterImg1 from "../img/sitter-1.jpg";
-import sitterImg2 from "../../img/sitter-2.jpg";
-// import sitterImg3 from "../img/sitter-3.jpg";
-// import sitterImg4 from "../img/sitter-4.jpg";
-// import sitterImg5 from "../img/sitter-5.jpg";
-// import sitterImg6 from "../img/sitter-6.jpg";
-// import sitterImg7 from "../img/sitter-7.jpg";
 
 function ProfilePoper(){
     // START: getting JSON file
@@ -29,13 +22,7 @@ function ProfilePoper(){
         //START: showing Json file data to profile page
         let selectedSitter = localSitterList[selectedSitterId];
 
-            //START: picture
-            // let picNumber = (Math.floor(Math.random()*7)+1);
-            // $('[alt="mainPic"]').attr("src",JSON.parse(`sitterImg${picNumber}`));
-            //could not get pictures from the json file, and it was not able to do it randomly, so putting one picture for now 
-            $('[alt="mainPic"]').attr("src",sitterImg2);
-            //END: picture
-
+        $('[alt="mainPic"]').attr("src",selectedSitter?.picture);
         $('[class="sitterName"]').text(`${selectedSitter?.name}`);
         $('[class="rating"]').text(`${selectedSitter?.rating}/5`);
         $('[class="rating"]').css("color","orange");

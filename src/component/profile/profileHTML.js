@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow,faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -256,7 +255,3 @@ function ProApp(){
 }
 
 export default ProApp;
-
-// const rootProfileHTML = ReactDOM.createRoot(document.getElementById("root"));
-
-// rootProfileHTML.render(<App/>);
