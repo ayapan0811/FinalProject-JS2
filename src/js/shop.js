@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from "react";
 import $ from 'jquery';
 
-function selectType(props){
-    const types = [1,2];
-    for(let type of types){
-        if($("#animal").val()== type){
-            for(let i=0;i<100;i++){
-                if($(`.${type}`).eq(i).attr('typeId') == false){
-                    $("#box").eq(1).hide();
-                }
-            }
-        }
-    }
-}
 function Item(props) {
 
   return (
-    <div className="box">
+    <div className="box" id={props.typeId}>
         <figure>
             <img src={props.img} alt={props.name}/>
             <figcaption>
@@ -29,7 +17,7 @@ function Item(props) {
   );
 }
 function Shop() {
-    selectType()
+
   const [localProductList, setProductList] = useState([]);
 
   useEffect(function(){
@@ -66,21 +54,29 @@ function Shop() {
     </header>
     <main className="shop">
         <section id="menu">
-            <label for="">Animal Type 
-                    <select name="animal" id="animal">
-                    <option value="null"></option>
-                        <option value="1">Dog</option>
-                        <option value="2">Cat</option>
-                    </select>
-            </label>
-            <label for="">Product Type
-                    <select name="product" id="product">
+            <form onSubmit={function selectType(e){
+                e.preventDefault();
+                $('.box').show();
+                const types = [1,2];
+                for(let type of types){
+                    if($("#animal").val()== type){
+                        for(let i=0;i<30;i++){
+                            if($(`.box`).eq(i).attr('id') != type){
+                                $(".box").eq(i).hide();
+                            }
+                        }
+                    }
+                }
+            }}>
+                <label htmlFor="">Animal Type 
+                        <select name="animal" id="animal">
                         <option value="null"></option>
-                        <option value="Portion">Portion</option>
-                        <option value="Doghouse">Doghouse</option>
-                        <option value="Toys">Toys</option>
-                    </select>
-            </label>
+                            <option value="1">Dog</option>
+                            <option value="2">Cat</option>
+                        </select>
+                </label>
+                <button type="submit">Change</button>
+            </form>
             <h2>
                 Cart
             </h2>
@@ -88,6 +84,7 @@ function Shop() {
         <section id="box">
                 {localProductList.map((item) => (
                   <Item 
+                    typeId={item.typeId}
                     name={item.name}
                     img={item.img}
                     description={item.description}

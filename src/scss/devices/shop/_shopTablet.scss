@@ -10,8 +10,14 @@
             font-size: 30px;
         }
         label{
+            row-gap: 2vh;
             @include flex-column;
             @include flex-center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2vh;
         }
     }
 }
