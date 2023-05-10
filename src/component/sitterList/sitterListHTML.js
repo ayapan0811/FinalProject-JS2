@@ -2,9 +2,9 @@ import $ from 'jquery';
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldDog, faLocationArrow } from '@fortawesome/free-solid-svg-icons';
-import Header from './header';
-import FooterLinkList from "./footerList";
-import FooterSNS from './footerSNS';
+import Header from '../header&footer/header';
+import FooterLinkList from "../header&footer/footerList";
+import FooterSNS from '../header&footer/footerSNS';
 import SitterListForm from './sitterListForm';
 
 function ConfirmModal(){

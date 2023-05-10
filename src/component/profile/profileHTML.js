@@ -2,11 +2,11 @@ import $ from 'jquery';
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow,faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import proCat from "../img/proCat.jpg";
-import proDog from "../img/proDog.jpg";
-import Header from './header';
-import FooterLinkList from "./footerList";
-import FooterSNS from "./footerSNS";
+import proCat from "../../img/proCat.jpg";
+import proDog from "../../img/proDog.jpg";
+import Header from '../header&footer/header';
+import FooterLinkList from "../header&footer/footerList";
+import FooterSNS from "../header&footer/footerSNS";
 import SlideShow from './profileSlideShow';
 import ProfilePoper from './profileInfoPoper';
 

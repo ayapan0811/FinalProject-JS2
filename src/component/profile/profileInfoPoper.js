@@ -2,7 +2,7 @@ import $ from "jquery";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 // import sitterImg1 from "../img/sitter-1.jpg";
-import sitterImg2 from "../img/sitter-2.jpg";
+import sitterImg2 from "../../img/sitter-2.jpg";
 // import sitterImg3 from "../img/sitter-3.jpg";
 // import sitterImg4 from "../img/sitter-4.jpg";
 // import sitterImg5 from "../img/sitter-5.jpg";

@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './css/style.css';
-import HomeApp from './component/homeHTML';
-import ListApp from './component/sitterListHTML';
-import ProApp from './component/profileHTML';
-import SignInApp from './component/signInHTML';
-import SignUpApp from './component/signUpHTML';
+import HomeApp from './component/home/homeHTML';
+import ListApp from './component/sitterList/sitterListHTML';
+import ProApp from './component/profile/profileHTML';
+import SignInApp from './component/signIn&signUp/signInHTML';
+import SignUpApp from './component/signIn&signUp/signUpHTML';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

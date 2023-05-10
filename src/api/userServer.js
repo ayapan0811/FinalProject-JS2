@@ -1,5 +1,6 @@
 const filePath = "../data/user.json";
 const fileManager = require('fs');
+const bodyParser = require('body-parser');
 
 let userList = JSON.parse(fileManager.readFileSync(filePath, "utf8"));
 console.log(userList);
@@ -17,15 +18,19 @@ console.log(userList);
 
 // })
 
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+
 const PORT = 3200;
 const express = require('express');
 const app = express();
 const cors = require("cors")
 
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
-app.get("/user-api",function(req, res){
+app.post("/user-api",function(req, res){
     res.json(userList);
 });
 

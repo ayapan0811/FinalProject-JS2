@@ -1,22 +1,34 @@
 import React from "react";
 import $ from "jquery";
-import Header from "./header";
-import FooterLinkList from "./footerList";
-import FooterSNS from "./footerSNS";
+import Header from "../header&footer/header";
+import FooterLinkList from "../header&footer/footerList";
+import FooterSNS from "../header&footer/footerSNS";
 
 function SignUpPage(){
+    function formChange(){
+        console.log("test");
+        //setstate                    
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let password = $("#password").val();
+        console.log(name,email,password);
+    }
+    
     return(
         <main className="sign">
             <section>
-                <form action="#">
+                <form action="#" onSubmit={(e)=>{
+                    e.preventDefault();
+                    
+                }}>
                     <h1>Sign Up for Dog Owner</h1>
                     <aside>
                         <label htmlFor="name">Name</label>
-                        <input type="text" required name="name" id="name" placeholder="Name"/>
+                        <input type="text" required name="name" id="name" placeholder="Name" onChange={()=>{formChange()}}/>
                     </aside>
                     <aside>
                         <label htmlFor="email">Email</label>
-                        <input type="text" required name="email" id="email"placeholder="Email"/>
+                        <input type="text" required name="email" id="email"placeholder="Email" onChange={()=>{formChange()}}/>
                     </aside>
                     <aside>
                         <label htmlFor="password">Password</label>
@@ -27,7 +39,8 @@ function SignUpPage(){
                             }else{
                                 $("#message").text("Password match!");
                                 $("#message").css("color","green");
-                            }  
+                            } 
+                            formChange(); 
                         }}/>
                     </aside>
                         <label htmlFor="cnf-password">Confirm Password</label>
@@ -82,6 +95,7 @@ function Footer(){
 //END: footer part
 
 function SignUpApp(){
+
     return(
         <React.Fragment>
             <Header/>

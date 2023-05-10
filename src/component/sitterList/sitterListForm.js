@@ -6,6 +6,7 @@ function SitterListForm() {
         const daysOfWeek = ["listSun","listMon","listTue","listWed","listThu","listFri","listSat"];
 
         $("#location").ready(function(){
+            
             $(".listForm").submit((e)=>{
                 e.preventDefault();
                 $(".list").show();

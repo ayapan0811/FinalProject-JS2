@@ -1,8 +1,8 @@
 import React from "react";
 import SignInCheck from "./signInCheck";
-import Header from "./header";
-import FooterSNS from "./footerSNS";
-import FooterLinkList from "./footerList";
+import Header from "../header&footer/header";
+import FooterSNS from "../header&footer/footerSNS";
+import FooterLinkList from "../header&footer/footerList";
 
 function SignInPage(){
     return(
