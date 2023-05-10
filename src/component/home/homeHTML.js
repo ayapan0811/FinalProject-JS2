@@ -156,7 +156,7 @@ function Blog(){
                     <h4>Reasons to become a pet sitter</h4>
                     <p>
                         There are many reasons why pet sitting is a fulfilling and fun activity to get into.
-                        Here are just some of the reasons why you might consider jumping on board the Bawwow pet-sitting community:
+                        Here are just some of the reasons why you might consider jumping on board the Bowwow pet-sitting community:
                     </p>
                 </figcaption>
                 <a href="#">Read More</a>
@@ -327,7 +327,7 @@ function Footer(){
                     </ul>
                 </section>
             </section>
-            <p>Copyright &copy; Bawwow sitter service </p>
+            <p>Copyright &copy; Bowwow sitter service </p>
         </footer>
     );
 }

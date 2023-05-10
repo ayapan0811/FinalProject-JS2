@@ -10,7 +10,7 @@ function Header(){
                     <a>
                         <FontAwesomeIcon icon={faDog}/>
                     </a>
-                    <h1>Bawwau Sitter</h1>
+                    <h1>Bowwou Sitter</h1>
                 </section>
                 <div className="pc-menu">
                     <nav>

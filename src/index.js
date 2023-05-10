@@ -9,13 +9,11 @@ import SignInApp from './component/sign/signInHTML';
 // import SignUpApp from './component/signIn&signUp/signUpHTML';
 import SignUpForm from './component/sign/signUpTest';
 import Shop from './component/shop/shop';
-// import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      {/* <Route path='/jsonfile' element={<SitterListTestApp/>}/> */}
       <Route path='/' element={<HomeApp/>}/>
       <Route path='/list' element={<ListApp/>}/>
       <Route path="/profile" element={<ProApp/>}/>
@@ -25,12 +23,5 @@ root.render(
       <Route path="/shop" element={<Shop/>}/>
     </Routes>
   </BrowserRouter>
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();

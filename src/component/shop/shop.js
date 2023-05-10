@@ -46,7 +46,7 @@ function Footer(){
                     </ul>
                 </section>
             </section>
-            <p>Copyright &copy; Bawwow sitter service </p>
+            <p>Copyright &copy; Bowwow sitter service </p>
         </footer>
     );
 }

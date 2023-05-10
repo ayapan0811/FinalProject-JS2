@@ -4,7 +4,7 @@ import { faTwitter, faFacebook, faLinkedinIn, faInstagram } from "@fortawesome/f
 function FooterSNS(){
     return(
         <section className="footer-aboutus">
-            <h4>Bawwow sitter</h4>
+            <h4>Bowwow sitter</h4>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nam ipsa placeat aut? Accusamus doloribus laudantium quo saepe magnam. Repellat animi deserunt inventore eum officia itaque corporis velit aspernatur ipsam?
             </p>
