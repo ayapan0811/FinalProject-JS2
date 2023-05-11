@@ -110,7 +110,7 @@ class SignUpForm extends React.Component {
                             placeholder="Confirm Password" onChange={this.confirmation}/>
                             <p id="message"></p>
                         <aside className="sign-up">
-                            <button type="submit">Sign Up</button>
+                            <button type="submit"><a>Sign Up</a></button>
                         </aside>
                     </form>
                 </section>
