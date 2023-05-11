@@ -14,8 +14,8 @@ function SearchSitter(){
         <section className="search-sitter">
             <section className="ss-container">
                 <article>
-                    <h2>Loving pet care in your neighborhood</h2>
-                    <p> Book trusted sitters and dog walkers</p>
+                    <h2>Hello pet parents! Welcome to our website!</h2>
+                    <p>Find the best sitter in your neighborhood</p>
                     <a href="/list">Search Sitter</a>
                 </article>
             </section>
@@ -67,20 +67,20 @@ function Services(){
                 <section>
                     <aside>
                         <FontAwesomeIcon icon={faShieldDog} size="xl"/>
-                        <h4>Pet sitters you can trust</h4>
+                        <h4>Reasons you can trust sitters</h4>
                     </aside>
                     <ul>
                         <li>
                             <FontAwesomeIcon icon={faSquareCheck} size="xl"/>
-                            <p>All sitters pass a background check</p>
+                            <p>All sitters have special animal care certification</p>
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faSquareCheck} size="xl"/>
-                            <p>All sitters provide a detailed profile and personal information</p>
+                            <p>All sitters are sweet and love animals!</p>
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faSquareCheck} size="xl"/>
-                            <p>All sitters are approved by our team of sitter specialists</p>
+                            <p>All sitters have experience having a pet</p>
                         </li>
                     </ul>
                 </section>
@@ -118,7 +118,7 @@ function BookingFlow(){
                     <FontAwesomeIcon icon={faCreditCard} size="2xl"/>
                     <h4>3.Pay</h4>
                     <p>
-                        Have a connection with a sitter and discucc with your lovely pets.
+                        Have a connection with a sitter and discuss with your lovely pets.
                     </p>
                 </aside>
             </article>
@@ -138,9 +138,9 @@ function Blog(){
                     <p>23/04/2023</p>
                 </aside>
                 <figcaption>
-                    <h4>Communication skills for pet sitters</h4>
+                    <h4>Do Dogs Have Feelings?</h4>
                     <p>
-                        Communicating skills are essential for pet sitters to have when building trust with clients and ensuring the safety and well-being of their furry companions.
+                        Any dog parent knows that their pup has feelings — after all, dogs are pretty expressive, whether they’re wagging their tails and licking you or barking at something scary. But you may be wondering if they have the same emotions as people.
                     </p>
                 </figcaption>
                 <a href="#">Read More</a>
@@ -149,13 +149,12 @@ function Blog(){
                 <img src={dogImg2} alt="dog2"/>
                 <aside>
                     <FontAwesomeIcon icon={faClock} size="xl"/>
-                    <p>12/04/2023</p>
+                    <p>23/04/2023</p>
                 </aside>
                 <figcaption>
-                    <h4>Reasons to become a pet sitter</h4>
+                    <h4>Do Cats Have Feelings?</h4>
                     <p>
-                        There are many reasons why pet sitting is a fulfilling and fun activity to get into.
-                        Here are just some of the reasons why you might consider jumping on board the Bowwow pet-sitting community:
+                        We're told that only humans have deep emotions like love. Animals have only their natural instincts. A cat shows affection to you because he needs you for food and shelter. You give your cat what he needs, and his instinct tells him to buddy up to you.
                     </p>
                 </figcaption>
                 <a href="#">Read More</a>
@@ -167,9 +166,9 @@ function Blog(){
                     <p>05/04/2023</p>
                 </aside>
                 <figcaption>
-                    <h4>Dog sitters | how to greet a new dog</h4>
+                    <h4>Common Dog Behavior Issues</h4>
                     <p>
-                        As a dog sitter, one of the most important things you will need to do is introduce yourself to the new dogs that come into your care. This process is crucial because it sets the tone for the rest of your time together and helps ensure that the dog is comfortable with you.
+                        If you're looking for help treating your dog’s behavior issue, or just curious about why your dog does what he does, you've come to the right place. Find out more here about common dog behavior issues to help you and your pup address some of our canine friends' behaviors and habits.
                     </p>
                 </figcaption>
                 <a href="#">Read More</a>
@@ -246,7 +245,7 @@ function Contact(){
 function Location(){
     return(
         <section className="location">
-            <h2>Sitter across Canada</h2>
+            <h2>Places you can find the sitters</h2>
             <article>
                 <aside>
                     <h3>Vancouver</h3>

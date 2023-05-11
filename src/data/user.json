@@ -1,24 +1,20 @@
 [
     {
-        "id": 1,
         "name": "Jeane Plimmer",
         "email": "jplimmer0@typepad.com",
         "password": "5QEYlZ"
     },
     {
-        "id": 2,
         "name": "Courtney Wingeatt",
         "email": "cwingeatt1@usnews.com",
         "password": "t87l9tByN"
     },
     {
-        "id": 3,
         "name": "Franky McGourty",
         "email": "fmcgourty2@ovh.net",
         "password": "rreknBbyOVi"
     },
     {
-        "id": 4,
         "name": "testname",
         "email": "test@test.com",
         "password": "testpass"

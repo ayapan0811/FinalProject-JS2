@@ -8,6 +8,13 @@
   }
   .footer-aboutus{
     width: 60%;
+    a{
+      transition: .4s;
+    }
+    a:hover{
+      background-color: white;
+      color: $title;
+    }
   }
   .link{
     width: 25%;

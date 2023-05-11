@@ -7,10 +7,10 @@ function Header(){
         <header id="header">
             <section className="header-container">
                 <section>
-                    <a>
-                        <FontAwesomeIcon icon={faDog}/>
+                    <a href="/">
+                        <FontAwesomeIcon icon={faDog} size="2xl" style={{ color: 'darkgoldenrod'}}/>
                     </a>
-                    <h1>Bowwou Sitter</h1>
+                    <h1>Bowwow Sitter</h1>
                 </section>
                 <div className="pc-menu">
                     <nav>

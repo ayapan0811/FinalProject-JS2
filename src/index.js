@@ -7,7 +7,7 @@ import ListApp from './component/sitterList/sitterListHTML';
 import ProApp from './component/profile/profileHTML';
 import SignInApp from './component/sign/signInHTML';
 // import SignUpApp from './component/signIn&signUp/signUpHTML';
-import SignUpForm from './component/sign/signUpTest';
+import SignUpForm from './component/sign/signUp';
 import Shop from './component/shop/shop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

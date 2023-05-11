@@ -948,9 +948,6 @@ li {
     width: 50vh;
     align-items: center;
   }
-  .header-container > section i {
-    font-size: 35px;
-  }
   .header-container .pc-menu {
     display: block;
     width: 90%;
@@ -1098,10 +1095,10 @@ li {
   ======================*/
   .location > article {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .location aside {
-    width: 30%;
+    width: 20%;
   }
   .location h3 {
     width: 40%;
@@ -1247,6 +1244,13 @@ li {
   }
   .footer-aboutus {
     width: 60%;
+  }
+  .footer-aboutus a {
+    transition: 0.4s;
+  }
+  .footer-aboutus a:hover {
+    background-color: white;
+    color: #9E6F21;
   }
   .link {
     width: 25%;

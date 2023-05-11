@@ -1,9 +1,39 @@
 import React from "react";
-// import $ from "jquery";
-// import Header from "../header&footer/header";
-// import FooterLinkList from "../header&footer/footerList";
-// import FooterSNS from "../header&footer/footerSNS";
+import $ from "jquery";
+import Header from "../header&footer/header";
+import FooterLinkList from "../header&footer/footerList";
+import FooterSNS from "../header&footer/footerSNS";
 
+
+const listFooter = [
+    {name:"Top", link:"#header"},
+    {name:"Home", link:"/"},
+    {name:"Search Sitter", link:"/list"},
+    {name:"Sign In", link:"/signIn"}
+]
+
+function Footer(){
+    return(
+        <footer>
+            <section>
+                <FooterSNS/>
+                <section className="link">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        {listFooter.map((listFoot)=>(
+                            <FooterLinkList
+                                key={listFoot.name}
+                                name={listFoot.name}
+                                link={listFoot.link}
+                            />
+                        ))}
+                    </ul>
+                </section>
+            </section>
+            <p>Copyright &copy; Bowwow sitter service </p>
+        </footer>
+    );
+}
 
 class SignUpForm extends React.Component {
     constructor(props){
@@ -23,9 +53,24 @@ class SignUpForm extends React.Component {
         console.log(event.target.value);
     }
 
+    confirmation = ()=>{
+        if($("#password").val() != $("#cnf-password").val()){
+            $("#message").text("Password don't match!");
+            $("#message").css("color","red");    
+        }else{
+            $("#message").text("Password match!");
+            $("#message").css("color","green");
+        }
+    }
+ 
+    bothFunction = (event)=>{
+        this.handleChange(event);
+        this.confirmation(event);
+    }
+
     handleSubmit = (event) => {
         // console.log("test");
-        fetch("http://localhost:5000/form", {
+        fetch("http://localhost:3200/form", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,6 +86,8 @@ class SignUpForm extends React.Component {
 
     render(){
         return(
+            <>
+            <Header/>
             <main className="sign">
                 <section>
                     <form action="#" onSubmit={this.handleSubmit}>
@@ -55,18 +102,20 @@ class SignUpForm extends React.Component {
                         </aside>
                         <aside>
                             <label htmlFor="password">Password</label>
-                            <input type="password"  name="password" id="password"placeholder="Password" value={this.state.value} onChange={this.handleChange}/>
+                            <input type="password"  name="password" id="password"placeholder="Password" value={this.state.value} onChange={this.bothFunction}/>
                         </aside>
                             <label htmlFor="cnf-password">Confirm Password</label>
                             <input type="password" name="cnf-password" id="cnf-password"
-                            placeholder="Confirm Password"/>
+                            placeholder="Confirm Password" onChange={this.confirmation}/>
                             <p id="message"></p>
                         <aside className="sign-up">
-                            <button><a>Sign Up</a></button>
+                            <button type="submit"><a>Sign Up</a></button>
                         </aside>
                     </form>
                 </section>
         </main>
+        <Footer/>
+        </>
         );
     }
 }

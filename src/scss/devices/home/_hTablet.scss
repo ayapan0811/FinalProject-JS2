@@ -123,10 +123,10 @@
   .location{
     > article{
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     aside{
-      width: 30%;
+      width: 20%;
     }
     h3{
      width: 40%;

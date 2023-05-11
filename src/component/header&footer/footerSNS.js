@@ -6,7 +6,9 @@ function FooterSNS(){
         <section className="footer-aboutus">
             <h4>Bowwow sitter</h4>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nam ipsa placeat aut? Accusamus doloribus laudantium quo saepe magnam. Repellat animi deserunt inventore eum officia itaque corporis velit aspernatur ipsam?
+                Dogs and cats are like family members.
+                If you have to be away from home for a long period of time for work, or for travel, or if your are unable to walk the dog because of illness or injury. You can connect with a sitter near you and leave your precious pet with them.
+                We have an online shop selling dog and cat food too!
             </p>
             <ul>
                 <li>
