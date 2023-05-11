@@ -116,6 +116,14 @@
     form{
       width: 60%;
     }
+    .submit{
+      transition: .4s;
+      border: 1px solid $title;
+      &:hover{
+        background-color: white;
+        color: $title;
+      }
+    }
   }
   /*=====================
   location
@@ -126,7 +134,7 @@
       justify-content: space-around;
     }
     aside{
-      width: 20%;
+      width: 15%;
     }
     h3{
      width: 40%;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouseChimneyWindow, faDog, faShieldDog, faMagnifyingGlass, faCalendarDays, faEarthAmericas, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faHouseChimneyWindow, faDog, faShieldDog, faMagnifyingGlass, faCalendarDays, faEarthAmericas, faPersonShelter } from "@fortawesome/free-solid-svg-icons";
 import { faSquareCheck, faCreditCard, faClock } from "@fortawesome/free-regular-svg-icons";
 import dogImg1 from "../../img/home-img/home-dog1.jpg";
 import dogImg2 from "../../img/home-img/home-dog2.jpg";
@@ -236,7 +236,7 @@ function Contact(){
                 <input type="text" name="name" id="name" placeholder="Your Name"/>
                 <input type="mail" name="mail" id="mail" placeholder="Your Email"/>
                 <textarea name="message" id="message" placeholder="Type your message"></textarea>
-                <input type="submit" value="Send Message"/>
+                <input type="submit" value="Send Message" className="submit"/>
             </form>
         </section>
     );
@@ -247,6 +247,7 @@ function Location(){
         <section className="location">
             <h2>Places you can find the sitters</h2>
             <article>
+                <FontAwesomeIcon icon={faPersonShelter} size="2xl"/>
                 <aside>
                     <h3>Vancouver</h3>
                     <ul>

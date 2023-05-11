@@ -1090,6 +1090,14 @@ li {
   .contact form {
     width: 60%;
   }
+  .contact .submit {
+    transition: 0.4s;
+    border: 1px solid #9E6F21;
+  }
+  .contact .submit:hover {
+    background-color: white;
+    color: #9E6F21;
+  }
   /*=====================
   location
   ======================*/
@@ -1098,7 +1106,7 @@ li {
     justify-content: space-around;
   }
   .location aside {
-    width: 20%;
+    width: 15%;
   }
   .location h3 {
     width: 40%;
@@ -1282,12 +1290,14 @@ li {
   }
   .search-sitter h2 {
     font-size: 45px;
+    padding-top: 10vh;
   }
   .search-sitter p {
     font-size: 20px;
+    padding-top: 5vh;
   }
   .search-sitter a {
-    margin-top: 10vw;
+    margin-top: 3vw;
     font-size: 28px;
   }
   /*=====================
