@@ -64,7 +64,7 @@ function LeftForm(){
                         </select>
                     </article>
                     <article>
-                        <label htmlFor="day">Available Days</label>
+                        <label htmlFor="day">Sitter Available Days</label>
                         <select name="day" id="day">
                             <option value="none">Select day</option>
                             <option value="listSun">Sunday</option>
@@ -77,7 +77,7 @@ function LeftForm(){
                         </select>
                     </article>
                     <article>
-                        <label htmlFor="size">Accepted Size</label>
+                        <label htmlFor="size">Your Dog Size</label>
                         <select name="size" id="selected-size">
                             <option value="none">Select size</option>
                             <option value="1">Under 10kg</option>

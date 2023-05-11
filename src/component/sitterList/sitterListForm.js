@@ -48,14 +48,26 @@ function SitterListForm() {
                 }
                 //END: day select
                 //START: size select
-                for(let j=1; j<5; j++){
-                    if($("#selected-size").val() == j){
-                        for(let i=0;i<100;i++){
-                            if($(".acceptedSize").eq(i).attr('id') != j){
-                                $(".list").eq(i).hide();
-                            }
-                        }  
-                    }
+                if($("#selected-size").val() == 2){ //under25kg
+                    for(let i=0;i<100;i++){
+                        if($(".acceptedSize").eq(i).attr('id') == 1){
+                            $(".list").eq(i).hide();
+                        }
+                    }  
+                }
+                if($("#selected-size").val() == 3){ //under45kg
+                    for(let i=0;i<100;i++){
+                        if($(".acceptedSize").eq(i).attr('id') == 1 || $(".acceptedSize").eq(i).attr('id') == 2){
+                            $(".list").eq(i).hide();
+                        }
+                    }  
+                }
+                if($("#selected-size").val() == 4){ //all size
+                    for(let i=0;i<100;i++){
+                        if($(".acceptedSize").eq(i).attr('id') != 4){
+                            $(".list").eq(i).hide();
+                        }
+                    }  
                 }
                 //END: size select
             })
